@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-08-26T12:52:11+03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="fi-FI">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>LuFy Integraali</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Aja (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Siirry pääasiaan</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\puoli}{\frac{1}{2}}
+\newcommand{\second}{\mathrm{s}}
+\newcommand{\hour}{\mathrm{h}}
+\newcommand{\meter}{\mathrm{m}}
+\newcommand{\henry}{\mathrm{H}}
+\newcommand{\ohm}{\Omega}
+\newcommand{\ampere}{\mathrm{A}}
+\newcommand{\farad}{\mathrm{F}}
+\newcommand{\volt}{\mathrm{V}}
+\newcommand{\hertz}{\mathrm{Hz}}
+\newcommand{\tesla}{\mathrm{T}}
+\newcommand{\coulomb}{\mathrm{C}}
+\newcommand{\weber}{\mathrm{Wb}}
+\newcommand{\watt}{\mathrm{W}}
+\newcommand{\radian}{\mathrm{rad}}
+\newcommand{\newton}{\mathrm{N}}
+\newcommand{\joule}{\mathrm{J}}
+\newcommand{\gram}{\mathrm{g}}
+\newcommand{\kilogram}{\mathrm{kg}}
+\newcommand{\kelvin}{\mathrm{K}}
+\newcommand{\celsius}{^\circ\mathrm{C}}
+\newcommand{\pico}{\mathrm{p}}
+\newcommand{\nano}{\mathrm{n}}
+\newcommand{\micro}{\mu}
+\newcommand{\milli}{\mathrm{m}}
+\newcommand{\centi}{\mathrm{c}}
+\newcommand{\kilo}{\mathrm{k}}
+\newcommand{\mega}{\mathrm{M}}
+\newcommand{\dee}{\mathrm{d}}
+\newcommand{\eminus}{\mathrm{\,e\,\text{-}}}
+\newcommand{\eplus}{\mathrm{\,e}}
+\newcommand{\squared}{^2}
+\newcommand{\cubed}{^3}
+\newcommand{\ang}[1]{#1^\circ}
+\newcommand{\doo}{\partial}
+\newcommand{\kertaa}{\cdot}
+\newcommand{\pistetulo}[2]{\vec{#1} \cdot \vec{#2}}
+\newcommand{\ristitulo}[2]{\vec{#1} \times \vec{#2}}
+\newcommand{\sulut}[1]{\left( #1 \right)}
+\newcommand{\ja}{\quad \text{ja} \quad}
+\newcommand{\mps}{\meter/\second}
+\newcommand{\SI}[2]{#1 \mathrm{\, #2}}
+\newcommand{\si}[1]{\mathrm{\, #1}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="fysiikka-materiaaleja.html"><span class="title">Lisämateriaaleja lukion fysiikkaan</span></a></h1>
+<p class="byline">Lasse M. Manninen</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Sisällys</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec-menetelmat-derivaatta.html" title="Edellinen">Ed</a><a id="upbutton" class="up-button button toolbar-item" href="mat-menetelmat.html" title="Ylös">Yl</a><a id="nextbutton" class="next-button button toolbar-item" href="maxwell.html" title="Seuraava">Seur</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Sisällys</button><a class="previous-button toolbar-item button" href="sec-menetelmat-derivaatta.html" title="Edellinen">Ed</a><a class="up-button button toolbar-item" href="mat-menetelmat.html" title="Ylös">Yl</a><a class="next-button button toolbar-item" href="maxwell.html" title="Seuraava">Seur</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Nimiösivut</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Kolofoni</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Tästä materiaalista</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="jaykkakappale.html" data-scroll="jaykkakappale"><span class="codenumber">1</span> <span class="title">Jäykän kappaleen dynamiikkaa</span></a><ul>
+<li><a href="sec-pyorimisliikkeen-vastineita.html" data-scroll="sec-pyorimisliikkeen-vastineita">Pyörimisliikkeen vastineita lineaariselle liikkeelle</a></li>
+<li><a href="sec-tasaisesti-kiihtyva-pyorimisliike.html" data-scroll="sec-tasaisesti-kiihtyva-pyorimisliike">Tasaisesti kiihtyvä pyörimisliike ja hitausmomentti</a></li>
+<li><a href="sec-yleisen-pyorimisliikkeen-kuvaajat.html" data-scroll="sec-yleisen-pyorimisliikkeen-kuvaajat">Yleisen pyörimisliikkeen kuvaajat</a></li>
+<li><a href="sec-pyorimisliikkeen-perusyhtalo.html" data-scroll="sec-pyorimisliikkeen-perusyhtalo">Pyörimisliikkeen perusyhtälö</a></li>
+<li><a href="sec-rotaatioenergia.html" data-scroll="sec-rotaatioenergia">Rotaatioenergia ja sen säilymislaki</a></li>
+<li><a href="sec-pyorimismaara.html" data-scroll="sec-pyorimismaara">Pyörimismäärä ja sen säilyminen</a></li>
+<li><a href="sec-syventavaa.html" data-scroll="sec-syventavaa">Syventävää materiaalia</a></li>
+<li><a href="sec-alun-systeemi.html" data-scroll="sec-alun-systeemi">Palataan alun systeemiin</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="kinematiikkaa.html" data-scroll="kinematiikkaa"><span class="codenumber">2</span> <span class="title">Kinematiikkaa kahdessa ja kolmessa ulottuvuudessa</span></a><ul>
+<li><a href="sec-Kinematiikkaa.html" data-scroll="sec-Kinematiikkaa">Kinematiikkaa</a></li>
+<li><a href="sec-Koordinaatistot.html" data-scroll="sec-Koordinaatistot">Koordinaatistot fysiikassa</a></li>
+<li><a href="sec-suhteellinen-liike.html" data-scroll="sec-suhteellinen-liike">Suhteellinen liike</a></li>
+<li><a href="sec-kinematiikka-kisatehtava.html" data-scroll="sec-kinematiikka-kisatehtava">Palataan alun pulmaan</a></li>
+<li><a href="sec-kin-syventavaa.html" data-scroll="sec-kin-syventavaa">Syventävää materiaalia</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="termodynamiikkaa.html" data-scroll="termodynamiikkaa"><span class="codenumber">3</span> <span class="title">Termodynamiikkaa</span></a><ul>
+<li><a href="sec-IIpaasaanto.html" data-scroll="sec-IIpaasaanto">Termodynamiikan II pääsääntö</a></li>
+<li><a href="sec-lampovoimakoneet.html" data-scroll="sec-lampovoimakoneet">Lämpövoimakoneet</a></li>
+<li><a href="sec-carnot.html" data-scroll="sec-carnot">Carnot'n kiertoprosessi</a></li>
+<li><a href="sec-entropia.html" data-scroll="sec-entropia">Entropia</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="vaihtovirtapiirit.html" data-scroll="vaihtovirtapiirit"><span class="codenumber">4</span> <span class="title">Vaihtovirtapiirit</span></a><ul>
+<li><a href="sec-rlctasa.html" data-scroll="sec-rlctasa">RLC-piiri, tasavirta</a></li>
+<li><a href="sec-ac-perusteet.html" data-scroll="sec-ac-perusteet">AC-piirien perusteita</a></li>
+<li><a href="sec-lrcvaihtovirta.html" data-scroll="sec-lrcvaihtovirta">LRC-vaihtovirtapiirit</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="optiikkaa.html" data-scroll="optiikkaa"><span class="codenumber">5</span> <span class="title">Optiikkaa</span></a><ul>
+<li><a href="subsec-yleista-optiikasta.html" data-scroll="subsec-yleista-optiikasta">Yleistä optiikasta</a></li>
+<li><a href="sec-kuvan-muodostuminen.html" data-scroll="sec-kuvan-muodostuminen">Kuvan muodostuminen</a></li>
+<li><a href="sec-ohuet-linssit.html" data-scroll="sec-ohuet-linssit">Ohuet linssit ja rajapinnat</a></li>
+<li><a href="sec-optiset-laitteet.html" data-scroll="sec-optiset-laitteet">Suurentavat optiset laitteet</a></li>
+<li><a href="sec-optiikka-syventavaa.html" data-scroll="sec-optiikka-syventavaa">Syventävää materiaalia</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="mat-menetelmat.html" data-scroll="mat-menetelmat"><span class="codenumber">6</span> <span class="title">Vektorit, derivaatta ja integraali fysiikassa</span></a><ul>
+<li><a href="sec-menetelmat-vektorit.html" data-scroll="sec-menetelmat-vektorit">Vektorit</a></li>
+<li><a href="sec-menetelmat-derivaatta.html" data-scroll="sec-menetelmat-derivaatta">Derivaatta</a></li>
+<li><a href="sec-menetelmat-integraali.html" data-scroll="sec-menetelmat-integraali" class="active">Integraali</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="maxwell.html" data-scroll="maxwell"><span class="codenumber">7</span> <span class="title">Maxwellin yhtälöt</span></a><ul>
+<li><a href="sec-maxwell-motivointia.html" data-scroll="sec-maxwell-motivointia">Motivointia</a></li>
+<li><a href="sec-kenttien-maarittaminen.html" data-scroll="sec-kenttien-maarittaminen">Sähkö- ja magneettikenttien määrittäminen</a></li>
+<li><a href="sec-maxwell.html" data-scroll="sec-maxwell">Maxwellin yhtälöt</a></li>
+</ul>
+</li>
+<li class="link"><a href="ratks.html" data-scroll="ratks"><span class="codenumber">8</span> <span class="title">Malliratkaisut</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Tuotettu PreTeXtillä</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="sec-menetelmat-integraali"><h2 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">6.3</span> <span class="title">Integraali</span>
+</h2>
+<section class="introduction" id="introduction-47"><p id="p-617">Kuten derivaatan kohdalla, myös integraaleissa esiintyy monennimisiä funktioita ja integrointimuuttujan kanssa on oltava tarkkana. Ensimmäisessä tehtävässä on esimerkki, jossa energia riippuu lämpökapasiteetista \(E=E(c)\) ja lämpökapasiteetti edelleen lämpötilasta \(c=c(T)\text{.}\) Kysymyksessä integroidaan energiaa lämpötilan yli, joten on oltava huolellinen, ettei lämpökapasiteettia \(c\) tule pidettyä vakiona. Vastaaviin tilanteisiin törmää fysiikassa usein.</p></section><section class="exercises" id="exercises-integraali"><h3 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-147"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-618">Useiden kiinteiden aineiden ominaislämpökapasiteetti \(c\) on lähes vakio suurella lämpötila-alueella. Sen sijaan timantin ominaislämpökapasiteettia 200 K-600 K lämpötiloilla kuvaa hyvin funktio \(c(T) = 2,8T - 350 \si{\joule/\kilogram\kelvin}\text{.}\) Aineen termisen energian muutosta lämpötilan muuttuessa kuvaa yhtälö</p>
+<div class="displaymath">
+\begin{equation*}
+\Delta E_t = Mc\Delta T,
+\end{equation*}
+</div>
+<p class="continuation">jossa \(M\) on tutkittavan aineen massa ja \(T\) lämpötila kelvineinä. Timantin tapauksessa termisen energian muutos täytyy laskea integroimalla</p>
+<div class="displaymath">
+\begin{equation*}
+\Delta E
+= \int \dee E
+= \int Mc(T)\dee T.
+\end{equation*}
+</div>
+<p class="continuation">Kuinka paljon energiaa tarvitaan 3,5:n karaatin timantin lämmittämiseen \(-50\celsius\text{:}\)sta \(250\celsius\text{:}\)een? Jalokivitimanteilla 1 karaatti = 200 mg.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-149" id="solution-149"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-149"><div class="solution solution-like">
+<p id="p-619">Muutetaan lämpötilat kelvineiksi: \(\SI{-50}{\celsius}=\SI{223}{\kelvin}\) ja \(\SI{250}{\celsius} = \SI{523}{\kelvin}\text{.}\) Muutetaan massa kilogrammoiksi \(3,5\text{ ka} = \SI{700}{\milli\gram} = \SI{7\eminus4}{\kilogram}\) Lasketaan sitten määrätty integraali alkulämpötilasta loppulämpötilaan (selkeyttämiseksi merkitään yksiköt vasta lopuksi)</p>
+<div class="displaymath">
+\begin{align*}
+\int_{223}^{523} Mc(T)\dee T
+\amp= M \int_{223}^{523} 2,8T - 350 \dee T \\
+\amp= M \Bigg|_{223}^{523} 2,8 \cdot \puoli T^2 - 350 T \\
+\amp= M \Bigg|_{223}^{523} (1,4 T^2 - 350 T) \\
+\amp= M (( 1,4\cdot523^2-350\cdot523 ) - ( 1,4\cdot223^2-350\cdot223 ) ) \\
+\amp= 208320M \\
+\amp= 208320\cdot 7\eminus4 \\
+\amp= \SI{145,824}{\joule} \approx \SI{146}{\joule}
+\end{align*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-148"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-620">Ympäristön kaasuun tekemä työ ideaalikaasuprosessissa voidaan laskea integroimalla paineen funktiota tilavuuden yli</p>
+<div class="displaymath">
+\begin{equation*}
+W = -\int_{V_1}^{V_2} p(V) \dee V.
+\end{equation*}
+</div>
+<p class="continuation">Ideaalikaasuprosessia kuvaa yhtälö \(p=cV^{1/2}\text{.}\) Mikä on kaasuun tehty työ, kun kaasun tilavuus muuttuu tilavuudesta \(V_1\) tilavuuteen \(V_2\text{?}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-150" id="solution-150"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-150"><div class="solution solution-like">
+<p id="p-621">Sijoitetaan integraaliin annettu paineen funktio ja lasketaan integraali</p>
+<div class="displaymath">
+\begin{align*}
+W \amp= -\int_{V_1}^{V_2} p(V) \dee V
+= -\int_{V_1}^{V_2} c V^{1/2} \dee V \\
+\amp= -c \Bigg|_{V_1}^{V_2} \frac{2}{3} V^{3/2} \\
+\amp= -c \frac{2}{3} (V_2^{3/2} - V_1^{3/2}) \\
+\amp= \frac{2c}{3} (V_1^{3/2} - V_2^{3/2})
+\end{align*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-149"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-622">Katso video <a class="external" href="https://www.youtube.com/watch?v=jLBZ1tgcfM4" target="_blank">Varausjakauman sähkökenttä</a>.</p></article><article class="exercise exercise-like" id="exercise-150"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-623">Ohuessa tangossa on tasaisesti levittynyt varaus \(Q\text{.}\) Tangon pituus on \(L\text{.}\) Tanko taivutetaan puoliympyrän muotoon. Mikä on sähkökenttä puoliympyrän keskipisteessä? Toimitaan kuten videon esimerkeissä ja muodostetaan integraali miettimällä aluksi varausten summaa. Tarkastellaan lyhyttä \(\Delta s\text{:}\)n pituista pätkää tangosta (ks. alla oleva kuva). Jokaisen tällaisen pätkän varaus on \(\Delta q\text{.}\) Koska jokaista pätkää vastaa samassa kulmassa oleva pätkä \(x\)-akselin toisella puolella, \(y\)-akselin suuntaiset sähkökentän komponentit kumoutuvat. Nyt saadaan kokonaissähkökentäksi</p>
+<div class="displaymath">
+\begin{equation*}
+E_x = \sum_i (E_i)_x = \sum_i E_i\cos\theta_i \ja E_y = 0.
+\end{equation*}
+</div>
+<p class="continuation">Kaikki varaukset ovat etäisyydellä \(R\) keskipisteestä. Tällöin yhden pätkän muodostama kenttä on</p>
+<div class="displaymath">
+\begin{equation*}
+E_i = \frac{\Delta q}{4 \pi \epsilon_0 r_i^2}
+= \frac{\Delta q}{4 \pi \epsilon_0 R^2}.
+\end{equation*}
+</div>
+<p class="continuation">Tangon varausjakauma on tasainen, joten \(\Delta s\text{:}\)n pituisen pätkän varaus \(\Delta q\) on</p>
+<div class="displaymath">
+\begin{equation*}
+\Delta q = \lambda \Delta s = \frac{Q}{L} \Delta s.
+\end{equation*}
+</div>
+<p class="continuation">Siispä kokonaiskenttä keskipisteessä on</p>
+<div class="displaymath">
+\begin{equation*}
+E
+= \sum_i \frac{(Q/L)\Delta s}{4 \pi \epsilon_0 R^2} \cos\theta_i. 
+\end{equation*}
+</div>
+<p class="continuation">Kirjoita nyt \(\Delta s\) kulman \(\Delta\theta\) ja säteen \(R\) avulla ja muodosta summasta integraali kulman \(\theta\) yli. Laske sitten tangon muodostama kokonaissähkökenttä keskipisteessä.</p>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/integraali1.svg" role="img" class="contained" alt=""></div>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-151" id="solution-151"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-151"><div class="solution solution-like">
+<p id="p-624">Kaaren pituus kaarta vastaavan kulman (radiaaneina) ja säteen avulla on \(s = \theta R\text{.}\) Siispä \(\Delta s = \Delta \theta R\text{.}\) Sijoitetaan tämä summaan</p>
+<div class="displaymath">
+\begin{equation*}
+E
+= \sum_i \frac{(Q/L) R}{4 \pi \epsilon_0 R^2} \cos\theta_i \Delta \theta
+\end{equation*}
+</div>
+<p class="continuation">Summasta saadaan integraali, kun kulman muutos viedään infinitesimaalisen pieneksi</p>
+<div class="displaymath">
+\begin{gather*}
+E = \int \frac{(Q/L) R}{4 \pi \epsilon_0 R^2} \cos\theta \dee \theta.
+\end{gather*}
+</div>
+<p class="continuation">Integraalin rajat muodostuvat puoliympyrän kattavista kulmista. Sähkökentän suunta voidaan perustella tilanteen symmetrian avulla. Nyt tehtävänannon kuvan mukaisesti kulma \(\theta\) on välillä \([-\pi/2,\pi/2]\text{,}\) eli integraali on</p>
+<div class="displaymath">
+\begin{align*}
+E \amp= \int_{-\pi/2}^{\pi/2} \frac{(Q/L) }{4 \pi \epsilon_0 R} \cos\theta \dee \theta \\
+\amp= \frac{(Q/L)}{4 \pi \epsilon_0 } \int_{-\pi/2}^{\pi/2} \cos\theta \dee \theta \\
+\amp= \frac{(Q/L)}{4 \pi \epsilon_0 R} \Bigg|_{-\pi/2}^{\pi/2} \sin\theta \\
+\amp= \frac{(Q/L)}{4 \pi \epsilon_0 R}
+(\sin(\pi/2) - \sin(-\pi/2)) \\
+\amp= \frac{2Q}{4 \pi \epsilon_0 RL}
+\end{align*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-151"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-625">Katso video <a class="external" href="https://www.youtube.com/watch?v=fmLv9MN8VWo" target="_blank">Liikkuvan varauksen synnyttämä magneettikenttä</a>.</p></article></section><p id="p-626">Lue <a class="external" href="https://www.jyu.fi/science/fi/fysiikka/opiskelu/suomen-fysiikan-olympiavalmennus/valmennusmateriaalia/fmm.pdf" target="_blank">valmennusmateriaalista</a> osio viivaintegraali ja tee seuraava tehtävä.</p>
+<article class="exercise exercise-like" id="exercise-152"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-152"><h6 class="heading">
+<span class="type">Harjoitus</span><span class="space"> </span><span class="codenumber">6.3.1</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-152"><article class="exercise exercise-like"><div class="introduction" id="introduction-48"><p id="p-627">Voimakenttää \(xy\)-tasossa kuvaa funktio \(\vec{F}(x,y) = y^2 \hat{i} + 2xy\hat{j}\text{.}\) Laske viivaintegraali \(\int_{\mathcal{C}} \vec{F} \cdot \dee \vec{r}\text{,}\) eli voiman tekemä työ, pisteestä \((0,0)\) pisteeseen \((1,1)\text{,}\) kun</p></div>
+<article class="task exercise-like" id="task-7"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-628">\(\mathcal{C}\) on suora \(y=x\text{.}\) Suoran parametrisaatio on \(\vec{r}(t) = t\hat{i} + t\hat{j}\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-152" id="solution-152"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-152"><div class="solution solution-like">
+<p id="p-629">Tehtävänannon mukaiset polut ovat</p>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/integraali2.svg" role="img" class="contained" alt=""></div>
+<p id="p-630">Suoran parametrisaatio on \(\vec{r} = t\hat{i} + t\hat{j}\text{,}\) \(0\leq t \leq 1\text{.}\) Toisaalta suoralla \(y=x\text{,}\) joten \(\vec{F} = t^2\hat{i} + 2t^2\hat{j}\text{.}\) Siispä \(\dee\vec{r} = \dee t \hat{i} + \dee t \hat{j}\) ja integraalissa oleva pistetulo on</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{F} \cdot \dee \vec{r}
+= (t^2\hat{i} + 2t^2\hat{j}) \cdot (\hat{i} + \hat{j}) \dee t
+= 3t^2 \dee t.
+\end{equation*}
+</div>
+<p class="continuation">Siispä integraalista tulee</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{\mathcal{C}} \vec{F} \cdot \dee \vec{r}
+= \int_{0}^{1} 3t^2 \dee t
+= \Bigg|_0^1 t^3
+= 1.
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="task exercise-like" id="task-8"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-631">\(\mathcal{C}\) on paraabeli \(y=x^2\text{.}\) Paraabelin parametrisaatio on \(\vec{r}(t) = t\hat{i} + t^2\hat{j}\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-153" id="solution-153"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-153"><div class="solution solution-like">
+<p id="p-632">Paraabelin voi parametrisoida \(\vec{r} = t\hat{i} + t^2\hat{j}\text{,}\) \(0\leq t \leq 1\text{,}\) joten \(\dee\vec{r} = \dee t \hat{i} + 2t\dee t \hat{j}\text{.}\) Paraabelillä \(y=x^2\text{,}\) joten \(\vec{F} = t^4\hat{i} + 2t^3\hat{j}\text{.}\) Siispä pistetulo on</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{F} \cdot \dee \vec{r}
+= (t^4\hat{i} + 2t^3\hat{j}) \cdot (\hat{i} + 2t\hat{j}) \dee t
+= 5t^4 \dee t.
+\end{equation*}
+</div>
+<p class="continuation">Integraalista saadaan</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{\mathcal{C}} \vec{F} \cdot \dee \vec{r}
+= \int_{0}^{1} 5t^4 \dee t
+= \Bigg|_0^1 t^5
+= 1.
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="task exercise-like" id="task-9"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-633">\(\mathcal{C}\) on suora pisteestä \((0,0)\) pisteeseen \((0,1)\text{,}\) josta edelleen suora pisteeseen \((1,1)\text{.}\) Nämä suorat voi parametrisoida erikseen siten, että \(\vec{r}_1(t) = t\hat{j}\) ja \(\vec{r}_2(t) = t\hat{i} + \hat{j}\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-154" id="solution-154"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-154"><div class="solution solution-like">
+<p id="p-634">Kolmas polku koostuu kahdesta osasta, jotka voi parametrisoida erikseen. Ensimmäisellä osalla \(x=0\) ja \(0 \leq y \leq 1\text{.}\) Toisella osalla \(y=1\) ja \(0 \leq x \leq 1\text{.}\) Siispä \(\vec{r}_1 = t\hat{j}\text{,}\) \(0\leq t \leq 1\) ja \(\vec{r}_2 = t\hat{i} + \hat{j}\text{,}\) \(0\leq t \leq 1\text{.}\) Nyt \(\dee\vec{r}_1 = \dee t\hat{j} \) ja \(\dee\vec{r}_2=\dee t \hat{i}\)</p>
+<p id="p-635">Vastaavasti ensimmäisellä osalla \(\vec{F}_1 = t^2\hat{i}\) ja toisella osalla \(\vec{F}_2 = \hat{i} + 2t\hat{j}\text{.}\) Pistetulot ovat</p>
+<div class="displaymath">
+\begin{gather*}
+\vec{F}_1 \cdot \dee \vec{r}_1
+= (t^2\hat{i}) \cdot (\hat{j})\dee t
+= 0 \\
+\vec{F}_2 \cdot \dee \vec{r}_2
+= (\hat{i} + 2t\hat{j}) \cdot (\dee t \hat{i})
+= \dee t
+\end{gather*}
+</div>
+<p id="p-636">Integraali saadaan polkujen integraalien summasta</p>
+<div class="displaymath">
+\begin{gather*}
+\int_{\mathcal{C}} \vec{F} \cdot \dee \vec{r}
+= \int_{\mathcal{C}_1} \vec{F}_1 \cdot \dee \vec{r}_1
++ \int_{\mathcal{C}_2} \vec{F}_2 \cdot \dee \vec{r}_2
+= \int_{0}^{1} 0 \dee t + \int_{0}^{1} \dee t
+= 1.
+\end{gather*}
+</div>
+</div></div>
+</div></article></article></div>
+<p id="p-637">Viivaintegraalin erikoistapaukset ovat, kun pistetulo on 0 tai 1 koko polulla. Kun voimavektori ja polku ovat samansuuntaiset koko polun yli, saadaan työksi \(W=Fs\text{.}\) Toisaalta aina, kun polku on kohtisuorassa voimaa vasten, voima ei tee työtä. Nämä erikoistapaukset ovat erityisen hyödyllisiä, kun tutkitaan sähkö- ja magneettikenttiä. Tästä aiheesta lisää Maxwellin yhtälöitä käsittelevässä materiaalissa.</p></section></div></main>
+</div>
+</body>
+</html>

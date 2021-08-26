@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-08-26T12:52:11+03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="fi-FI">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>LuFy Malliratkaisut</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Aja (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Siirry pääasiaan</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\puoli}{\frac{1}{2}}
+\newcommand{\second}{\mathrm{s}}
+\newcommand{\hour}{\mathrm{h}}
+\newcommand{\meter}{\mathrm{m}}
+\newcommand{\henry}{\mathrm{H}}
+\newcommand{\ohm}{\Omega}
+\newcommand{\ampere}{\mathrm{A}}
+\newcommand{\farad}{\mathrm{F}}
+\newcommand{\volt}{\mathrm{V}}
+\newcommand{\hertz}{\mathrm{Hz}}
+\newcommand{\tesla}{\mathrm{T}}
+\newcommand{\coulomb}{\mathrm{C}}
+\newcommand{\weber}{\mathrm{Wb}}
+\newcommand{\watt}{\mathrm{W}}
+\newcommand{\radian}{\mathrm{rad}}
+\newcommand{\newton}{\mathrm{N}}
+\newcommand{\joule}{\mathrm{J}}
+\newcommand{\gram}{\mathrm{g}}
+\newcommand{\kilogram}{\mathrm{kg}}
+\newcommand{\kelvin}{\mathrm{K}}
+\newcommand{\celsius}{^\circ\mathrm{C}}
+\newcommand{\pico}{\mathrm{p}}
+\newcommand{\nano}{\mathrm{n}}
+\newcommand{\micro}{\mu}
+\newcommand{\milli}{\mathrm{m}}
+\newcommand{\centi}{\mathrm{c}}
+\newcommand{\kilo}{\mathrm{k}}
+\newcommand{\mega}{\mathrm{M}}
+\newcommand{\dee}{\mathrm{d}}
+\newcommand{\eminus}{\mathrm{\,e\,\text{-}}}
+\newcommand{\eplus}{\mathrm{\,e}}
+\newcommand{\squared}{^2}
+\newcommand{\cubed}{^3}
+\newcommand{\ang}[1]{#1^\circ}
+\newcommand{\doo}{\partial}
+\newcommand{\kertaa}{\cdot}
+\newcommand{\pistetulo}[2]{\vec{#1} \cdot \vec{#2}}
+\newcommand{\ristitulo}[2]{\vec{#1} \times \vec{#2}}
+\newcommand{\sulut}[1]{\left( #1 \right)}
+\newcommand{\ja}{\quad \text{ja} \quad}
+\newcommand{\mps}{\meter/\second}
+\newcommand{\SI}[2]{#1 \mathrm{\, #2}}
+\newcommand{\si}[1]{\mathrm{\, #1}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="fysiikka-materiaaleja.html"><span class="title">Lisämateriaaleja lukion fysiikkaan</span></a></h1>
+<p class="byline">Lasse M. Manninen</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Sisällys</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec-maxwell.html" title="Edellinen">Ed</a><a id="upbutton" class="up-button button toolbar-item" href="fysiikka-materiaaleja.html" title="Ylös">Yl</a><span id="nextbutton" class="next-button button toolbar-item disabled">Seur</span></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Sisällys</button><a class="previous-button toolbar-item button" href="sec-maxwell.html" title="Edellinen">Ed</a><a class="up-button button toolbar-item" href="fysiikka-materiaaleja.html" title="Ylös">Yl</a><span class="next-button button toolbar-item disabled">Seur</span>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Nimiösivut</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Kolofoni</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Tästä materiaalista</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="jaykkakappale.html" data-scroll="jaykkakappale"><span class="codenumber">1</span> <span class="title">Jäykän kappaleen dynamiikkaa</span></a><ul>
+<li><a href="sec-pyorimisliikkeen-vastineita.html" data-scroll="sec-pyorimisliikkeen-vastineita">Pyörimisliikkeen vastineita lineaariselle liikkeelle</a></li>
+<li><a href="sec-tasaisesti-kiihtyva-pyorimisliike.html" data-scroll="sec-tasaisesti-kiihtyva-pyorimisliike">Tasaisesti kiihtyvä pyörimisliike ja hitausmomentti</a></li>
+<li><a href="sec-yleisen-pyorimisliikkeen-kuvaajat.html" data-scroll="sec-yleisen-pyorimisliikkeen-kuvaajat">Yleisen pyörimisliikkeen kuvaajat</a></li>
+<li><a href="sec-pyorimisliikkeen-perusyhtalo.html" data-scroll="sec-pyorimisliikkeen-perusyhtalo">Pyörimisliikkeen perusyhtälö</a></li>
+<li><a href="sec-rotaatioenergia.html" data-scroll="sec-rotaatioenergia">Rotaatioenergia ja sen säilymislaki</a></li>
+<li><a href="sec-pyorimismaara.html" data-scroll="sec-pyorimismaara">Pyörimismäärä ja sen säilyminen</a></li>
+<li><a href="sec-syventavaa.html" data-scroll="sec-syventavaa">Syventävää materiaalia</a></li>
+<li><a href="sec-alun-systeemi.html" data-scroll="sec-alun-systeemi">Palataan alun systeemiin</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="kinematiikkaa.html" data-scroll="kinematiikkaa"><span class="codenumber">2</span> <span class="title">Kinematiikkaa kahdessa ja kolmessa ulottuvuudessa</span></a><ul>
+<li><a href="sec-Kinematiikkaa.html" data-scroll="sec-Kinematiikkaa">Kinematiikkaa</a></li>
+<li><a href="sec-Koordinaatistot.html" data-scroll="sec-Koordinaatistot">Koordinaatistot fysiikassa</a></li>
+<li><a href="sec-suhteellinen-liike.html" data-scroll="sec-suhteellinen-liike">Suhteellinen liike</a></li>
+<li><a href="sec-kinematiikka-kisatehtava.html" data-scroll="sec-kinematiikka-kisatehtava">Palataan alun pulmaan</a></li>
+<li><a href="sec-kin-syventavaa.html" data-scroll="sec-kin-syventavaa">Syventävää materiaalia</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="termodynamiikkaa.html" data-scroll="termodynamiikkaa"><span class="codenumber">3</span> <span class="title">Termodynamiikkaa</span></a><ul>
+<li><a href="sec-IIpaasaanto.html" data-scroll="sec-IIpaasaanto">Termodynamiikan II pääsääntö</a></li>
+<li><a href="sec-lampovoimakoneet.html" data-scroll="sec-lampovoimakoneet">Lämpövoimakoneet</a></li>
+<li><a href="sec-carnot.html" data-scroll="sec-carnot">Carnot'n kiertoprosessi</a></li>
+<li><a href="sec-entropia.html" data-scroll="sec-entropia">Entropia</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="vaihtovirtapiirit.html" data-scroll="vaihtovirtapiirit"><span class="codenumber">4</span> <span class="title">Vaihtovirtapiirit</span></a><ul>
+<li><a href="sec-rlctasa.html" data-scroll="sec-rlctasa">RLC-piiri, tasavirta</a></li>
+<li><a href="sec-ac-perusteet.html" data-scroll="sec-ac-perusteet">AC-piirien perusteita</a></li>
+<li><a href="sec-lrcvaihtovirta.html" data-scroll="sec-lrcvaihtovirta">LRC-vaihtovirtapiirit</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="optiikkaa.html" data-scroll="optiikkaa"><span class="codenumber">5</span> <span class="title">Optiikkaa</span></a><ul>
+<li><a href="subsec-yleista-optiikasta.html" data-scroll="subsec-yleista-optiikasta">Yleistä optiikasta</a></li>
+<li><a href="sec-kuvan-muodostuminen.html" data-scroll="sec-kuvan-muodostuminen">Kuvan muodostuminen</a></li>
+<li><a href="sec-ohuet-linssit.html" data-scroll="sec-ohuet-linssit">Ohuet linssit ja rajapinnat</a></li>
+<li><a href="sec-optiset-laitteet.html" data-scroll="sec-optiset-laitteet">Suurentavat optiset laitteet</a></li>
+<li><a href="sec-optiikka-syventavaa.html" data-scroll="sec-optiikka-syventavaa">Syventävää materiaalia</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="mat-menetelmat.html" data-scroll="mat-menetelmat"><span class="codenumber">6</span> <span class="title">Vektorit, derivaatta ja integraali fysiikassa</span></a><ul>
+<li><a href="sec-menetelmat-vektorit.html" data-scroll="sec-menetelmat-vektorit">Vektorit</a></li>
+<li><a href="sec-menetelmat-derivaatta.html" data-scroll="sec-menetelmat-derivaatta">Derivaatta</a></li>
+<li><a href="sec-menetelmat-integraali.html" data-scroll="sec-menetelmat-integraali">Integraali</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="maxwell.html" data-scroll="maxwell"><span class="codenumber">7</span> <span class="title">Maxwellin yhtälöt</span></a><ul>
+<li><a href="sec-maxwell-motivointia.html" data-scroll="sec-maxwell-motivointia">Motivointia</a></li>
+<li><a href="sec-kenttien-maarittaminen.html" data-scroll="sec-kenttien-maarittaminen">Sähkö- ja magneettikenttien määrittäminen</a></li>
+<li><a href="sec-maxwell.html" data-scroll="sec-maxwell">Maxwellin yhtälöt</a></li>
+</ul>
+</li>
+<li class="link active"><a href="ratks.html" data-scroll="ratks"><span class="codenumber">8</span> <span class="title">Malliratkaisut</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Tuotettu PreTeXtillä</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="solutions" id="ratks"><h2 class="heading hide-type">
+<span class="type">Ratkaisut</span> <span class="codenumber">8</span> <span class="title">Malliratkaisut</span>
+</h2>
+<section class="chapter"><h3 class="heading">
+<span class="type">Luku</span> <span class="codenumber">1</span> <span class="title">Jäykän kappaleen dynamiikkaa</span>
+</h3></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">1.2</span> <span class="title">Tasaisesti kiihtyvä pyörimisliike ja hitausmomentti</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">1.2.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-1-hidden.html" title="Ratkaisu 1.2.1.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.2.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-2-hidden.html" title="Ratkaisu 1.2.2.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.2.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-3-hidden.html" title="Ratkaisu 1.2.3.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.2.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-4-hidden.html" title="Ratkaisu 1.2.4.1"><span class="type">Ratkaisu</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">1.3</span> <span class="title">Yleisen pyörimisliikkeen kuvaajat</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">1.3.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-5-hidden.html" title="Ratkaisu 1.3.1.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.3.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-6-hidden.html" title="Ratkaisu 1.3.2.1"><span class="type">Ratkaisu</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">1.4</span> <span class="title">Pyörimisliikkeen perusyhtälö</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">1.4.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-7-hidden.html" title="Ratkaisu 1.4.1.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.4.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-8-hidden.html" title="Ratkaisu 1.4.2.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.4.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-9-hidden.html" title="Ratkaisu 1.4.3.1"><span class="type">Ratkaisu</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">1.5</span> <span class="title">Rotaatioenergia ja sen säilymislaki</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">1.5.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-10-hidden.html" title="Ratkaisu 1.5.1.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.5.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-11-hidden.html" title="Ratkaisu 1.5.2.1"><span class="type">Ratkaisu</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">1.6</span> <span class="title">Pyörimismäärä ja sen säilyminen</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">1.6.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-12-hidden.html" title="Ratkaisu 1.6.1.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.6.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-13-hidden.html" title="Ratkaisu 1.6.2.1"><span class="type">Ratkaisu</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">1.7</span> <span class="title">Syventävää materiaalia</span>
+</h4></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">1.7.1</span> <span class="title">Johdatus jäykkien kappaleiden tarkasteluun</span>
+</h5></section><section class="exercises"><h6 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">1.7.1.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-14-hidden.html" title="Ratkaisu 1.7.1.1.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.7.1.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-15-hidden.html" title="Ratkaisu 1.7.1.2.1"><span class="type">Ratkaisu</span></a></div></article></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">1.7.2</span> <span class="title">Pyörimisliikkeen energia ja hitausmomentti</span>
+</h5></section><section class="subsubsection"><h6 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">1.7.2.1</span> <span class="title">Moniulotteista integrointia</span>
+</h6></section><section class="exercises"><h6 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">1.7.2.1.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-16-hidden.html" title="Ratkaisu 1.7.2.1.1.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.7.2.1.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-17-hidden.html" title="Ratkaisu 1.7.2.1.2.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.7.2.1.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-18-hidden.html" title="Ratkaisu 1.7.2.1.3.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.7.2.1.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-19-hidden.html" title="Ratkaisu 1.7.2.1.4.1"><span class="type">Ratkaisu</span></a></div></article></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">1.7.3</span> <span class="title">Jäykän kappaleen vieriminen</span>
+</h5></section><section class="exercises"><h6 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">1.7.3.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-20-hidden.html" title="Ratkaisu 1.7.3.1.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.7.3.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-21-hidden.html" title="Ratkaisu 1.7.3.2.1"><span class="type">Ratkaisu</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">1.8</span> <span class="title">Palataan alun systeemiin</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h5>
+<div class="exercisegroup"><div class="exercisegroup-exercises">
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">1.8.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-22-hidden.html" title="Ratkaisu 1.8.1.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.8.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-23-hidden.html" title="Ratkaisu 1.8.2.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.8.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-24-hidden.html" title="Ratkaisu 1.8.3.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.8.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-25-hidden.html" title="Ratkaisu 1.8.4.1"><span class="type">Ratkaisu</span></a></div></article>
+</div></div>
+<div class="exercisegroup"><div class="exercisegroup-exercises">
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">1.8.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-26-hidden.html" title="Ratkaisu 1.8.5.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.8.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-27-hidden.html" title="Ratkaisu 1.8.6.1"><span class="type">Ratkaisu</span></a></div></article>
+</div></div>
+<div class="exercisegroup"><div class="exercisegroup-exercises">
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">1.8.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-28-hidden.html" title="Ratkaisu 1.8.7.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.8.8<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-29-hidden.html" title="Ratkaisu 1.8.8.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.8.9<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-30-hidden.html" title="Ratkaisu 1.8.9.1"><span class="type">Ratkaisu</span></a></div></article>
+</div></div>
+<div class="exercisegroup"><div class="exercisegroup-exercises">
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">1.8.10<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-31-hidden.html" title="Ratkaisu 1.8.10.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.8.11<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-32-hidden.html" title="Ratkaisu 1.8.11.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.8.12<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-33-hidden.html" title="Ratkaisu 1.8.12.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.8.13<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-34-hidden.html" title="Ratkaisu 1.8.13.1"><span class="type">Ratkaisu</span></a></div></article>
+</div></div>
+<div class="exercisegroup"><div class="exercisegroup-exercises">
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">1.8.14<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-35-hidden.html" title="Ratkaisu 1.8.14.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.8.15<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-36-hidden.html" title="Ratkaisu 1.8.15.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.8.16<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-37-hidden.html" title="Ratkaisu 1.8.16.1"><span class="type">Ratkaisu</span></a></div></article>
+</div></div>
+<div class="exercisegroup"><div class="exercisegroup-exercises">
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">1.8.17<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-38-hidden.html" title="Ratkaisu 1.8.17.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.8.18<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-39-hidden.html" title="Ratkaisu 1.8.18.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.8.19<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-40-hidden.html" title="Ratkaisu 1.8.19.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.8.20<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-41-hidden.html" title="Ratkaisu 1.8.20.1"><span class="type">Ratkaisu</span></a></div></article>
+</div></div></section><section class="chapter"><h3 class="heading">
+<span class="type">Luku</span> <span class="codenumber">2</span> <span class="title">Kinematiikkaa kahdessa ja kolmessa ulottuvuudessa</span>
+</h3></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">2.1</span> <span class="title">Kinematiikkaa</span>
+</h4></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">2.1.1</span> <span class="title">Yksiulotteista kinematiikkaa</span>
+</h5></section><section class="exercises"><h6 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">2.1.1.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-42-hidden.html" title="Ratkaisu 2.1.1.1.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.1.1.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-43-hidden.html" title="Ratkaisu 2.1.1.2.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.1.1.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-44-hidden.html" title="Ratkaisu 2.1.1.3.1"><span class="type">Ratkaisu</span></a></div></article></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">2.1.2</span> <span class="title">Kinematiikkaa kahdessa ja kolmessa ulottuvuudessa</span>
+</h5></section><section class="exercises"><h6 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">2.1.2.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-45-hidden.html" title="Ratkaisu 2.1.2.1.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.1.2.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-46-hidden.html" title="Ratkaisu 2.1.2.2.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.1.2.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-47-hidden.html" title="Ratkaisu 2.1.2.3.1"><span class="type">Ratkaisu</span></a></div></article></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">2.1.3</span> <span class="title">Heittoliike</span>
+</h5></section><section class="exercises"><h6 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">2.1.3.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-48-hidden.html" title="Ratkaisu 2.1.3.1.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.1.3.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-49-hidden.html" title="Ratkaisu 2.1.3.2.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.1.3.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-50-hidden.html" title="Ratkaisu 2.1.3.3.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.1.3.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-51-hidden.html" title="Ratkaisu 2.1.3.4.1"><span class="type">Ratkaisu</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">2.2</span> <span class="title">Koordinaatistot fysiikassa</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">2.2.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-52-hidden.html" title="Ratkaisu 2.2.1.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.2.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-53-hidden.html" title="Ratkaisu 2.2.2.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.2.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-54-hidden.html" title="Ratkaisu 2.2.3.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.2.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-55-hidden.html" title="Ratkaisu 2.2.4.1"><span class="type">Ratkaisu</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">2.3</span> <span class="title">Suhteellinen liike</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">2.3.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-56-hidden.html" title="Ratkaisu 2.3.1.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.3.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-57-hidden.html" title="Ratkaisu 2.3.2.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.3.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-58-hidden.html" title="Ratkaisu 2.3.3.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.3.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-59-hidden.html" title="Ratkaisu 2.3.4.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.3.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-60-hidden.html" title="Ratkaisu 2.3.5.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.3.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-61-hidden.html" title="Ratkaisu 2.3.6.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.3.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-62-hidden.html" title="Ratkaisu 2.3.7.1"><span class="type">Ratkaisu</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">2.4</span> <span class="title">Palataan alun pulmaan</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">2.4.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-63-hidden.html" title="Ratkaisu 2.4.1.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.4.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-64-hidden.html" title="Ratkaisu 2.4.2.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.4.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-65-hidden.html" title="Ratkaisu 2.4.3.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.4.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-66-hidden.html" title="Ratkaisu 2.4.4.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.4.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-67-hidden.html" title="Ratkaisu 2.4.5.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.4.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-68-hidden.html" title="Ratkaisu 2.4.6.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.4.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-69-hidden.html" title="Ratkaisu 2.4.7.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.4.8<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-70-hidden.html" title="Ratkaisu 2.4.8.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.4.9<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-71-hidden.html" title="Ratkaisu 2.4.9.1"><span class="type">Ratkaisu</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">2.5</span> <span class="title">Syventävää materiaalia</span>
+</h4></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">2.5.2</span> <span class="title">Haastavia tehtäviä</span>
+</h5></section><section class="exercises"><h6 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">2.5.2.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-72-hidden.html" title="Ratkaisu 2.5.2.1.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.5.2.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-73-hidden.html" title="Ratkaisu 2.5.2.2.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.5.2.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-74-hidden.html" title="Ratkaisu 2.5.2.3.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.5.2.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-75-hidden.html" title="Ratkaisu 2.5.2.4.1"><span class="type">Ratkaisu</span></a></div></article></section><section class="chapter"><h3 class="heading">
+<span class="type">Luku</span> <span class="codenumber">3</span> <span class="title">Termodynamiikkaa</span>
+</h3></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">3.1</span> <span class="title">Termodynamiikan II pääsääntö</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">3.1.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-76-hidden.html" title="Ratkaisu 3.1.1.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.1.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-77-hidden.html" title="Ratkaisu 3.1.2.1"><span class="type">Ratkaisu</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">3.2</span> <span class="title">Lämpövoimakoneet</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">3.2.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-78-hidden.html" title="Ratkaisu 3.2.1.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.2.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-79-hidden.html" title="Ratkaisu 3.2.2.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.2.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-80-hidden.html" title="Ratkaisu 3.2.3.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.2.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-81-hidden.html" title="Ratkaisu 3.2.4.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.2.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-82-hidden.html" title="Ratkaisu 3.2.5.1"><span class="type">Ratkaisu</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">3.3</span> <span class="title">Carnot'n kiertoprosessi</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">3.3.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-83-hidden.html" title="Ratkaisu 3.3.1.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.3.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-84-hidden.html" title="Ratkaisu 3.3.2.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.3.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-85-hidden.html" title="Ratkaisu 3.3.3.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.3.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-86-hidden.html" title="Ratkaisu 3.3.4.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.3.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-87-hidden.html" title="Ratkaisu 3.3.5.1"><span class="type">Ratkaisu</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">3.4</span> <span class="title">Entropia</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">3.4.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-88-hidden.html" title="Ratkaisu 3.4.1.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.4.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-89-hidden.html" title="Ratkaisu 3.4.2.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.4.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-90-hidden.html" title="Ratkaisu 3.4.3.1"><span class="type">Ratkaisu</span></a></div></article></section><section class="chapter"><h3 class="heading">
+<span class="type">Luku</span> <span class="codenumber">4</span> <span class="title">Vaihtovirtapiirit</span>
+</h3></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">4.1</span> <span class="title">RLC-piiri, tasavirta</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">4.1.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-91-hidden.html" title="Ratkaisu 4.1.1.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.1.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-92-hidden.html" title="Ratkaisu 4.1.2.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.1.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-93-hidden.html" title="Ratkaisu 4.1.3.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.1.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-94-hidden.html" title="Ratkaisu 4.1.4.1"><span class="type">Ratkaisu</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">4.2</span> <span class="title">AC-piirien perusteita</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">4.2.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-95-hidden.html" title="Ratkaisu 4.2.1.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.2.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-96-hidden.html" title="Ratkaisu 4.2.2.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.2.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-97-hidden.html" title="Ratkaisu 4.2.3.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.2.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-98-hidden.html" title="Ratkaisu 4.2.4.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.2.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-99-hidden.html" title="Ratkaisu 4.2.5.1"><span class="type">Ratkaisu</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">4.3</span> <span class="title">LRC-vaihtovirtapiirit</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">4.3.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-100-hidden.html" title="Ratkaisu 4.3.1.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.3.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-101-hidden.html" title="Ratkaisu 4.3.2.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.3.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-102-hidden.html" title="Ratkaisu 4.3.3.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.3.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-103-hidden.html" title="Ratkaisu 4.3.4.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.3.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-104-hidden.html" title="Ratkaisu 4.3.5.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.3.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-105-hidden.html" title="Ratkaisu 4.3.6.1"><span class="type">Ratkaisu</span></a></div></article></section><section class="chapter"><h3 class="heading">
+<span class="type">Luku</span> <span class="codenumber">5</span> <span class="title">Optiikkaa</span>
+</h3></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">5.2</span> <span class="title">Kuvan muodostuminen</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber">5.2.1</span> <span class="title">Harjoitustehtävät</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">5.2.1.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-106-hidden.html" title="Ratkaisu 5.2.1.1.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.2.1.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-107-hidden.html" title="Ratkaisu 5.2.1.2.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.2.1.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-108-hidden.html" title="Ratkaisu 5.2.1.3.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.2.1.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-109-hidden.html" title="Ratkaisu 5.2.1.4.1"><span class="type">Ratkaisu</span></a></div></article></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">5.2.2</span> <span class="title">Kaarevat peilit</span>
+</h5></section><section class="exercises"><h6 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">5.2.2.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-110-hidden.html" title="Ratkaisu 5.2.2.1.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.2.2.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-111-hidden.html" title="Ratkaisu 5.2.2.2.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.2.2.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-112-hidden.html" title="Ratkaisu 5.2.2.3.1"><span class="type">Ratkaisu</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">5.3</span> <span class="title">Ohuet linssit ja rajapinnat</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">5.3.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-113-hidden.html" title="Ratkaisu 5.3.1.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.3.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-114-hidden.html" title="Ratkaisu 5.3.2.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.3.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-115-hidden.html" title="Ratkaisu 5.3.3.1"><span class="type">Ratkaisu</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">5.4</span> <span class="title">Suurentavat optiset laitteet</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber">5.4.1</span> <span class="title">Harjoitustehtävät</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">5.4.1.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-116-hidden.html" title="Ratkaisu 5.4.1.1.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.4.1.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-117-hidden.html" title="Ratkaisu 5.4.1.2.1"><span class="type">Ratkaisu</span></a></div></article></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">5.4.2</span> <span class="title">Pallopeilitehtävä</span>
+</h5></section><section class="exercises"><h6 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">5.4.2.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-118-hidden.html" title="Ratkaisu 5.4.2.1.1"><span class="type">Ratkaisu</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">5.5</span> <span class="title">Syventävää materiaalia</span>
+</h4></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">5.5.1</span> <span class="title">Kameran optiikkaa</span>
+</h5></section><section class="exercises"><h6 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">5.5.1.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-119-hidden.html" title="Ratkaisu 5.5.1.1.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.5.1.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-120-hidden.html" title="Ratkaisu 5.5.1.2.1"><span class="type">Ratkaisu</span></a></div></article></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">5.5.3</span> <span class="title">Haastavia tehtäviä</span>
+</h5></section><section class="exercises"><h6 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">5.5.3.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-121-hidden.html" title="Ratkaisu 5.5.3.1.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.5.3.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-122-hidden.html" title="Ratkaisu 5.5.3.2.1"><span class="type">Ratkaisu</span></a></div></article></section><section class="chapter"><h3 class="heading">
+<span class="type">Luku</span> <span class="codenumber">6</span> <span class="title">Vektorit, derivaatta ja integraali fysiikassa</span>
+</h3></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">6.1</span> <span class="title">Vektorit</span>
+</h4></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">6.1.1</span> <span class="title">Komponentteihin jakaminen</span>
+</h5></section><section class="exercises"><h6 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">6.1.1.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-123-hidden.html" title="Ratkaisu 6.1.1.1.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.1.1.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-124-hidden.html" title="Ratkaisu 6.1.1.2.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.1.1.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-125-hidden.html" title="Ratkaisu 6.1.1.3.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.1.1.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-126-hidden.html" title="Ratkaisu 6.1.1.4.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.1.1.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-127-hidden.html" title="Ratkaisu 6.1.1.5.1"><span class="type">Ratkaisu</span></a></div></article></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">6.1.2</span> <span class="title">Pistetulo</span>
+</h5></section><section class="exercises"><h6 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h6>
+<div class="exercisegroup"><div class="exercisegroup-exercises">
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">6.1.2.1<span class="period">.</span></span></h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-128-hidden.html" title="Ratkaisu 6.1.2.1.a.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-129-hidden.html" title="Ratkaisu 6.1.2.1.b.1"><span class="type">Ratkaisu</span></a></div></article></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.1.2.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-130-hidden.html" title="Ratkaisu 6.1.2.2.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.1.2.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-131-hidden.html" title="Ratkaisu 6.1.2.3.1"><span class="type">Ratkaisu</span></a></div></article>
+</div></div>
+<div class="exercisegroup"><div class="exercisegroup-exercises">
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">6.1.2.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-132-hidden.html" title="Ratkaisu 6.1.2.4.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.1.2.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-133-hidden.html" title="Ratkaisu 6.1.2.5.1"><span class="type">Ratkaisu</span></a></div></article>
+</div></div></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">6.1.3</span> <span class="title">Ristitulo</span>
+</h5></section><section class="exercises"><h6 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">6.1.3.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-134-hidden.html" title="Ratkaisu 6.1.3.1.1"><span class="type">Ratkaisu</span></a></div></article><div class="exercisegroup"><div class="exercisegroup-exercises"><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.1.3.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-135-hidden.html" title="Ratkaisu 6.1.3.2.1"><span class="type">Ratkaisu</span></a></div></article></div></div>
+<div class="exercisegroup"><div class="exercisegroup-exercises"><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.1.3.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-136-hidden.html" title="Ratkaisu 6.1.3.3.1"><span class="type">Ratkaisu</span></a></div></article></div></div>
+<div class="exercisegroup"><div class="exercisegroup-exercises"><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.1.3.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-137-hidden.html" title="Ratkaisu 6.1.3.4.1"><span class="type">Ratkaisu</span></a></div></article></div></div>
+<div class="exercisegroup"><div class="exercisegroup-exercises"><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.1.3.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-138-hidden.html" title="Ratkaisu 6.1.3.5.1"><span class="type">Ratkaisu</span></a></div></article></div></div></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">6.2</span> <span class="title">Derivaatta</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber">6.2.1</span> <span class="title">Harjoitustehtävät</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">6.2.1.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-139-hidden.html" title="Ratkaisu 6.2.1.1.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.2.1.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-140-hidden.html" title="Ratkaisu 6.2.1.2.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.2.1.3<span class="period">.</span></span></h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-141-hidden.html" title="Ratkaisu 6.2.1.3.a.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-142-hidden.html" title="Ratkaisu 6.2.1.3.b.1"><span class="type">Ratkaisu</span></a></div></article></article><div class="exercisegroup"><div class="exercisegroup-exercises"><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.2.1.4<span class="period">.</span></span></h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-143-hidden.html" title="Ratkaisu 6.2.1.4.a.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-144-hidden.html" title="Ratkaisu 6.2.1.4.b.1"><span class="type">Ratkaisu</span></a></div></article></article></div></div>
+<div class="exercisegroup"><div class="exercisegroup-exercises"><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.2.1.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-145-hidden.html" title="Ratkaisu 6.2.1.5.1"><span class="type">Ratkaisu</span></a></div></article></div></div></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">6.2.2</span> <span class="title">Osittaisderivaatta</span>
+</h5></section><section class="exercises"><h6 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">6.2.2.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-146-hidden.html" title="Ratkaisu 6.2.2.1.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.2.2.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-147-hidden.html" title="Ratkaisu 6.2.2.2.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.2.2.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-148-hidden.html" title="Ratkaisu 6.2.2.3.1"><span class="type">Ratkaisu</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">6.3</span> <span class="title">Integraali</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">6.3.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-149-hidden.html" title="Ratkaisu 6.3.1.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.3.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-150-hidden.html" title="Ratkaisu 6.3.2.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.3.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-151-hidden.html" title="Ratkaisu 6.3.4.1"><span class="type">Ratkaisu</span></a></div></article></section><section class="chapter"><h3 class="heading">
+<span class="type">Luku</span> <span class="codenumber">7</span> <span class="title">Maxwellin yhtälöt</span>
+</h3></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">7.2</span> <span class="title">Sähkö- ja magneettikenttien määrittäminen</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber">7.2.1</span> <span class="title">Harjoitustehtävät</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">7.2.1.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-155-hidden.html" title="Ratkaisu 7.2.1.1.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">7.2.1.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-156-hidden.html" title="Ratkaisu 7.2.1.2.1"><span class="type">Ratkaisu</span></a></div></article></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">7.2.2</span> <span class="title">Gaussin laki</span>
+</h5></section><section class="exercises"><h6 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">7.2.2.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-157-hidden.html" title="Ratkaisu 7.2.2.1.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">7.2.2.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-158-hidden.html" title="Ratkaisu 7.2.2.2.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">7.2.2.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-159-hidden.html" title="Ratkaisu 7.2.2.3.1"><span class="type">Ratkaisu</span></a></div></article></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">7.2.3</span> <span class="title">Ampèren laki</span>
+</h5></section><section class="exercises"><h6 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">7.2.3.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-160-hidden.html" title="Ratkaisu 7.2.3.1.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">7.2.3.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-161-hidden.html" title="Ratkaisu 7.2.3.2.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">7.2.3.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-162-hidden.html" title="Ratkaisu 7.2.3.3.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">7.2.3.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-163-hidden.html" title="Ratkaisu 7.2.3.4.1"><span class="type">Ratkaisu</span></a></div></article></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">7.2.4</span> <span class="title">Faradayn laki (sähkömagneettinen induktio)</span>
+</h5></section><section class="exercises"><h6 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">7.2.4.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-164-hidden.html" title="Ratkaisu 7.2.4.1.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">7.2.4.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-165-hidden.html" title="Ratkaisu 7.2.4.2.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">7.2.4.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-166-hidden.html" title="Ratkaisu 7.2.4.3.1"><span class="type">Ratkaisu</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">7.3</span> <span class="title">Maxwellin yhtälöt</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">7.3.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-167-hidden.html" title="Ratkaisu 7.3.1.1"><span class="type">Ratkaisu</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">7.3.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-168-hidden.html" title="Ratkaisu 7.3.2.1"><span class="type">Ratkaisu</span></a></div></article></section></section></div></main>
+</div>
+</body>
+</html>

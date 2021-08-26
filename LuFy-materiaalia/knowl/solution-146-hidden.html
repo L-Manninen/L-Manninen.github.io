@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fi-FI">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-08-26T12:52:18+03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution solution-like">
+<p>Nyt \(P(V) = RTV^{-1} \exp(-\frac{\alpha}{VRT})\text{.}\) Derivoidaan selkeyden vuoksi osamäärän termit erikseen</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\frac{\doo }{\doo V} V\amp = 1 \\
+\frac{\doo}{\doo V} \exp(-\frac{\alpha}{VRT})
+\amp= \frac{\alpha}{RT V^2} \exp(-\frac{\alpha}{VRT})
+\end{align*}
+</div>
+<p class="continuation">Jälkimmäisessä käytetään yhdistetyn funktion derivointisääntöä. Nyt osamäärän derivointisäännöstä saadaan</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\sulut{\frac{\doo P}{\doo V}}_T
+\amp= RT
+\left(
+\frac{V \frac{\alpha}{RT V^2} \exp(-\frac{\alpha}{VRT}) - \exp(-\frac{\alpha}{VRT}) }{V^2}
+\right) \\
+\amp= RT \exp(-\frac{\alpha}{VRT})
+\left(
+\frac{\alpha}{RTV^3} - \frac{1}{V^2}
+\right) \\
+\amp= \exp(-\frac{\alpha}{VRT})
+\left(
+\frac{\alpha}{V^3} - \frac{RT}{V^2}
+\right) \\
+
+\end{align*}
+</div>
+<p class="continuation">joka voidaan toisaalta kirjoittaa paineen avulla</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\exp(-\frac{\alpha}{VRT})
+\left(
+\frac{\alpha}{V^3} - \frac{RT}{V^2}
+\right) 
+\amp= \frac{V}{RT} P
+\left(
+\frac{\alpha}{V^3} - \frac{RT}{V^2}
+\right) \\
+\amp= \frac{P(\alpha - VRT)}{V^2RT}
+\end{align*}
+</div>
+<p>Käytetään toisen derivaatan laskemisessa hyödyksi relaatiota</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\frac{\doo T}{\doo P}
+= \frac{1}{\frac{\doo P}{\doo T}}.
+\end{equation*}
+</div>
+<p class="continuation">Paine lämpötilan funktiona on \(P(T) = \frac{R}{V} T\exp(-\frac{\alpha}{VRT}) \text{.}\) Käyttämällä tulon derivoimissääntöä saadaan</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\sulut{\frac{\doo P}{\doo T}}_V
+\amp= \frac{R}{V}
+\left(
+\exp(-\frac{\alpha}{VRT}) + T \frac{\alpha}{VRT^2} \exp(-\frac{\alpha}{VRT})
+\right) \\
+\amp= \frac{1}{T} P + \frac{\alpha}{VRT^2} P \\
+\amp= P \left( \frac{1}{T} \frac{\alpha}{VRT^2} \right) \\
+\amp= \frac{P(\alpha + VRT)}{VRT^2}.
+\end{align*}
+</div>
+<p class="continuation">Siispä kysytty derivaatta on edellisen käänteisluku</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\sulut{\frac{\doo T}{\doo P}}_V
+= \frac{VRT^2}{P(\alpha + VRT)}
+\end{equation*}
+</div>
+</div></body>
+</html>

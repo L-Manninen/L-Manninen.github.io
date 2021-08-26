@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-08-26T12:52:09+03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="fi-FI">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>LuFy Syventävää materiaalia</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Aja (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Siirry pääasiaan</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\puoli}{\frac{1}{2}}
+\newcommand{\second}{\mathrm{s}}
+\newcommand{\hour}{\mathrm{h}}
+\newcommand{\meter}{\mathrm{m}}
+\newcommand{\henry}{\mathrm{H}}
+\newcommand{\ohm}{\Omega}
+\newcommand{\ampere}{\mathrm{A}}
+\newcommand{\farad}{\mathrm{F}}
+\newcommand{\volt}{\mathrm{V}}
+\newcommand{\hertz}{\mathrm{Hz}}
+\newcommand{\tesla}{\mathrm{T}}
+\newcommand{\coulomb}{\mathrm{C}}
+\newcommand{\weber}{\mathrm{Wb}}
+\newcommand{\watt}{\mathrm{W}}
+\newcommand{\radian}{\mathrm{rad}}
+\newcommand{\newton}{\mathrm{N}}
+\newcommand{\joule}{\mathrm{J}}
+\newcommand{\gram}{\mathrm{g}}
+\newcommand{\kilogram}{\mathrm{kg}}
+\newcommand{\kelvin}{\mathrm{K}}
+\newcommand{\celsius}{^\circ\mathrm{C}}
+\newcommand{\pico}{\mathrm{p}}
+\newcommand{\nano}{\mathrm{n}}
+\newcommand{\micro}{\mu}
+\newcommand{\milli}{\mathrm{m}}
+\newcommand{\centi}{\mathrm{c}}
+\newcommand{\kilo}{\mathrm{k}}
+\newcommand{\mega}{\mathrm{M}}
+\newcommand{\dee}{\mathrm{d}}
+\newcommand{\eminus}{\mathrm{\,e\,\text{-}}}
+\newcommand{\eplus}{\mathrm{\,e}}
+\newcommand{\squared}{^2}
+\newcommand{\cubed}{^3}
+\newcommand{\ang}[1]{#1^\circ}
+\newcommand{\doo}{\partial}
+\newcommand{\kertaa}{\cdot}
+\newcommand{\pistetulo}[2]{\vec{#1} \cdot \vec{#2}}
+\newcommand{\ristitulo}[2]{\vec{#1} \times \vec{#2}}
+\newcommand{\sulut}[1]{\left( #1 \right)}
+\newcommand{\ja}{\quad \text{ja} \quad}
+\newcommand{\mps}{\meter/\second}
+\newcommand{\SI}[2]{#1 \mathrm{\, #2}}
+\newcommand{\si}[1]{\mathrm{\, #1}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="fysiikka-materiaaleja.html"><span class="title">Lisämateriaaleja lukion fysiikkaan</span></a></h1>
+<p class="byline">Lasse M. Manninen</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Sisällys</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec-pyorimismaara.html" title="Edellinen">Ed</a><a id="upbutton" class="up-button button toolbar-item" href="jaykkakappale.html" title="Ylös">Yl</a><a id="nextbutton" class="next-button button toolbar-item" href="sec-alun-systeemi.html" title="Seuraava">Seur</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Sisällys</button><a class="previous-button toolbar-item button" href="sec-pyorimismaara.html" title="Edellinen">Ed</a><a class="up-button button toolbar-item" href="jaykkakappale.html" title="Ylös">Yl</a><a class="next-button button toolbar-item" href="sec-alun-systeemi.html" title="Seuraava">Seur</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Nimiösivut</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Kolofoni</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Tästä materiaalista</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="jaykkakappale.html" data-scroll="jaykkakappale"><span class="codenumber">1</span> <span class="title">Jäykän kappaleen dynamiikkaa</span></a><ul>
+<li><a href="sec-pyorimisliikkeen-vastineita.html" data-scroll="sec-pyorimisliikkeen-vastineita">Pyörimisliikkeen vastineita lineaariselle liikkeelle</a></li>
+<li><a href="sec-tasaisesti-kiihtyva-pyorimisliike.html" data-scroll="sec-tasaisesti-kiihtyva-pyorimisliike">Tasaisesti kiihtyvä pyörimisliike ja hitausmomentti</a></li>
+<li><a href="sec-yleisen-pyorimisliikkeen-kuvaajat.html" data-scroll="sec-yleisen-pyorimisliikkeen-kuvaajat">Yleisen pyörimisliikkeen kuvaajat</a></li>
+<li><a href="sec-pyorimisliikkeen-perusyhtalo.html" data-scroll="sec-pyorimisliikkeen-perusyhtalo">Pyörimisliikkeen perusyhtälö</a></li>
+<li><a href="sec-rotaatioenergia.html" data-scroll="sec-rotaatioenergia">Rotaatioenergia ja sen säilymislaki</a></li>
+<li><a href="sec-pyorimismaara.html" data-scroll="sec-pyorimismaara">Pyörimismäärä ja sen säilyminen</a></li>
+<li><a href="sec-syventavaa.html" data-scroll="sec-syventavaa" class="active">Syventävää materiaalia</a></li>
+<li><a href="sec-alun-systeemi.html" data-scroll="sec-alun-systeemi">Palataan alun systeemiin</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="kinematiikkaa.html" data-scroll="kinematiikkaa"><span class="codenumber">2</span> <span class="title">Kinematiikkaa kahdessa ja kolmessa ulottuvuudessa</span></a><ul>
+<li><a href="sec-Kinematiikkaa.html" data-scroll="sec-Kinematiikkaa">Kinematiikkaa</a></li>
+<li><a href="sec-Koordinaatistot.html" data-scroll="sec-Koordinaatistot">Koordinaatistot fysiikassa</a></li>
+<li><a href="sec-suhteellinen-liike.html" data-scroll="sec-suhteellinen-liike">Suhteellinen liike</a></li>
+<li><a href="sec-kinematiikka-kisatehtava.html" data-scroll="sec-kinematiikka-kisatehtava">Palataan alun pulmaan</a></li>
+<li><a href="sec-kin-syventavaa.html" data-scroll="sec-kin-syventavaa">Syventävää materiaalia</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="termodynamiikkaa.html" data-scroll="termodynamiikkaa"><span class="codenumber">3</span> <span class="title">Termodynamiikkaa</span></a><ul>
+<li><a href="sec-IIpaasaanto.html" data-scroll="sec-IIpaasaanto">Termodynamiikan II pääsääntö</a></li>
+<li><a href="sec-lampovoimakoneet.html" data-scroll="sec-lampovoimakoneet">Lämpövoimakoneet</a></li>
+<li><a href="sec-carnot.html" data-scroll="sec-carnot">Carnot'n kiertoprosessi</a></li>
+<li><a href="sec-entropia.html" data-scroll="sec-entropia">Entropia</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="vaihtovirtapiirit.html" data-scroll="vaihtovirtapiirit"><span class="codenumber">4</span> <span class="title">Vaihtovirtapiirit</span></a><ul>
+<li><a href="sec-rlctasa.html" data-scroll="sec-rlctasa">RLC-piiri, tasavirta</a></li>
+<li><a href="sec-ac-perusteet.html" data-scroll="sec-ac-perusteet">AC-piirien perusteita</a></li>
+<li><a href="sec-lrcvaihtovirta.html" data-scroll="sec-lrcvaihtovirta">LRC-vaihtovirtapiirit</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="optiikkaa.html" data-scroll="optiikkaa"><span class="codenumber">5</span> <span class="title">Optiikkaa</span></a><ul>
+<li><a href="subsec-yleista-optiikasta.html" data-scroll="subsec-yleista-optiikasta">Yleistä optiikasta</a></li>
+<li><a href="sec-kuvan-muodostuminen.html" data-scroll="sec-kuvan-muodostuminen">Kuvan muodostuminen</a></li>
+<li><a href="sec-ohuet-linssit.html" data-scroll="sec-ohuet-linssit">Ohuet linssit ja rajapinnat</a></li>
+<li><a href="sec-optiset-laitteet.html" data-scroll="sec-optiset-laitteet">Suurentavat optiset laitteet</a></li>
+<li><a href="sec-optiikka-syventavaa.html" data-scroll="sec-optiikka-syventavaa">Syventävää materiaalia</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="mat-menetelmat.html" data-scroll="mat-menetelmat"><span class="codenumber">6</span> <span class="title">Vektorit, derivaatta ja integraali fysiikassa</span></a><ul>
+<li><a href="sec-menetelmat-vektorit.html" data-scroll="sec-menetelmat-vektorit">Vektorit</a></li>
+<li><a href="sec-menetelmat-derivaatta.html" data-scroll="sec-menetelmat-derivaatta">Derivaatta</a></li>
+<li><a href="sec-menetelmat-integraali.html" data-scroll="sec-menetelmat-integraali">Integraali</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="maxwell.html" data-scroll="maxwell"><span class="codenumber">7</span> <span class="title">Maxwellin yhtälöt</span></a><ul>
+<li><a href="sec-maxwell-motivointia.html" data-scroll="sec-maxwell-motivointia">Motivointia</a></li>
+<li><a href="sec-kenttien-maarittaminen.html" data-scroll="sec-kenttien-maarittaminen">Sähkö- ja magneettikenttien määrittäminen</a></li>
+<li><a href="sec-maxwell.html" data-scroll="sec-maxwell">Maxwellin yhtälöt</a></li>
+</ul>
+</li>
+<li class="link"><a href="ratks.html" data-scroll="ratks"><span class="codenumber">8</span> <span class="title">Malliratkaisut</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Tuotettu PreTeXtillä</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="sec-syventavaa"><h2 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">1.7</span> <span class="title">Syventävää materiaalia</span>
+</h2>
+<section class="introduction" id="introduction-2"><p id="p-83">Seuraavaksi syvennetään aiempien osioiden käsitteitä ja määritellään ne tarkasti. Videoilla siirrytään sujuvasti summista integraaleihin, mikä on fysiikassa yleistä. Tilavuuden tai massa-alkioiden yli integroimista käsiteltäessä olennaista on, että yksinkertaisissa tapauksissa moniulotteiset integraalit lasketaan laskemalla tuttuja yksiulotteisia integraaleja peräkkäin.</p></section><section class="subsection" id="subsec-jaykat-kappaleet"><h3 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">1.7.1</span> <span class="title">Johdatus jäykkien kappaleiden tarkasteluun</span>
+</h3>
+<p id="p-84">Katso opi fysiikkaa kanavan video <a class="external" href="https://www.youtube.com/watch?v=Qk-9RVVBf7o" target="_blank">Johdatus jäykän kappaleen tarkasteluun</a>. Tee muistiinpanot, joissa vastaat kysymyksiin</p>
+<ol class="decimal">
+<li id="li-21"><p id="p-85">Milloin kappaleen muoto täytyy ottaa huomioon sitä mallinnettaessa?</p></li>
+<li id="li-22"><p id="p-86">Milloin jäykän kappaleen approksimaatiota ei voi käyttää?</p></li>
+</ol>
+<section class="exercises" id="exercises-jaykat-kappaleet"><h4 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h4>
+<article class="exercise exercise-like" id="exercise-15"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-87">Pesäpallomaila leikataan kahteen osaan sen massakeskipisteen kohdalta. Kumpi osa on painavampi?</p>
+<ol class="lower-alpha">
+<li id="li-23"><p id="p-88">Kahvaosa (vasen)</p></li>
+<li id="li-24"><p id="p-89">Lyöntiosa (oikea)</p></li>
+<li id="li-25"><p id="p-90">Molemmat osat painavat yhtä paljon.</p></li>
+</ol>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="kuvat/jaykkakappale/jaykkakappale-figure9.svg" role="img" class="contained" alt="(for accessibility)"></div>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-14" id="solution-14"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-14"><div class="solution solution-like"><p id="p-91">b) Lyöntiosan keskipiste on lähempänä massakeskipistettä kuin kahvaosan. Siispä lyöntiosan täytyy olla painavampi (mieti vääntömomentteja).</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-16"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-92">Oheinen kuva esittää massatonta tankoa, jonka päihin on kiinnitetty kaksi (pistemäistä) punnusta. Tangon pituus on 1,00m. Mikä on kappaleen massakeskipisteen etäisyys suuremmasta massasta metreinä?</p>
+<div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="kuvat/jaykkakappale/jaykkakappale-figure10.svg" role="img" class="contained" alt="(for accessibility)"></div>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-15" id="solution-15"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-15"><div class="solution solution-like">
+<p id="p-93">Tilannetta kannattaa tarkastella siten, että tanko on x-akselilla ja toinen punnuksista origossa. Valitaan painavampi punnus origoon ja kevyempi punnus positiivisen x-akselin puolelle. Lasketaan siis massakeskipisteen x-koordinaatti käyttämällä massakeskipisteen määritelmää:</p>
+<div class="displaymath">
+\begin{align*}
+x = \frac{1}{M} \sum_{i} m_i x_i
+= \frac{m_1 x_1 + m_2 x_2}{m_1 + m_2}
+\amp= \frac{6\text{kg} \cdot 0 + 2\text{kg} \cdot 1,00\text{m}}{6\text{kg} + 2\text{kg}} \\
+\amp= \frac{2\text{kgm}}{8\text{kg}} \\
+\amp= 0,25\text{m}
+\end{align*}
+</div>
+</div></div>
+</div></article></section></section><section class="subsection" id="subsec-hitausmomentti"><h3 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">1.7.2</span> <span class="title">Pyörimisliikkeen energia ja hitausmomentti</span>
+</h3>
+<section class="introduction" id="introduction-3"><p id="p-94">Katso opi fysiikkaa kanavan video <a class="external" href="https://www.youtube.com/watch?v=fIEF92k9nPw" target="_blank">Pyörimisliikkeen energia ja hitausmomentti</a>. Täydennä aiemmin tekemiäsi muistiinpanoja. Miksi pyörimisen kannalta massan jakautumisella kappaleessa on merkitystä?</p>
+<p id="p-95">Katso sitten opi fysiikkaa kanavan video <a class="external" href="https://www.youtube.com/watch?v=hKdwOi4FpGU" target="_blank">Hitausmomentin laskeminen</a>. Yritä laskea videon esimerkit läpi. Seuraavaksi harjoitellaan massakeskipisteen ja hitausmomentin laskemista.</p></section><section class="subsubsection" id="subsubsec-integrointia"><h4 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">1.7.2.1</span> <span class="title">Moniulotteista integrointia</span>
+</h4>
+<p id="p-96">Oheinen kuva esittää teräksistä kiilaa katsottuna ylhäältä päin ja sivusta. Teräksen tiheys on <span class="quantity">7860 <sup>kg</sup>⁄<sub>m<sup>3</sup></sub></span>.</p>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="kuvat/jaykkakappale/jaykkakappale-figure11.svg" role="img" class="contained" alt="(for accessibility)"></div>
+<section class="exercises" id="exercises-integrointi"><h5 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h5>
+<article class="exercise exercise-like" id="exercise-17"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-97">Laske kiilan tilavuus ja massa käyttäen geometriaa.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-16" id="solution-16"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-16"><div class="solution solution-like">
+<p id="p-98">Kiilan muotoisen kappaleen tilavuus:</p>
+<div class="displaymath">
+\begin{equation*}
+V = \frac{xz}{2} y = \frac{0,20\text{m} \cdot 0,10\text{m}}{2} \cdot 0,15\text{m} = 0,0015\text{m}^3\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Tilavuuden ja tiheyden avulla saamme massan</p>
+<div class="displaymath">
+\begin{equation*}
+m = \rho V = 7860\text{kg/m}^3 \cdot 0,0015\text{m}^3
+= 11,79\text{kg}\text{.}
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-18"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-99">Tämän kappaleen tilavuus voidaan laskea myös lausekkeella</p>
+<div class="displaymath">
+\begin{align*}
+V = \int_{y=0}^{y=y_1} \int_{x=0}^{x=x_1} \int_{z=0}^{z=g(x)} dzdxdy \amp \text{,}
+\end{align*}
+</div>
+<p class="continuation">jossa \(y_1=0,15\text{m}\) ja \(x_1=0,20\text{m}\) sekä funktio \(g(x) = z_1(x_1-x)/x_1\text{,}\) jossa \(z_1=0,10\text{m}\text{.}\) Laske tämä moniulotteinen integraali integroimalla sisimmästä integraalista ulommaiseen järjestyksessä (eli ensin \(z\text{:}\)n suhteen, sitten \(x\text{:}\)n suhteen ja sitten \(y\text{:}\)n suhteen.)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-17" id="solution-17"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-17"><div class="solution solution-like">
+<p id="p-100">Integroidaan siis. Tarvitsemme vain integroinnin perussääntöjä ja polynomin integrointia. Huomionarvoista on, että nyt \(x_1\) on tunnettu vakio ja \(x\) on muuttuja, jonka yli integroidaan.</p>
+<div class="displaymath">
+\begin{align*}
+V \amp= \int_{y=0}^{y=y_1} \int_{x=0}^{x=x_1} \int_{z=0}^{z=g(x)} dzdxdy \\
+\amp= \int_{0}^{y_1} \int_{0}^{x_1} g(x) dxdy \\
+\amp= \int_{0}^{y_1} \int_{0}^{x_1} \frac{z_1 (x_1-x)}{x_1} dxdy \\
+\amp= \int_{0}^{y_1} \Big|_{0}^{x_1} \frac{z_1}{x_1} x_1 x - \frac{1}{2} x^2 dy \\
+\amp= \int_{0}^{y_1} \frac{z_1}{x_1} \left( x_1^2 - \frac{1}{2}x_1^2 \right) dy \\
+\amp= \frac{z_1 x_1}{2} y_1 \\
+\amp= \frac{0,20\text{m} \cdot 0,10\text{m}}{2} \cdot 0,15\text{m} = 0,0015\text{m}^3\text{.}
+\end{align*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-19"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-101">Kiilan massakeskipisteen x-koordinaatti voidaan laskea lausekkeella</p>
+<div class="displaymath">
+\begin{equation*}
+x_{\text{MKP}} = \frac{1}{M} \int_{y=0}^{y=y_1} \int_{x=0}^{x=x_1} \int_{z=0}^{z=g(x)} x \, \rho \,  dzdxdy.
+\end{equation*}
+</div>
+<p class="continuation">Laske massakeskipisteen x-koordinaatti.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-18" id="solution-18"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-18"><div class="solution solution-like">
+<p id="p-102">Integroidaan järjestyksessä</p>
+<div class="displaymath">
+\begin{align*}
+x_{\text{MKP}}
+\amp= \int_{y=0}^{y=y_1} \int_{x=0}^{x=x_1} \int_{z=0}^{z=g(x)} x\rho dzdxdy \\
+\amp= \rho \int_{0}^{y_1} \int_{0}^{x_1} \frac{z_1 (x_1-x)}{x_1} x dxdy \\
+\amp= \rho \int_{0}^{y_1} \frac{z_1}{x_1} \int_{0}^{x_1} (x_1 x - x^2) dxdy \\
+\amp= \rho \int_{0}^{y_1} \frac{z_1}{x_1} \Big|_{0}^{x_1} \left(\frac{1}{2}x_1 x^2 - \frac{1}{3} x^3 \right) dy \\
+\amp= \rho \int_{0}^{y_1} \frac{z_1}{x_1} \left(\frac{1}{2}x_1^3 - \frac{1}{3} x_1^3 \right) dy \\
+\amp= \rho \frac{1}{6} z_1 x_1^2 \Big|_{0}^{y_1} y \\
+\amp= \frac{1}{6} \rho x_1^2 y_1 z_1 \\
+\amp= 0,786\text{m}
+\end{align*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-20"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-103">Kiilan hitausmomentti z-akselin suhteen saadaan lausekkeesta</p>
+<div class="displaymath">
+\begin{align*}
+I = \int_{y=0}^{y=y_1} \int_{x=0}^{x=x_1} \int_{z=0}^{z=g(x)} (x^2 + y^2) \, \rho \,  dzdxdy \amp \text{.}
+\end{align*}
+</div>
+<p class="continuation">Laske kiilan hitausmomentti z-akselin suhteen.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-19" id="solution-19"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-19"><div class="solution solution-like">
+<p id="p-104">Integroidaan järjestyksessä.</p>
+<div class="displaymath">
+\begin{align*}
+I
+\amp= \int_{y=0}^{y=y_1} \int_{x=0}^{x=x_1} \int_{z=0}^{z=g(x)} (x^2+y^2)\rho dzdxdy \\
+\amp= \rho \int_{0}^{y_1} \int_{0}^{x_1} (x^2+y^2) \frac{z_1 (x_1-x)}{x_1} dx dy \\
+\amp= \rho \frac{z_1}{x_1} \int_{0}^{y_1}
+\left( \frac{1}{12} x_1^4 + \frac{1}{2} y^2 x_1^2 \right) dy \\
+\amp= \rho \frac{z_1}{x_1}
+\left( \frac{1}{12} x_1^4 y_1 + \frac{1}{6} y_1^3 x_1^2 \right) \\
+\amp= 0,167025\text{kg/m}^2 \approx 0,17\text{kg/m}^2\text{.}
+\end{align*}
+</div>
+<p class="continuation">Tätä voidaan verrata vaikka samankokoisen suorakulmion hitausmomenttiin samanlaisen pyörimisakselin suhteen kuin kiilalla (ks. <a class="external" href="https://en.wikipedia.org/wiki/List%5C_of%5C_moments%5C_of%5C_inertia" target="_blank">lista hitausmomenteista</a>)</p>
+<div class="displaymath">
+\begin{equation*}
+I = \frac{1}{12} m (x_1^2 + y_1^2)
++ m \left( \sqrt{\frac{1}{2} (x_1^2 + y_1^2) } \right)^2
+\approx 0,43\text{kg/m}^2\text{,}
+\end{equation*}
+</div>
+<p class="continuation">joka on jonkin verran suurempi kuin kiilalla, kuten voi odottaa.</p>
+</div></div>
+</div></article></section></section></section><section class="subsection" id="subsec-vieriminen"><h3 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">1.7.3</span> <span class="title">Jäykän kappaleen vieriminen</span>
+</h3>
+<p id="p-105">Katso opi fysiikkaa kanavan video <a class="external" href="https://www.youtube.com/watch?v=6rVGOKU6Z0s" target="_blank">Jäykän kappaleen vieriminen</a>. Kirjoita muistiinpanot, joista käy ilmi ainakin vierimisehto ja vierivän kappaleen kineettinen energia. Laske videolla esitetyn tilanteen (4:50) kappaleiden vierimiseen kulunut aika.</p>
+<section class="exercises" id="exercises-vieriminen"><h4 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h4>
+<article class="exercise exercise-like" id="exercise-21"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-106">Sinulla on erilaisia vieriviä kappaleita, joiden massat ja säteet ovat yhtä suuret. <em class="emphasis">Totta vai tarua</em>: Kulmakiihtyvyys samalla kaltevalla tasolla riippuu kappaleen hitausmomentista eikä välttämättä ole sama kappaleillesi.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-20" id="solution-20"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-20"><div class="solution solution-like"><p id="p-107">Totta. Samalla kaltevalla tasolla kappale, jolla on pienin hitausmomentti saavuttaa suuremman nopeuden nopeammin kuin muut. Koska kappaleilla on samat säteet, tällä kappaleella on myös suurempi kulmakiihtyvyys.</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-22"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-108">Sinulla on alumiininen umpinainen sylinteri, jonka massa on <span class="quantity">128 g</span> ja halkaisija <span class="quantity">40,4 mm</span> sekä teräksinen rengas, jonka massa on <span class="quantity">132 g</span>, ulkohalkaisija on <span class="quantity">40,4 mm</span> ja sisähalkaisija on <span class="quantity">36,5 mm</span>. Asetat rampin kaltevuuskulmaan \(\theta =\) <span class="quantity">20 °</span> ja asetat sylinterin ja renkaan rampille korkeudelle <span class="quantity">0,15 m</span>. Laske kappaleiden nopeus rampin alapäässä. Laske myös kappaleiden vierimiseen kulunut aika. Oletetaan vastusvoimat häviävän pieniksi ja että kappaleet vierivät liukumatta.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-21" id="solution-21"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-21"><div class="solution solution-like">
+<p id="p-109">Videolla johdetaan vapaasti vierivän kappaleen kiihtyvyys</p>
+<div class="displaymath">
+\begin{equation*}
+a_x = \frac{g \sin \theta}{1+c},
+\end{equation*}
+</div>
+<p class="continuation">jossa \(c\) on kappaleen hitausmomenttiin liittyvä kerroin. Rengas on paksuseinäinen, joten kineettistä energiaa kirjoittaessa täytyy olla huolellinen. Renkaan kineettinen energia on</p>
+<div class="displaymath">
+\begin{align*}
+K_{\text{rengas}} \amp= \frac{1}{2} I \omega^2 + \frac{1}{2} mv_{\text{mkp}}^2 \\
+\amp= \frac{1}{2} m(r_1^2 + r_2^2) \frac{v_{\text{mkp}}^2}{r_1^2}
++ \frac{1}{2} mv_{\text{mkp}}^2 \\
+\amp= \frac{1}{2} mv_{\text{mkp}}^2 \left(1+\frac{r_2^2}{r_1^2} \right)
+\end{align*}
+</div>
+<p class="continuation">Nyt meillä on siis selvillä</p>
+<div class="displaymath">
+\begin{equation*}
+c_{\text{sylinteri}} = \frac{1}{2} \quad c_{\text{rengas}} = \frac{r_2^2}{r_1^2}
+\end{equation*}
+</div>
+<p class="continuation">Massakeskipisteen loppunopeus on</p>
+<div class="displaymath">
+\begin{equation*}
+v_{\text{mkp}} = \sqrt{\frac{2gh}{1+c}}.
+\end{equation*}
+</div>
+<p class="continuation">Tunnemme nyt kiihtyvyyden, alkunopeuden ja loppunopeuden, joten voimme ratkaista vierimiseen kuluvan ajan</p>
+<div class="displaymath">
+\begin{align*}
+\amp v = v_0 + a t \\
+\iff \amp\sqrt{\frac{2gh}{1+c}} = \frac{g \sin \theta}{1+c} t \\
+\iff \amp t =  \sqrt{\frac{2gh}{1+c}} \frac{1+c}{g \sin \theta} \\
+\amp= \sqrt{\frac{2gh(1+c)}{(g \sin \theta)^2}}
+\end{align*}
+</div>
+<p id="p-110">Annetuilla arvoilla</p>
+<div class="displaymath">
+\begin{align*}
+v_\text{sylinteri} \amp= 1,4\text{m/s} \\
+t_\text{sylinteri} \amp= 1,6\text{s} \\
+v_\text{rengas} \amp\approx 1,3\text{m/s}\\
+t_\text{rengas} \amp\approx 1,8\text{s} \text{.}
+\end{align*}
+</div>
+</div></div>
+</div></article></section></section></section></div></main>
+</div>
+</body>
+</html>

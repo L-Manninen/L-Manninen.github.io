@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-08-26T12:52:11+03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="fi-FI">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>LuFy Vektorit</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Aja (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Siirry pääasiaan</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\puoli}{\frac{1}{2}}
+\newcommand{\second}{\mathrm{s}}
+\newcommand{\hour}{\mathrm{h}}
+\newcommand{\meter}{\mathrm{m}}
+\newcommand{\henry}{\mathrm{H}}
+\newcommand{\ohm}{\Omega}
+\newcommand{\ampere}{\mathrm{A}}
+\newcommand{\farad}{\mathrm{F}}
+\newcommand{\volt}{\mathrm{V}}
+\newcommand{\hertz}{\mathrm{Hz}}
+\newcommand{\tesla}{\mathrm{T}}
+\newcommand{\coulomb}{\mathrm{C}}
+\newcommand{\weber}{\mathrm{Wb}}
+\newcommand{\watt}{\mathrm{W}}
+\newcommand{\radian}{\mathrm{rad}}
+\newcommand{\newton}{\mathrm{N}}
+\newcommand{\joule}{\mathrm{J}}
+\newcommand{\gram}{\mathrm{g}}
+\newcommand{\kilogram}{\mathrm{kg}}
+\newcommand{\kelvin}{\mathrm{K}}
+\newcommand{\celsius}{^\circ\mathrm{C}}
+\newcommand{\pico}{\mathrm{p}}
+\newcommand{\nano}{\mathrm{n}}
+\newcommand{\micro}{\mu}
+\newcommand{\milli}{\mathrm{m}}
+\newcommand{\centi}{\mathrm{c}}
+\newcommand{\kilo}{\mathrm{k}}
+\newcommand{\mega}{\mathrm{M}}
+\newcommand{\dee}{\mathrm{d}}
+\newcommand{\eminus}{\mathrm{\,e\,\text{-}}}
+\newcommand{\eplus}{\mathrm{\,e}}
+\newcommand{\squared}{^2}
+\newcommand{\cubed}{^3}
+\newcommand{\ang}[1]{#1^\circ}
+\newcommand{\doo}{\partial}
+\newcommand{\kertaa}{\cdot}
+\newcommand{\pistetulo}[2]{\vec{#1} \cdot \vec{#2}}
+\newcommand{\ristitulo}[2]{\vec{#1} \times \vec{#2}}
+\newcommand{\sulut}[1]{\left( #1 \right)}
+\newcommand{\ja}{\quad \text{ja} \quad}
+\newcommand{\mps}{\meter/\second}
+\newcommand{\SI}[2]{#1 \mathrm{\, #2}}
+\newcommand{\si}[1]{\mathrm{\, #1}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="fysiikka-materiaaleja.html"><span class="title">Lisämateriaaleja lukion fysiikkaan</span></a></h1>
+<p class="byline">Lasse M. Manninen</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Sisällys</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="mat-menetelmat.html" title="Edellinen">Ed</a><a id="upbutton" class="up-button button toolbar-item" href="mat-menetelmat.html" title="Ylös">Yl</a><a id="nextbutton" class="next-button button toolbar-item" href="sec-menetelmat-derivaatta.html" title="Seuraava">Seur</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Sisällys</button><a class="previous-button toolbar-item button" href="mat-menetelmat.html" title="Edellinen">Ed</a><a class="up-button button toolbar-item" href="mat-menetelmat.html" title="Ylös">Yl</a><a class="next-button button toolbar-item" href="sec-menetelmat-derivaatta.html" title="Seuraava">Seur</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Nimiösivut</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Kolofoni</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Tästä materiaalista</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="jaykkakappale.html" data-scroll="jaykkakappale"><span class="codenumber">1</span> <span class="title">Jäykän kappaleen dynamiikkaa</span></a><ul>
+<li><a href="sec-pyorimisliikkeen-vastineita.html" data-scroll="sec-pyorimisliikkeen-vastineita">Pyörimisliikkeen vastineita lineaariselle liikkeelle</a></li>
+<li><a href="sec-tasaisesti-kiihtyva-pyorimisliike.html" data-scroll="sec-tasaisesti-kiihtyva-pyorimisliike">Tasaisesti kiihtyvä pyörimisliike ja hitausmomentti</a></li>
+<li><a href="sec-yleisen-pyorimisliikkeen-kuvaajat.html" data-scroll="sec-yleisen-pyorimisliikkeen-kuvaajat">Yleisen pyörimisliikkeen kuvaajat</a></li>
+<li><a href="sec-pyorimisliikkeen-perusyhtalo.html" data-scroll="sec-pyorimisliikkeen-perusyhtalo">Pyörimisliikkeen perusyhtälö</a></li>
+<li><a href="sec-rotaatioenergia.html" data-scroll="sec-rotaatioenergia">Rotaatioenergia ja sen säilymislaki</a></li>
+<li><a href="sec-pyorimismaara.html" data-scroll="sec-pyorimismaara">Pyörimismäärä ja sen säilyminen</a></li>
+<li><a href="sec-syventavaa.html" data-scroll="sec-syventavaa">Syventävää materiaalia</a></li>
+<li><a href="sec-alun-systeemi.html" data-scroll="sec-alun-systeemi">Palataan alun systeemiin</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="kinematiikkaa.html" data-scroll="kinematiikkaa"><span class="codenumber">2</span> <span class="title">Kinematiikkaa kahdessa ja kolmessa ulottuvuudessa</span></a><ul>
+<li><a href="sec-Kinematiikkaa.html" data-scroll="sec-Kinematiikkaa">Kinematiikkaa</a></li>
+<li><a href="sec-Koordinaatistot.html" data-scroll="sec-Koordinaatistot">Koordinaatistot fysiikassa</a></li>
+<li><a href="sec-suhteellinen-liike.html" data-scroll="sec-suhteellinen-liike">Suhteellinen liike</a></li>
+<li><a href="sec-kinematiikka-kisatehtava.html" data-scroll="sec-kinematiikka-kisatehtava">Palataan alun pulmaan</a></li>
+<li><a href="sec-kin-syventavaa.html" data-scroll="sec-kin-syventavaa">Syventävää materiaalia</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="termodynamiikkaa.html" data-scroll="termodynamiikkaa"><span class="codenumber">3</span> <span class="title">Termodynamiikkaa</span></a><ul>
+<li><a href="sec-IIpaasaanto.html" data-scroll="sec-IIpaasaanto">Termodynamiikan II pääsääntö</a></li>
+<li><a href="sec-lampovoimakoneet.html" data-scroll="sec-lampovoimakoneet">Lämpövoimakoneet</a></li>
+<li><a href="sec-carnot.html" data-scroll="sec-carnot">Carnot'n kiertoprosessi</a></li>
+<li><a href="sec-entropia.html" data-scroll="sec-entropia">Entropia</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="vaihtovirtapiirit.html" data-scroll="vaihtovirtapiirit"><span class="codenumber">4</span> <span class="title">Vaihtovirtapiirit</span></a><ul>
+<li><a href="sec-rlctasa.html" data-scroll="sec-rlctasa">RLC-piiri, tasavirta</a></li>
+<li><a href="sec-ac-perusteet.html" data-scroll="sec-ac-perusteet">AC-piirien perusteita</a></li>
+<li><a href="sec-lrcvaihtovirta.html" data-scroll="sec-lrcvaihtovirta">LRC-vaihtovirtapiirit</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="optiikkaa.html" data-scroll="optiikkaa"><span class="codenumber">5</span> <span class="title">Optiikkaa</span></a><ul>
+<li><a href="subsec-yleista-optiikasta.html" data-scroll="subsec-yleista-optiikasta">Yleistä optiikasta</a></li>
+<li><a href="sec-kuvan-muodostuminen.html" data-scroll="sec-kuvan-muodostuminen">Kuvan muodostuminen</a></li>
+<li><a href="sec-ohuet-linssit.html" data-scroll="sec-ohuet-linssit">Ohuet linssit ja rajapinnat</a></li>
+<li><a href="sec-optiset-laitteet.html" data-scroll="sec-optiset-laitteet">Suurentavat optiset laitteet</a></li>
+<li><a href="sec-optiikka-syventavaa.html" data-scroll="sec-optiikka-syventavaa">Syventävää materiaalia</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="mat-menetelmat.html" data-scroll="mat-menetelmat"><span class="codenumber">6</span> <span class="title">Vektorit, derivaatta ja integraali fysiikassa</span></a><ul>
+<li><a href="sec-menetelmat-vektorit.html" data-scroll="sec-menetelmat-vektorit" class="active">Vektorit</a></li>
+<li><a href="sec-menetelmat-derivaatta.html" data-scroll="sec-menetelmat-derivaatta">Derivaatta</a></li>
+<li><a href="sec-menetelmat-integraali.html" data-scroll="sec-menetelmat-integraali">Integraali</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="maxwell.html" data-scroll="maxwell"><span class="codenumber">7</span> <span class="title">Maxwellin yhtälöt</span></a><ul>
+<li><a href="sec-maxwell-motivointia.html" data-scroll="sec-maxwell-motivointia">Motivointia</a></li>
+<li><a href="sec-kenttien-maarittaminen.html" data-scroll="sec-kenttien-maarittaminen">Sähkö- ja magneettikenttien määrittäminen</a></li>
+<li><a href="sec-maxwell.html" data-scroll="sec-maxwell">Maxwellin yhtälöt</a></li>
+</ul>
+</li>
+<li class="link"><a href="ratks.html" data-scroll="ratks"><span class="codenumber">8</span> <span class="title">Malliratkaisut</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Tuotettu PreTeXtillä</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="sec-menetelmat-vektorit"><h2 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">6.1</span> <span class="title">Vektorit</span>
+</h2>
+<section class="introduction" id="introduction-33"><p id="p-521">Fyysikoilla on useita tapoja merkitä vektoreita erilaisten mieltymysten ja soveltuvuuksien mukaan. Kaikki nämä merkinnät ovat yhtäläisiä. Joskus on tarpeen korostaa vektorin komponentteja ja joskus täytyy erottaa vektorisuureet skalaareista.</p>
+<div class="displaymath">
+\begin{equation*}
+\textbf{r} = \vec{r} = (r_1,r_2)
+%= \langle r_1,r_2 \rangle
+=
+\begin{pmatrix}
+r_1 \\ r_2
+\end{pmatrix}
+=
+\begin{bmatrix}
+r_1 \\ r_2
+\end{bmatrix}
+\end{equation*}
+</div>
+<p class="continuation">Tässä materiaalissa käytetään kirjaimen yllä olevaa nuolta merkitsemään vektoreita: \(\vec{v}\text{.}\)</p>
+<p id="p-522">Yksikkövektoreita merkitään kirjaimen päällä olevalla hatulla. Karteesisten akselien (\(x\text{,}\)\(y\) ja \(z\)-akselien) suuntaisia yksikkövektoreita merkitään yleensä \(\hat{i}, \hat{j}, \hat{k} \) ja yleistä johonkin muuhun suuntaan osoittavaa yksikkövektoria esimerkiksi \(\hat{r}\text{.}\)</p>
+<p id="p-523">Joskus käytetään toista tapaa merkitä akselien suuntaisia yksikkövektoreita</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{e}_x, \vec{e}_y, \vec{e}_z.
+\end{equation*}
+</div>
+<p class="continuation">Vektorin voi esittää sen komponenttien ja yksikkövektoreiden avulla aiempia merkintätapoja käyttämällä</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{r} = r_x\hat{i} + r_y\hat{j} + r_z\hat{k}
+= r_x \vec{e}_x + r_y \vec{e}_y + r_z \vec{e}_z
+\end{equation*}
+</div>
+<p id="p-524">Vektorisuure voi riippua ajasta tai jostain muusta suureesta, jolloin se on funktio</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{r}(t) = (r_1(t), r_2(t), r_3(t))
+= r_x(t)\hat{i} + r_y(t)\hat{j} + r_z(t)\hat{k}
+\end{equation*}
+</div>
+<p class="continuation">Vektorin pituutta merkitään usein samalla kirjaimella kuin vektoria</p>
+<div class="displaymath">
+\begin{equation*}
+|\vec{r}| = \sqrt{r_1^2 + \dots + r_n^2} = r,
+\end{equation*}
+</div>
+<p class="continuation">mutta sekaannusten välttämiseksi on syytä suosia merkintää \(|\vec{r}|\text{.}\)</p>
+<p id="p-525">Erilaisia fysiikassa esiintyviä vektorisuureita ovat esimerkiksi: nopeus, kiihtyvyys, liikemäärä, voima, pyörimismäärä, sähkökenttä, magneettikenttä ja dipolimomentti.</p>
+<p id="p-526">Fysiikassa esiintyy myös funktioita, jotka riippuvat useasta muuttujasta. Katso video <a class="external" href="https://www.youtube.com/watch?v=wyLMHhvkgBs" target="_blank">Kahden muuttujan funktio</a>. Fysikaalinen esimerkki tällaisesta funktiosta voi olla vaikkapa paikasta riippuva sähkökenttä</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{E}
+= \vec{E}(x,y,z)
+= \vec{E}(\vec{r}).
+\end{equation*}
+</div>
+<p class="continuation">Huomaa, että monen muuttujan funktion voi käsittää funktiona, jonka muuttujana on vektori.</p>
+<p id="p-527">Koska nopeus on vektori, myös liikemäärä on silloin vektori</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{p} = m\vec{v}.
+\end{equation*}
+</div>
+<p id="p-528">Newtonin II:n lain voi kirjoittaa vektorien ja derivaattojen avulla eri muodoissa</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{F}
+= m \vec{a}
+= m \frac{\dee \vec{v}}{\dee t}
+= \frac{\dee \vec{p}}{\dee t}
+= m\frac{\dee^2 \vec{x}}{\dee \vec{x}^2}
+\end{equation*}
+</div>
+<p id="p-529">Sähkövaraukset kohdistavat toisiinsa Coulombin voiman</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{F}_C = \frac{q_1 q_2}{4\pi\epsilon_0} \frac{\vec{r}_1-\vec{r}_2}{|\vec{r}_1-\vec{r}_2|^3}
+= \frac{q_1 q_2}{4\pi\epsilon_0} \frac{\hat{r}_{12}}{|\vec{r}_{12}|^2},
+\end{equation*}
+</div>
+<p class="continuation">jossa \(\vec{r}_1\) ja \(\vec{r}_2\) ovat varausten paikkavektorit.</p>
+<p id="p-530">Pistemäinen varaus luo sähkökentän</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{E} = \frac{q}{4\pi\epsilon_0} \frac{\hat{r}}{|\vec{r}|^2},
+\end{equation*}
+</div>
+<p class="continuation">jossa \(\vec{r}\) on paikkavektori tutkittavasta pisteestä varaukseen.</p></section><section class="subsection" id="subsec-komponentit"><h3 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">6.1.1</span> <span class="title">Komponentteihin jakaminen</span>
+</h3>
+<p id="p-531">Monessa fysiikan ongelmassa vektorin komponentit ovat tärkeitä ja helpottavat tutkittavan ilmiön dynamiikan tarkastelua. Montaa tilannetta voi tarkastella \(xy\) -koordinaatistossa siten, että \(\theta\) on kiertokulma \(x\)-akseliin nähden. Tällöin vektorin \(\vec{r}\) komponentit ovat</p>
+<div class="displaymath">
+\begin{equation*}
+r_x = |\vec{r}|\cos \theta \ja r_y = |\vec{r}|\sin \theta.
+\end{equation*}
+</div>
+<section class="exercises" id="exercises-komponentit"><h4 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h4>
+<article class="exercise exercise-like" id="exercise-124"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-532">Mikä on sähkökentän voimakkuus ja suunta alla olevan kuvan merkityssä pisteessä?</p>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/vektorit1.svg" role="img" class="contained" alt=""></div>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-123" id="solution-123"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-123"><div class="solution solution-like">
+<p id="p-533">Merkitään ylempää varausta \(q_1\text{:}\)llä ja alempaa varausta \(q_2\text{:}\)lla. Molemmat varaukset ovat positiivisia, joten sähkökenttä pisteessä \(P\) osoittaa poispäin varauksista. Kiinnitetään koordinaatisto siten, että varaukset sijaitsevat y-akselilla ja origo on pisteiden puolessavälissä.</p>
+<p id="p-534">\(q_1\text{:}\)n aiheuttama sähkökenttä on</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{E}_1
+= \frac{1}{4\pi\epsilon_0} \frac{|q_1|}{r_1^2}
+\end{equation*}
+</div>
+<p class="continuation">ja suunta on \ang{45} x-akselista alavasemmalle. Akseleiden suuntaisten yksikkövektoreiden \(\hat{i}\) ja \(\hat{j}\) avulla</p>
+<div class="displaymath">
+\begin{align*}
+\vec{E}_1
+\amp = \frac{1}{4\pi\epsilon_0} \frac{|q_1|}{r_1^2} (\cos(\ang{45})\hat{i} - \sin(\ang{45})\hat{j}) \\
+\amp = \frac{(\SI{9,0\eplus 9}{\newton\meter\squared/\coulomb\squared})(\SI{3,0\eminus9}{\coulomb})}{(\SI{0,050}{\meter})^2+(\SI{0,050}{\meter})^2}
+\left( \frac{1}{\sqrt{2}}\hat{i} - \frac{1}{\sqrt{2}}\hat{j} \right) \\
+\amp = (\SI{5400}{\newton/\coulomb})\left( \frac{1}{\sqrt{2}}\hat{i} - \frac{1}{\sqrt{2}}\hat{j} \right)
+\end{align*}
+</div>
+<p class="continuation">Vastaavasti varauksen \(q_2\) sähkökentäksi saadaan</p>
+<div class="displaymath">
+\begin{align*}
+\vec{E}_2 \amp = (\SI{5400}{\newton/\coulomb})
+\left( \frac{1}{\sqrt{2}}\hat{i} + \frac{1}{\sqrt{2}}\hat{j} \right) \\
+\implies
+\vec{E}_\mathrm{kok} \amp =  \vec{E}_1 + \vec{E}_2
+= 2(\SI{5400}{\newton/\coulomb})\left( \frac{1}{\sqrt{2}}\hat{i}\right) \\
+\amp = (\SI{7,6\eplus 3}{\newton/\coulomb}) \hat{i}
+\end{align*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-125"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-535">Kirjoita heittoliikkeessä olevan kappaleen nopeuden \(x\)- ja \(y\)-komponentit ajan funktiona, kun alkunopeus \(v\) ja heittokulma \(\theta\) tunnetaan. Voit olettaa ilmanvastuksen pieneksi.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-124" id="solution-124"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-124"><div class="solution solution-like">
+<p id="p-536">Kun ilmanvastus oletetaan pieneksi, heittoliikkeessä olevaan kappaleeseen vaikuttaa ainoastaan painovoima suoraan alaspäin. Tällä voimalla ei ole x-suuntaista komponenttia. Siispä nopeuden x-komponentti ei muutu ja se saadaan trigonometrialla</p>
+<div class="displaymath">
+\begin{equation*}
+v_x = v\cos\theta.
+\end{equation*}
+</div>
+<p class="continuation">Pystysuuntainen nopeus muuttuu ajassa kiihtyvyydellä \(-g\text{.}\) Alkunopeus saadaan jälleen trigonometrialla</p>
+<div class="displaymath">
+\begin{equation*}
+v_{y0} = v\sin\theta
+\end{equation*}
+</div>
+<p class="continuation">Tasaisesti muuttuvalle nopeudelle \(v= v_0 + at\text{,}\) joten heittoliikkeen y-suuntainen komponentti on</p>
+<div class="displaymath">
+\begin{equation*}
+v_y = v_{y0} + at = v\sin\theta - gt.
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-126"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-537">Kaksi 5,0 g:n pistevarausta 1,0 m pitkissä naruissa hylkivät toisiaan, kun varausten suuruudet on +100 nC, kuten alla olevassa kuvassa. Mikä on \(\theta\text{?}\) Voit käyttää pienillä kulmilla hyvin toimivaa approksimaatiota \(\tan\theta \approx \sin\theta\text{.}\)</p>
+<div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/vektorit2.svg" role="img" class="contained" alt=""></div>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-125" id="solution-125"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-125"><div class="solution solution-like">
+<p id="p-538">Kannattaa piirtää varausten vapaakappalekuvat</p>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/vektorit3.svg" role="img" class="contained" alt=""></div>
+<p id="p-539">Varaukset ovat tasapainossa ja lanka muodostaa kulman \(\theta\) pystysuunnasta. Varauksiin vaikuttaa sähköinen voima, painovoima ja langan jännitysvoima.</p>
+<p id="p-540">Tasapainossa Newtonin ensimmäinen lain mukaan kappaleeseen vaikuttava kokonaisvoima on nolla, eli \(\vec{F}_\mathrm{kok} = \vec{T} + \vec{F}_\mathrm{G} + \vec{F}_\mathrm{e} = \vec{0} \text{.}\) Komponenteittain</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{c|c}
+(F_\mathrm{kok})_x = T_x + (F_\mathrm{G})_x + (F_\mathrm{e})_x = \SI{0}{\newton} \amp 
+(F_\mathrm{kok})_y = T_y + (F_\mathrm{G})_y + (F_\mathrm{e})_y = \SI{0}{\newton} \\
+-T\sin\theta + \SI{0}{\newton} + K\dfrac{q^2}{d^2} = \SI{0}{\newton} \amp 
+T\cos\theta - mg + \SI{0}{\newton} = \SI{0}{\newton} \\
+T\sin\theta = K\dfrac{q^2}{d^2} = K\dfrac{q^2}{(2L\sin\theta)^2} \amp 
+T\cos\theta = mg
+\end{array}
+\end{equation*}
+</div>
+<p id="p-541">Jaetaan vasemmanpuoleinen yhtälö oikeanpuoleisella, jolloin saadaan</p>
+<div class="displaymath">
+\begin{equation*}
+\sin^2\theta\tan\theta = K\frac{q^2}{4L^2mg}
+= \frac{(\SI{9,0\eplus 9}{\newton\meter\squared/\coulomb\squared})(\SI{100\eminus9}{\coulomb})^2}
+{4(\SI{1,0}{\meter})^2(\SI{5,0\eminus3}{\kilogram})(\SI{9,8}{\newton/\kilogram})}
+= 4,59\eminus4
+\end{equation*}
+</div>
+<p class="continuation">Pienille kulmille \(\tan\theta \approx \sin\theta \text{.}\) Tällä approksimaatiolla saadaan \(\sin\theta=0,0771\text{,}\) joten \(\theta=\ang{4,4}\text{.}\)</p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-127"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-542">Alla olevassa kuvassa on kolme toisiinsa sidottua köyttä. Yksi ystäväsi vetää köyttä 3,0 N:n voimalla ja toinen 5,0 N:n voimalla. Millä voimalla ja mihin suuntaan sinun tulee vetää köyttä, jotta solmu pysyisi paikallaan?</p>
+<div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/vektorit4.svg" role="img" class="contained" alt=""></div>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-126" id="solution-126"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-126"><div class="solution solution-like">
+<p id="p-543">Käsitellään köydessä olevaa solmua staattisessa tasapainossa olevana hiukkasena.</p>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/vektorit5.svg" role="img" class="contained" alt=""></div>
+<p id="p-544">Kirjoitetaan vektorit \(\vec{F}_1\) ja \(\vec{F}_2\) komponenttimuodossa. Nyt \(\vec{F}_1=3\hat{i}\) ja \(\vec{F}_2=-5\sin(\ang{30})\hat{i} + 5\cos(\ang{30})\hat{j} \text{.}\) Tasapainossa voimien summan täytyy olla 0, eli \(\vec{F}_1 + \vec{F}_2 + \vec{F}_3 = \vec{0}\text{.}\) Voimme ratkaista tuntemattoman voiman \(\vec{F}_3 = -\vec{F}_1 - \vec{F}_2 = -0,5\hat{i} - 4,33\hat{j}.\) Voiman 3 suuruus on \(F_3 = \sqrt{(-0,50)^2+(-4,33)^2} = 4,4\text{.}\) Kulma \(\theta = \tan^{-1}(4,33/0,50) = \ang{83}\) negatiivisesta x-akselista alaspäin.</p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-128"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-545">Mikä on sähkökentän suunta ja voimakkuus merkityssä pisteessä?</p>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/vektorit6.svg" role="img" class="contained" alt=""></div>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-127" id="solution-127"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-127"><div class="solution solution-like">
+<p id="p-546">Lasketaan eri varausten aiheuttamat sähkökentät ja summataan ne yhteen. Merkitään varauksia \(q_1=\SI{5,0}{\nano\coulomb}, q_2=\SI{10}{\nano\coulomb}, q_3=\SI{-5,0}{\nano\coulomb}\text{.}\)</p>
+<p id="p-547">Varauksen \(q_1\) aiheuttama kenttä on</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{E}_1 = \frac{1}{4\pi\epsilon_0} \frac{q_1}{r^2} \hat{i}
+= \SI{112500}{\newton/\coulomb} \hat{i}
+\end{equation*}
+</div>
+<p class="continuation">Varauksen \(q_2\) aiheuttama kenttä on</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{E}_2 = \frac{1}{4\pi\epsilon_0} \frac{q_2}{r^2} \hat{j}
+= \SI{-56250}{\newton/\coulomb} \hat{j}
+\end{equation*}
+</div>
+<p class="continuation">Varauksen \(q_3\) aiheuttaman kentän suuruus on</p>
+<div class="displaymath">
+\begin{equation*}
+E_3 = \frac{1}{4\pi\epsilon_0} \frac{|q_3|}{r^2}
+= \SI{22500}{\newton/\coulomb}.
+\end{equation*}
+</div>
+<p class="continuation">\(\vec{E}_3\) osoittaa kohti \(q_3\text{:}\)a ja muodostaa kulman \(\theta=\tan^{-1}(4/2)=\ang{63,43}\) x-akseliin nähden. Siispä</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{E}_3 = -E_3\cos\theta\hat{i} + E_3\sin\theta\hat{j}
+= (-10064\hat{i} + 20124\hat{j} )\si{\newton/\coulomb}
+\end{equation*}
+</div>
+<p class="continuation">Näiden vektorien summa on</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{E}_\mathrm{kok} = \vec{E}_1 + \vec{E}_2 + \vec{E}_3
+= (1,0\eplus 5\hat{i} + -3,6\eplus 4\hat{j} )\si{\newton/\coulomb}
+\end{equation*}
+</div>
+<p class="continuation">Sähkökentän voimakkuus on</p>
+<div class="displaymath">
+\begin{equation*}
+E_\mathrm{kok} = \sqrt{E_x^2 + E_y^2}
+= \SI{108619}{\newton/\coulomb}
+= \SI{1,1\eplus 5}{\newton/\coulomb}
+\end{equation*}
+</div>
+<p class="continuation">ja vektorin muodostama kulma x-akselista on</p>
+<div class="displaymath">
+\begin{equation*}
+\phi = \tan^{-1}(|E_x/E_y|) = \ang{-19,4}.
+\end{equation*}
+</div>
+</div></div>
+</div></article></section></section><section class="subsection" id="subsec-pistetulo"><h3 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">6.1.2</span> <span class="title">Pistetulo</span>
+</h3>
+<p id="p-548">Jos tarvitset muistin virkistystä vektoreiden pistetulosta, voit katsoa videon <a class="external" href="https://www.youtube.com/watch?v=QIkJC1wjRKM" target="_blank">Pistetulo</a>.</p>
+<section class="exercises" id="exercises-pistetulo"><h4 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h4>
+<div class="exercisegroup" id="exercisegroup-7">
+<div class="introduction" id="introduction-34">
+<p id="p-549">Vakiovoiman tekemä työ on yleisesti</p>
+<div class="displaymath">
+\begin{equation*}
+W = \pistetulo{F}{s} = \vec{F} \cdot \Delta \vec{r},
+\end{equation*}
+</div>
+<p class="continuation">kun voima ja liikkeen suunta eivät ole samansuuntaiset. Kun ne ovat samansuuntaiset, pistetulo muuttuu kertolaskuksi ja saadaan tuttu \(W=Fs\text{,}\) eli työ on matka kertaa voima.</p>
+</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-129"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-35"><p id="p-550">Kuinka paljon voima \(\vec{F} = (-3,0\hat{i} + 6,0\hat{j})\si{\newton}\) tekee työtä hiukkaseen, joka liikkuu siirtymän</p></div>
+<article class="task exercise-like" id="task-1"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-551">\(\Delta \vec{r} = 2,0\hat{i}\;\si{\meter}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-128" id="solution-128"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-128"><div class="solution solution-like"><div class="displaymath" id="p-552">
+\begin{equation*}
+W = \vec{F} \cdot \Delta \vec{r}
+= (-3,0\hat{i} + 6,0\hat{j}) \cdot (2,0\hat{i}) \si{\newton\meter}
+= (-6,0\hat{i} \cdot \hat{i} + 12 \hat{j} \cdot \hat{i}) \si{\joule}
+= \SI{-6,0}{\joule}		
+\end{equation*}
+</div></div></div>
+</div></article><article class="task exercise-like" id="task-2"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-553">\(\Delta \vec{r} = 2,0\hat{j}\;\si{\meter}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-129" id="solution-129"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-129"><div class="solution solution-like"><div class="displaymath" id="p-554">
+\begin{equation*}
+W = \vec{F} \cdot \Delta \vec{r}
+= (-3,0\hat{i} + 6,0\hat{j}) \cdot (2,0\hat{j}) \si{\newton\meter}
+= (-6,0\hat{i} \cdot \hat{j} + 12 \hat{j} \cdot \hat{j}) \si{\joule}
+= \SI{12}{\joule}
+\end{equation*}
+</div></div></div>
+</div></article></article><article class="exercise exercise-like" id="exercise-130"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-555">Kahta köyttä käytetään pianon laskemiseksi toisesta kerroksesta maahan. Pianon massa on 355 kg ja siirron korkeus on 5,00 m. Kuinka paljon eri voimat tekevät työtä?</p>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/vektorit7.svg" role="img" class="contained" alt=""></div>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-130" id="solution-130"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-130"><div class="solution solution-like">
+<p id="p-556">Lasketaan voimien tekemät työt pistetulolla \(W=\vec{F}\cdot\Delta\vec{r}\text{.}\) Siirtymä on \(\Delta \vec{r}=-5,00\hat{j}\text{.}\) Painovoimalle</p>
+<div class="displaymath">
+\begin{equation*}
+w = \vec{F}_\mathrm{G} \cdot \Delta \vec{r}
+= (F_\mathrm{G})(\Delta r)\cos\ang{0}
+= (\SI{255}{\kilogram})(\SI{9,81}{\meter/\second\squared})(\SI{5,00}{\meter})(1,00)
+= \SI{1,25\eplus 4}{\joule}
+\end{equation*}
+</div>
+<p class="continuation">Jännitysvoimalle 1</p>
+<div class="displaymath">
+\begin{equation*}
+w = \vec{T}_1 \cdot \Delta \vec{r}
+= (T_1)(\Delta r)\cos\ang{150}
+= (\SI{1830}{\newton})(\SI{5,00}{\meter})(-0,8660)
+= \SI{-7,92\eplus 3}{\joule}
+\end{equation*}
+</div>
+<p class="continuation">Jännitysvoimalle 2</p>
+<div class="displaymath">
+\begin{equation*}
+w = \vec{T}_2 \cdot \Delta \vec{r}
+= (T_2)(\Delta r)\cos\ang{135}
+= (\SI{1295}{\newton})(\SI{5,00}{\meter})(-0,7071)
+= \SI{-4,58\eplus 3}{\joule}
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-131"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-557">Hiihtäjä, jonka massa on 60 kg ja nopeus on 2,0 m/s, saapuu mäkeen, jonka pituus on 50 m ja kaltevuuskulma \(\ang{10}\text{.}\) Mikä on hiihtäjän nopeus mäen alla, jos oletetaan, että hiihtäjä liukuu kitkatta mäkeä alas?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-131" id="solution-131"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-131"><div class="solution solution-like">
+<p id="p-558">Tarkastellaan hiihtäjää pistemäisenä kappaleena. Piirretään tilanteesta kuva</p>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/vektorit8.svg" role="img" class="contained" alt=""></div>
+<p id="p-559">Kineettisen energian muutos \(\Delta K\) on yhtäsuuri kuin painovoiman hiihtäjään tekemä työ. Lasketaan työ pistetulon avulla ja ratkaistaan kineettisten energioiden erotuksesta \(v_1\text{.}\)</p>
+<p id="p-560">Työksi saadaan</p>
+<div class="displaymath">
+\begin{equation*}
+W = \vec{F}_\mathrm{G} \cdot \Delta \vec{r}
+= mg(\Delta r) \cos\alpha
+= (\SI{70}{\kilogram})(\SI{9,8}{\meter/\second\squared})(\SI{50}{\meter})\cos\ang{80}
+= \SI{5960}{\joule}
+\end{equation*}
+</div>
+<p class="continuation">Ratkaistaan nopeus kineettisen energian muutoksesta</p>
+<div class="displaymath">
+\begin{align*}
+\Delta K \amp = \puoli mv_1^2 - \puoli mv_0^2 = W \\
+\implies
+v_1 \amp = \sqrt{ v_0^2 + \frac{2W}{m} }
+= \sqrt{(\SI{2,0}{\meter/\second})^2 + \frac{2(\SI{5960}{\joule})}{\SI{70}{\kilogram}}} \\
+\amp = \SI{13}{\meter/\second}
+\end{align*}
+</div>
+</div></div>
+</div></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-8">
+<div class="introduction" id="introduction-36">
+<p id="p-561">Teho on yksinkertaisessa tapauksessa \(P=W/t\text{,}\) eli tehty työ jaettuna työhön käytetyllä ajalla. Toisin sanoen teho kertoo kuinka nopeasti työtä tehdään aikayksikössä. Tämän voi ilmaista derivaatan avulla \(P = \dee W/ \dee t\text{.}\) Työn määritelmästä saadaan pienen matkan \(\dee \vec{r}\) yli tehty työ</p>
+<div class="displaymath">
+\begin{equation*}
+\dee W = \vec{F} \cdot \dee\vec{r},
+\end{equation*}
+</div>
+<p class="continuation">jolloin tehoksi saadaan</p>
+<div class="displaymath">
+\begin{equation*}
+P(t)
+= \frac{\vec{F} \cdot \dee\vec{r}}{\dee t}
+=\vec{F} \cdot \frac{\dee\vec{r}}{\dee t}
+= \vec{F} \cdot \vec{v}
+= \pistetulo{F}{v} = Fv\cos\theta.
+\end{equation*}
+</div>
+<p class="continuation">Eli voiman hiukkaseen kohdistama teho on voiman ja hiukkasen nopeuden pistetulo.</p>
+</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-132"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-562">Tehtaassa siirretään 300 kg konetta moottorin avulla. Mikä moottorin tehon on oltava, jotta kone liikkuu 5 m/s? Koneen ja lattian välinen kitkakerroin on \(\mu=0,60\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-132" id="solution-132"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-132"><div class="solution solution-like">
+<p id="p-563">Moottori kohdistaa kaapelin välityksellä koneeseen jännitysvoiman \(\vec{T}\text{.}\) Tämä voima tekee koneeseen työtä teholla \(P=Tv\text{.}\) Kone on tasapainossa, koska se liikkuu tasaisella nopeudella, joten kaapelin jännitysvoima on yhtäsuuri kuin kitkan aiheuttama voima</p>
+<div class="displaymath">
+\begin{equation*}
+T = F_\mu = \mu mg
+\end{equation*}
+</div>
+<p class="continuation">Moottorin tehoksi saadaan</p>
+<div class="displaymath">
+\begin{equation*}
+P = Tv = \mu mgv = \SI{882}{\watt}
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-133"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-564">1500 kg auto, jonka etuprofiilin leveys on 1,6 m ja korkeus on 1,4 m. Auton ilmanvastuskerroin on 0,50 ja renkaiden ja tien välinen vierimiskitkakerroin on 0,02. Mikä moottorin tehon on oltava, jotta auto voi ylläpitää nopeutta \(\SI{30}{\meter/\second} = \SI{108}{\kilo\meter/\hour}\text{.}\) Oleta, että auton moottorin tehosta 25% kuluu muuhun kuin renkaiden pyörittämiseen. Vierimiskitkalle voit käyttää \(f_\mu = \mu m g\) ja ilmanvastukselle \(F_{\mathrm{D}} = \frac{1}{2} C \rho A v^2\text{,}\) jossa \(C\) on kappaleen muodosta tuleva kerroin, \(\rho\) on väliaineen tiheys, \(A\) on kappaleen poikkileikkauksen pinta-ala ja \(v\) on kappaleen vauhti.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-133" id="solution-133"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-133"><div class="solution solution-like">
+<p id="p-565">Tasaisella nopeudella liikkuvaan autoon kohdistuva kokonaisvoima on nolla. Liikettä vastustavat renkaiden vierimiskitka ja ilmanvastus. Autoa eteenpäin työntävä voima \(\vec{F}\) on yhtäsuuri kuin vastusvoimien summa</p>
+<div class="displaymath">
+\begin{equation*}
+F = f_\mu + D,
+\end{equation*}
+</div>
+<p class="continuation">jossa \(\vec{D}\) on ilmanvastus. Annetuilla tiedoilla</p>
+<div class="displaymath">
+\begin{equation*}
+F = \mu mg + \puoli C \rho A v^2 = \SI{294}{\newton} + \SI{605}{\newton}
+= \SI{899}{\newton},
+\end{equation*}
+</div>
+<p class="continuation">jossa \(A\) on auton poikkileikkauksen ala ja \(\rho=\SI{1,2}{\kilogram/\meter\cubed}\) ilman tiheys. Teho, joka tarvitaan auton nopeuden pitämiseksi 30 m/s, on</p>
+<div class="displaymath">
+\begin{equation*}
+P = Fv = (\SI{899}{\newton})(\SI{30}{\meter/\second})
+= \SI{27000}{\watt}
+= 36\mathrm{ hp}.
+\end{equation*}
+</div>
+<p class="continuation">Auton vetävien renkaiden täytyy siis tuottaa tämä teho vastusvoimia vastaan. Moottorin tuottaman tehon täytyy olla suurempi, koska osa moottorin tehosta kuluu auton toimintaan ja osa menee hukkaan. Jos 25% tehosta menetetään, niin autoa liikuttavasta tehosta saadaan moottorin tuottama teho</p>
+<div class="displaymath">
+\begin{equation*}
+P = 0,75 P_\mathrm{moottori}
+\implies
+P_\mathrm{moottori} = \frac{P}{0,75} = \SI{31900}{\watt} = 48\mathrm{ hp}	.
+\end{equation*}
+</div>
+</div></div>
+</div></article>
+</div>
+</div></section></section><section class="subsection" id="subsec-ristitulo"><h3 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">6.1.3</span> <span class="title">Ristitulo</span>
+</h3>
+<p id="p-566">Katso videot <a class="external" href="https://www.youtube.com/watch?v=gH-5eY13FRM" target="_blank">Determinantit (Matikkamatskut)</a> ja <a class="external" href="https://www.youtube.com/watch?v=7UG1FmTVRVM" target="_blank">Ristitulo (Matikkamatskut)</a>.</p>
+<p id="p-567">Fysikaalisissa tilanteissa ristitulon voi usein määrittää laskematta käyttämällä oikean käden sääntöä (kuva 1). Oikean käden etusormi osoittaa ensimmäisen vektorin suuntaan, kohtisuoraan etusormen kanssa oleva keskisormi osoittaa toisen vektorin suuntaan ja peukalo osoittaa ristitulon tuloksen suuntaan. Yhtäläisesti oikean käden säännön voi määritellä siten, että peukalo ja etusormi osoittavat keskenään kerrottavien vektoreiden suunnat ja keskisormi osoittaa saadun vektorin suunnan.</p>
+<div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/oikean-kaden-saanto.png" class="contained" alt="(for accessibility)"></div>
+<section class="exercises" id="exercises-ristitulo"><h4 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h4>
+<article class="exercise exercise-like" id="exercise-134"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-568">Määritä yksikkövektoreiden väliset ristitulot</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{ccc}
+\text{a) }\hat{i} \times \hat{j} \amp 
+\text{b) }\hat{j} \times \hat{i} \amp 
+\text{c) }\hat{i} \times \hat{k} \\
+\text{d) }\hat{k} \times \hat{i} \amp 
+\text{e) }\hat{k} \times \hat{j} \amp 
+\text{f) }\hat{j} \times \hat{k} 
+\end{array}
+\end{equation*}
+</div>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-134" id="solution-134"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-134"><div class="solution solution-like"><div class="displaymath" id="p-569">
+\begin{equation*}
+\begin{array}{ccc}
+\text{a) }\hat{i} \times \hat{j} = \hat{k} \amp 
+\text{b) }\hat{j} \times \hat{i} = -\hat{k} \amp 
+\text{c) }\hat{i} \times \hat{k} = -\hat{j} \\
+\text{d) }\hat{k} \times \hat{i} = \hat{j} \amp 
+\text{e) }\hat{k} \times \hat{j} = -\hat{i} \amp 
+\text{f) }\hat{j} \times \hat{k} = \hat{i}
+\end{array}
+\end{equation*}
+</div></div></div>
+</div></article><div class="exercisegroup" id="exercisegroup-9">
+<div class="introduction" id="introduction-37">
+<p id="p-570">Pistemäinen liikkuva varattu hiukkanen luo magneettikentän</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{B} = \frac{\mu_0}{4\pi} \frac{q \ristitulo{v}{r}}{r^2}
+\end{equation*}
+</div>
+</div>
+<div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-135"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-571">Alla olevan kuvan elektroni liikkuu oikealle. Mihin suuntaan elektronin luoma magneettikenttä osoittaa merkityssä pisteessä?</p>
+<div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/vektorit9.svg" role="img" class="contained" alt=""></div>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-135" id="solution-135"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-135"><div class="solution solution-like"><p id="p-572">Huomaa, että varauksen merkki muuttaa ristitulosta saatavan vektorin suunnan. Magneettikenttä osoittaa siten sivusta ulospäin.</p></div></div>
+</div></article></div>
+</div>
+<div class="exercisegroup" id="exercisegroup-10">
+<div class="introduction" id="introduction-38">
+<p id="p-573">Magneettikentässä liikkuvaan hiukkaseen kohdistuva voima riippuu sen nopeudesta</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{F} = q \ristitulo{v}{B}
+= (qvB\sin\alpha, \text{suunta oikean käden säännollä})
+\end{equation*}
+</div>
+</div>
+<div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-136"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-574">Pitkässä johtimessa kulkee 10 A virta vasemmalta oikealle. 1,0 cm:n etäisyydellä johtimen yläpuolella liikkuu elektroni oikealle nopeudella 1,0e7 m/s. Mikä on magneettikentän elektroniin kohdistaman voiman suunta ja suuruus?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-136" id="solution-136"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-136"><div class="solution solution-like">
+<p id="p-575">Varaus on negatiivinen, joten voiman suunta on päinvastainen vektoriin \(\vec{v}\times\vec{B}\) nähden. Oikean käden säännöstä saadaan, että \(\vec{v}\times\vec{B}\) osoittaa alaspäin, joten voiman \(\vec{F}\) suunta on ylös. Voiman suuruus on \(F=|q|vB\) ja magneettikenttä on pitkän suoran johtimen kenttä</p>
+<div class="displaymath">
+\begin{equation*}
+B = \frac{\mu_0 I}{2\pi d} = \SI{2,0\eminus4}{\tesla},
+\end{equation*}
+</div>
+<p class="continuation">joten voiman suuruus on</p>
+<div class="displaymath">
+\begin{equation*}
+F = evB
+= (\SI{1,60\eminus19}{\coulomb})(\SI{1,0\eplus 7}{\meter/\second})(\SI{2,0\eminus4}{\tesla})
+= \SI{3,2\eminus16}{\newton}
+\end{equation*}
+</div>
+<p class="continuation">ja suunta ylös, kuten todettiin.</p>
+</div></div>
+</div></article></div>
+</div>
+<div class="exercisegroup" id="exercisegroup-11">
+<div class="introduction" id="introduction-39">
+<p id="p-576">Lorentzin voima kuvaa varattuun hiukkaseen kohdistuvaa voimaa sähkö- ja magneettikentässä.</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{F} = q(\vec{E} + \vec{v}\times\vec{B})
+\end{equation*}
+</div>
+<p class="continuation">Kun nopeus on kohtisuorassa magneettikenttää vasten ja sähkökenttää ei ole, hiukkanen on ympyräradalla. Jos ristitulon kirjoittaa auki determinantin avulla, voi nähdä, miten voima saa magneettikentän suuntaista komponenttia, kun nopeus ei ole kohtisuorassa magneettikentän kanssa. Tällöin hiukkanen päätyy ruuviviivaradalle.</p>
+<p id="p-577">Voima ei aina kohdistu kohtisuoraan voiman vartta kohden, joten yleisempi muoto vääntömomentille on tarpeen. Vääntömomentissa</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{\tau} = \vec{r} \times \vec{F} = rF \sin\phi
+\end{equation*}
+</div>
+<p class="continuation">\(r\) on etäisyys pisteestä, jonka suhteen kappale pyörii pisteeseen, johon voima vaikuttaa. Huomaa, että kulma \(\phi\) on voiman varren ja voimavektorin välinen kulma.</p>
+<div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/vektorit10.svg" role="img" class="contained" alt=""></div>
+</div>
+<div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-137"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-578">Käytät 20 cm pitkää jakoavainta mutterin vääntämiseen. Jakoavaimen varsi muodostaa \(\ang{30}\) kulman vaakatasoon nähden ja kohdistat jakoavaimen päähän 100 N voiman. Kuinka suuri vääntömomentti kohdistuu mutteriin?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-137" id="solution-137"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-137"><div class="solution solution-like">
+<p id="p-579">Piirretään havainnollistava kuva.</p>
+<div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/vektorit11.svg" role="img" class="contained" alt=""></div>
+<p id="p-580">Lasketaan vääntömomentti ristitulon trigonometrisella määritelmällä, huomaa \(\phi\text{:}\)n merkki</p>
+<div class="displaymath">
+\begin{equation*}
+\tau = \vec{r} \times \vec{F}
+= rF\sin\phi = (\SI{0,20}{\meter})(\SI{-86,6}{\newton})
+= \SI{-17}{\newton\meter}
+\end{equation*}
+</div>
+</div></div>
+</div></article></div>
+</div>
+<div class="exercisegroup" id="exercisegroup-12">
+<div class="introduction" id="introduction-40">
+<p id="p-581">Hiukkasen pyörimismäärä jonkin pisteen suhteen saadaan ristitulolla</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{L} = \ristitulo{r}{p}.
+\end{equation*}
+</div>
+</div>
+<div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-138"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-582">Mihin suuntaan pyörimismäärävektori osoittaa, kun hiukkanen on ympyräradalla \(xy\)-tasossa?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-138" id="solution-138"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-138"><div class="solution solution-like"><p id="p-583">Jos hiukkanen liikkuu vastapäivään, pyörimismäärävektori osoittaa positiivisen z-akselin suuntaan. Jos liike on myötäpäivään, vektorin suunta on negatiivisen z-akselin suuntaan.</p></div></div>
+</div></article></div>
+</div></section><p id="p-584">Magneettinen dipolimomentti määritellään magneettikentän dipoliin aiheuttaman vääntömomentin avulla \(\vec{\tau} = \ristitulo{m}{B}\text{.}\)</p></section></section></div></main>
+</div>
+</body>
+</html>

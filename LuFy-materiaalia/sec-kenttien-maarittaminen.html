@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-08-26T12:52:11+03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="fi-FI">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>LuFy Sähkö- ja magneettikenttien määrittäminen</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Aja (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Siirry pääasiaan</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\puoli}{\frac{1}{2}}
+\newcommand{\second}{\mathrm{s}}
+\newcommand{\hour}{\mathrm{h}}
+\newcommand{\meter}{\mathrm{m}}
+\newcommand{\henry}{\mathrm{H}}
+\newcommand{\ohm}{\Omega}
+\newcommand{\ampere}{\mathrm{A}}
+\newcommand{\farad}{\mathrm{F}}
+\newcommand{\volt}{\mathrm{V}}
+\newcommand{\hertz}{\mathrm{Hz}}
+\newcommand{\tesla}{\mathrm{T}}
+\newcommand{\coulomb}{\mathrm{C}}
+\newcommand{\weber}{\mathrm{Wb}}
+\newcommand{\watt}{\mathrm{W}}
+\newcommand{\radian}{\mathrm{rad}}
+\newcommand{\newton}{\mathrm{N}}
+\newcommand{\joule}{\mathrm{J}}
+\newcommand{\gram}{\mathrm{g}}
+\newcommand{\kilogram}{\mathrm{kg}}
+\newcommand{\kelvin}{\mathrm{K}}
+\newcommand{\celsius}{^\circ\mathrm{C}}
+\newcommand{\pico}{\mathrm{p}}
+\newcommand{\nano}{\mathrm{n}}
+\newcommand{\micro}{\mu}
+\newcommand{\milli}{\mathrm{m}}
+\newcommand{\centi}{\mathrm{c}}
+\newcommand{\kilo}{\mathrm{k}}
+\newcommand{\mega}{\mathrm{M}}
+\newcommand{\dee}{\mathrm{d}}
+\newcommand{\eminus}{\mathrm{\,e\,\text{-}}}
+\newcommand{\eplus}{\mathrm{\,e}}
+\newcommand{\squared}{^2}
+\newcommand{\cubed}{^3}
+\newcommand{\ang}[1]{#1^\circ}
+\newcommand{\doo}{\partial}
+\newcommand{\kertaa}{\cdot}
+\newcommand{\pistetulo}[2]{\vec{#1} \cdot \vec{#2}}
+\newcommand{\ristitulo}[2]{\vec{#1} \times \vec{#2}}
+\newcommand{\sulut}[1]{\left( #1 \right)}
+\newcommand{\ja}{\quad \text{ja} \quad}
+\newcommand{\mps}{\meter/\second}
+\newcommand{\SI}[2]{#1 \mathrm{\, #2}}
+\newcommand{\si}[1]{\mathrm{\, #1}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="fysiikka-materiaaleja.html"><span class="title">Lisämateriaaleja lukion fysiikkaan</span></a></h1>
+<p class="byline">Lasse M. Manninen</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Sisällys</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec-maxwell-motivointia.html" title="Edellinen">Ed</a><a id="upbutton" class="up-button button toolbar-item" href="maxwell.html" title="Ylös">Yl</a><a id="nextbutton" class="next-button button toolbar-item" href="sec-maxwell.html" title="Seuraava">Seur</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Sisällys</button><a class="previous-button toolbar-item button" href="sec-maxwell-motivointia.html" title="Edellinen">Ed</a><a class="up-button button toolbar-item" href="maxwell.html" title="Ylös">Yl</a><a class="next-button button toolbar-item" href="sec-maxwell.html" title="Seuraava">Seur</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Nimiösivut</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Kolofoni</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Tästä materiaalista</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="jaykkakappale.html" data-scroll="jaykkakappale"><span class="codenumber">1</span> <span class="title">Jäykän kappaleen dynamiikkaa</span></a><ul>
+<li><a href="sec-pyorimisliikkeen-vastineita.html" data-scroll="sec-pyorimisliikkeen-vastineita">Pyörimisliikkeen vastineita lineaariselle liikkeelle</a></li>
+<li><a href="sec-tasaisesti-kiihtyva-pyorimisliike.html" data-scroll="sec-tasaisesti-kiihtyva-pyorimisliike">Tasaisesti kiihtyvä pyörimisliike ja hitausmomentti</a></li>
+<li><a href="sec-yleisen-pyorimisliikkeen-kuvaajat.html" data-scroll="sec-yleisen-pyorimisliikkeen-kuvaajat">Yleisen pyörimisliikkeen kuvaajat</a></li>
+<li><a href="sec-pyorimisliikkeen-perusyhtalo.html" data-scroll="sec-pyorimisliikkeen-perusyhtalo">Pyörimisliikkeen perusyhtälö</a></li>
+<li><a href="sec-rotaatioenergia.html" data-scroll="sec-rotaatioenergia">Rotaatioenergia ja sen säilymislaki</a></li>
+<li><a href="sec-pyorimismaara.html" data-scroll="sec-pyorimismaara">Pyörimismäärä ja sen säilyminen</a></li>
+<li><a href="sec-syventavaa.html" data-scroll="sec-syventavaa">Syventävää materiaalia</a></li>
+<li><a href="sec-alun-systeemi.html" data-scroll="sec-alun-systeemi">Palataan alun systeemiin</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="kinematiikkaa.html" data-scroll="kinematiikkaa"><span class="codenumber">2</span> <span class="title">Kinematiikkaa kahdessa ja kolmessa ulottuvuudessa</span></a><ul>
+<li><a href="sec-Kinematiikkaa.html" data-scroll="sec-Kinematiikkaa">Kinematiikkaa</a></li>
+<li><a href="sec-Koordinaatistot.html" data-scroll="sec-Koordinaatistot">Koordinaatistot fysiikassa</a></li>
+<li><a href="sec-suhteellinen-liike.html" data-scroll="sec-suhteellinen-liike">Suhteellinen liike</a></li>
+<li><a href="sec-kinematiikka-kisatehtava.html" data-scroll="sec-kinematiikka-kisatehtava">Palataan alun pulmaan</a></li>
+<li><a href="sec-kin-syventavaa.html" data-scroll="sec-kin-syventavaa">Syventävää materiaalia</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="termodynamiikkaa.html" data-scroll="termodynamiikkaa"><span class="codenumber">3</span> <span class="title">Termodynamiikkaa</span></a><ul>
+<li><a href="sec-IIpaasaanto.html" data-scroll="sec-IIpaasaanto">Termodynamiikan II pääsääntö</a></li>
+<li><a href="sec-lampovoimakoneet.html" data-scroll="sec-lampovoimakoneet">Lämpövoimakoneet</a></li>
+<li><a href="sec-carnot.html" data-scroll="sec-carnot">Carnot'n kiertoprosessi</a></li>
+<li><a href="sec-entropia.html" data-scroll="sec-entropia">Entropia</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="vaihtovirtapiirit.html" data-scroll="vaihtovirtapiirit"><span class="codenumber">4</span> <span class="title">Vaihtovirtapiirit</span></a><ul>
+<li><a href="sec-rlctasa.html" data-scroll="sec-rlctasa">RLC-piiri, tasavirta</a></li>
+<li><a href="sec-ac-perusteet.html" data-scroll="sec-ac-perusteet">AC-piirien perusteita</a></li>
+<li><a href="sec-lrcvaihtovirta.html" data-scroll="sec-lrcvaihtovirta">LRC-vaihtovirtapiirit</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="optiikkaa.html" data-scroll="optiikkaa"><span class="codenumber">5</span> <span class="title">Optiikkaa</span></a><ul>
+<li><a href="subsec-yleista-optiikasta.html" data-scroll="subsec-yleista-optiikasta">Yleistä optiikasta</a></li>
+<li><a href="sec-kuvan-muodostuminen.html" data-scroll="sec-kuvan-muodostuminen">Kuvan muodostuminen</a></li>
+<li><a href="sec-ohuet-linssit.html" data-scroll="sec-ohuet-linssit">Ohuet linssit ja rajapinnat</a></li>
+<li><a href="sec-optiset-laitteet.html" data-scroll="sec-optiset-laitteet">Suurentavat optiset laitteet</a></li>
+<li><a href="sec-optiikka-syventavaa.html" data-scroll="sec-optiikka-syventavaa">Syventävää materiaalia</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="mat-menetelmat.html" data-scroll="mat-menetelmat"><span class="codenumber">6</span> <span class="title">Vektorit, derivaatta ja integraali fysiikassa</span></a><ul>
+<li><a href="sec-menetelmat-vektorit.html" data-scroll="sec-menetelmat-vektorit">Vektorit</a></li>
+<li><a href="sec-menetelmat-derivaatta.html" data-scroll="sec-menetelmat-derivaatta">Derivaatta</a></li>
+<li><a href="sec-menetelmat-integraali.html" data-scroll="sec-menetelmat-integraali">Integraali</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="maxwell.html" data-scroll="maxwell"><span class="codenumber">7</span> <span class="title">Maxwellin yhtälöt</span></a><ul>
+<li><a href="sec-maxwell-motivointia.html" data-scroll="sec-maxwell-motivointia">Motivointia</a></li>
+<li><a href="sec-kenttien-maarittaminen.html" data-scroll="sec-kenttien-maarittaminen" class="active">Sähkö- ja magneettikenttien määrittäminen</a></li>
+<li><a href="sec-maxwell.html" data-scroll="sec-maxwell">Maxwellin yhtälöt</a></li>
+</ul>
+</li>
+<li class="link"><a href="ratks.html" data-scroll="ratks"><span class="codenumber">8</span> <span class="title">Malliratkaisut</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Tuotettu PreTeXtillä</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="sec-kenttien-maarittaminen"><h2 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">7.2</span> <span class="title">Sähkö- ja magneettikenttien määrittäminen</span>
+</h2>
+<section class="introduction" id="introduction-50"><p id="p-645">Katso video <a class="external" href="https://www.youtube.com/watch?v=XB59XYNW_e8" target="_blank">Vuon käsite ja sähkökentän vuo</a>.</p>
+<p id="p-646">Jos vektorikenttä on vakio, esimerkiksi homogeeninen sähkökenttä, niin</p>
+<div class="displaymath">
+\begin{equation*}
+\Phi = \vec{E} \cdot \vec{A}.
+\end{equation*}
+</div>
+<p id="p-647">Yleisen vektorikentän \(\vec{f}\) vuon pinnan \(A\) läpi voi laskea</p>
+<div class="displaymath">
+\begin{equation*}
+\Phi = \int \vec{f} \cdot \dee \vec{A}.
+\end{equation*}
+</div>
+<p class="continuation">Erikoistapaukset ovat ne, kun pistetulo on nolla tai 1.</p>
+<p id="p-648">Jos kenttä on vakio pinnalla \(A\text{,}\) niin integraalista tulee</p>
+<div class="displaymath">
+\begin{equation*}
+\Phi = \int_{\mathrm{pinta}} \vec{f} \cdot \dee \vec{A}
+= \int_{\mathrm{pinta}} f \cos\theta \dee A
+= f \cos\theta \int_{\mathrm{pinta}} \dee A,
+\end{equation*}
+</div>
+<p class="continuation">jossa integroitavaksi jää kaikki pinta-ala-alkiot pinnalla \(A\text{,}\) eli pinnan \(A\) pinta-ala</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{\mathrm{pinta}} \dee A = A.
+\end{equation*}
+</div>
+<p class="continuation">Tämä on erityisen hyödyllistä esimerkiksi sähkökenttien vuota laskettaessa, kun sähkökentän muoto tunnetaan tai voidaan arvata.</p>
+<p id="p-649">Yksinkertaisimmat tapaukset sähkokentän vuosta ovat ne, kun pinta on jokaisessa kohdassa samansuuntainen sähkökentän kanssa ja kun pinta on joka kohdassa kohtisuorassa sähkökentän kanssa. Kun pinta on samansuuntainen kentän kanssa, on kenttävektorin ja pintavektorin pistetulo \(\vec{E}\cdot\vec{A}\) kaikkialla nolla ja vuo pinnan läpi on nolla. Kun pinta on kohtisuorassa sähkökentän kanssa, pistetulo on kertolasku \(\vec{E}\cdot\vec{A} = EA\) ja vuo on</p>
+<div class="displaymath">
+\begin{equation*}
+\Phi = \int_{\mathrm{pinta}} \vec{E} \cdot \dee \vec{A}
+= \int_{\mathrm{pinta}} E \dee A
+= E \int_{\mathrm{pinta}} \dee A
+=EA
+\end{equation*}
+</div></section><section class="exercises" id="exercises-max-kentat"><h3 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber">7.2.1</span> <span class="title">Harjoitustehtävät</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-153"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-650">Neliö ja ympyrä ovat samassa homogeenisessa kentässä. Ympyrän halkaisija on sama kuin ympyrän sivun pituus. Onko vuo ympyrän läpi suurempi, pienempi vai yhtä suuri kuin ympyrän läpi? Perustele.</p>
+<div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/maxwell1.svg" role="img" class="contained" alt=""></div>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-155" id="solution-155"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-155"><div class="solution solution-like"><p id="p-651">Vuot pintojen läpi ovat \(\Phi_{\mathrm{neliö}} = \vec{E}_{\mathrm{neliö}} \cdot \vec{A}_{\mathrm{neliö}} = E_{\mathrm{neliö}} A_{\mathrm{neliö}}\) ja \(\Phi_{\mathrm{ympyrä}} = \vec{E}_{\mathrm{ympyrä}} \cdot \vec{A}_{\mathrm{ympyrä}} = E_{\mathrm{ympyrä}} A_{\mathrm{ympyrä}}\text{.}\) Sähkökenttä on homogeeninen, joten \(E_{\mathrm{neliö}} = E_{\mathrm{ympyrä}}\text{.}\) Pinta-alat ovat \(A_\mathrm{neliö} = d^2\) ja \(A_\mathrm{ympyrä} = \pi \dfrac{d^2}{2^2} = \dfrac{\pi}{4} d^2 \text{.}\) Koska \(\pi/4 \lt 1\text{,}\) niin \(A_\mathrm{neliö} &gt; A_\mathrm{ympyrä} \) ja siten \(\Phi_{\mathrm{neliö}} &gt; \Phi_{\mathrm{ympyrä}} \text{.}\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-154"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-652">Mikä on sähkökentän vuo kuvassa esitetyn pinnan läpi?</p>
+<div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/maxwell2.svg" role="img" class="contained" alt=""></div>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-156" id="solution-156"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-156"><div class="solution solution-like">
+<p id="p-653">Lasketaan pistetulo \(\vec{E} \cdot \vec{A} = EA\cos(\theta) \text{.}\) Pinta-alavektori \(\vec{A} \) osoittaa pinnan <em class="emphasis">normaalin</em> suuntaan, joten vektoreiden \(\vec{E} \) ja \(\vec{A} \) välinen kulma on \(\ang{60}\text{.}\) Sähkökentän suuruus on annettu \(E=200\,\newton/\coulomb\) ja pinta-ala on \(A = 10\,\centi\meter \cdot 20\,\centi\meter = 200\,\centi\meter^2 = 0,02\,\meter^2 \text{.}\) Siispä</p>
+<div class="displaymath">
+\begin{equation*}
+\Phi = \vec{E} \cdot \vec{A} = 200\,\newton/\coulomb \cdot 0,02\,\meter^2 \cos \ang{30} \approx  3,46\,\newton\meter^2/\coulomb\text{.}
+\end{equation*}
+</div>
+</div></div>
+</div></article></section><section class="subsection" id="subsec-gauss"><h3 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">7.2.2</span> <span class="title">Gaussin laki</span>
+</h3>
+<p id="p-654">Katso video <a class="external" href="https://www.youtube.com/watch?v=HctFKHdWPRw" target="_blank">Gaussin laki</a>.</p>
+<section class="exercises" id="exercises-gauss"><h4 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h4>
+<article class="exercise exercise-like" id="exercise-155"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-655">Käy huolellisesti läpi videolla esitetty esimerkki tasaisesti varatun pallon kentästä.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-157" id="solution-157"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-157"><div class="solution solution-like"><p id="p-656"></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-156"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-657">Tutkitaan videolla esitettyä äärettömän pitkän ohuen tasaisesti varatun johtimen sähkökenttää. Kuten videolla todettiin, Gaussin pinnaksi kannattaa valita sylinteri, jolloin sähkökenttä on kohtisuorassa sylinterin vaippaa vasten ja samansuuntainen sylinterin päätyjen kanssa. Johtimen pituusvaraustiheys on \(\lambda\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="li-110"><p id="p-658">Mikä on \(L\text{:}\)n pitusen johtimen osan varaus \(Q\text{?}\)</p></li>
+<li id="li-111"><p id="p-659">Mikä on vuo sylinterin päätyjen läpi?</p></li>
+<li id="li-112"><p id="p-660">Mikä on vuo sylinterin vaipan läpi?</p></li>
+<li id="li-113"><p id="p-661">Mikä on kokonaisvuo sylinterin läpi?</p></li>
+<li id="li-114"><p id="p-662">Mikä on sähkökentän suuruus etäisyydellä \(r\) johtimesta?</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-158" id="solution-158"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-158"><div class="solution solution-like"><ol class="lower-alpha">
+<li id="li-115"><p id="p-663">Pituusvaraustiheys \(\lambda\) kertoo kuinka paljon varausta on pituusyksikköä kohti. Siispä \(L\text{:}\)n pituisen johtimenpätkän varaus on \(Q=\lambda L\text{.}\)</p></li>
+<li id="li-116"><p id="p-664">Sylinterin päädyissä pinta-alavektori \(\vec{A}\) on kohtisuorassa sähkökenttävektorin \(\vec{E}\) kanssa, joten näiden vektoreiden välinen pistetulo on nolla ja siten vuo sylinterin päätyjen läpi on nolla.</p></li>
+<li id="li-117"><p id="p-665">Vaipan kohdalla pinnan normaalin suuntainen pinta-alavektori on joka kohdassa samansuuntainen sähkökentän kanssa, joten pistetulosta tulee kertolasku \(\Phi_\mathrm{vaippa} = EA_\mathrm{vaippa} = E 2\pi r L\text{,}\) jossa \(r\) on sylinterin säde ja \(L\) sen pituus.</p></li>
+<li id="li-118"><p id="p-666">\(\Phi = \Phi_\mathrm{päädyt} + \Phi_\mathrm{vaippa} = 0 + E 2\pi r L \text{.}\)</p></li>
+<li id="li-119">
+<p id="p-667">Nyt voimme käyttää Gaussin lakia, jonka mukaan vuo suljetun pinnan läpi on \(\Phi = Q_\mathrm{in} / \epsilon_0 \text{.}\) Siispä nyt saamme</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{Q_\mathrm{in}}{\epsilon_0} = E 2\pi r L \iff E = \frac{\lambda}{2\pi\epsilon_0 r}\text{.}
+\end{equation*}
+</div>
+</li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-157"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-668">Tutkitaan videolla esitettyä tasaisesti varatun äärettömän laajan levyn aiheuttamaa sähkökenttää. Millaisen Gaussin pinnan valitsisit tämän kentän tutkimiseksi? Mikä on vuo valitsemasi pinnan läpi? Mikä on pintasi sisään jäävä varaus \(Q\text{,}\) kun levyn pintavaraustiheys on \(\eta\text{?}\) Mikä on levyn aiheuttama sähkökenttä?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-159" id="solution-159"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-159"><div class="solution solution-like">
+<p id="p-669">Gaussin pinnaksi voi valita esimerkiksi sylinterin, jonka vaippa on kohtisuorassa varauslevyä vastaan. Varauslevyn sähkökenttä osoittaa joka kohdassa kohtisuoraan levystä ulospäin (jokaista vinoa sähkökenttävektoria vastaa symmetrian perusteella vektori, joiden summassa tason suuntaiset komponentit kumoutuvat). Tällöin vuo vaipan läpi on nolla ja kokonaisvuo valitun pinnan läpi on vuo päätyjen läpi \(\Phi = 2EA \text{.}\) Pinta-alan \(A\) sisään jäävä varaus, kun pintavaraustiheys on \(\eta\text{,}\) on \(Q_\mathrm{in}=\eta A\text{.}\) Nyt gaussin lain avulla</p>
+<div class="displaymath">
+\begin{equation*}
+\Phi = 2EA = \frac{Q_\mathrm{in}}{\epsilon_0} = \frac{\eta A}{\epsilon_0} \iff E = \frac{\eta}{2\epsilon_0}\text{.}
+\end{equation*}
+</div>
+</div></div>
+</div></article></section></section><section class="subsection" id="subsec-ampere"><h3 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">7.2.3</span> <span class="title">Ampèren laki</span>
+</h3>
+<p id="p-670">Katso video <a class="external" href="https://www.youtube.com/watch?v=ylcWfJv00rA" target="_blank">Ampèren laki</a>.</p>
+<p id="p-671">Ampèren laki muistuttaa Gaussin lakia. Nyt pinnan sijaan integroidaan pistetuloa käyrän yli. Jälleen, jos magneettikentän muoto tunnetaan symmetriasta, voidaan käyrä valita sellaiseksi, että integraalista tulee kertolasku tai vakion integraali. Näin voidaan laskea magneettikentän vuontiheyksiä erilaisille systeemeille.</p>
+<section class="exercises" id="exercises-ampere"><h4 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h4>
+<article class="exercise exercise-like" id="exercise-158"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-672">Käy huolellisesti läpi videolla esitetty esimerkki äärellisen paksuisen johtimen magneettikentästä. Perustele, miksi integraali pistetulon yli muuttuu kertolaskuksi.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-160" id="solution-160"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-160"><div class="solution solution-like"><p id="p-673"></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-159"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-674">Mieti tarkasti, miksi videolla esitetyissä esimerkeissä integroitavat polut valitaan juuri tietynlaisiksi. Voisiko polut valita eri tavoin, mutta kuitenkin säilyttää laskun yksinkertaisuuden?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-161" id="solution-161"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-161"><div class="solution solution-like"><p id="p-675">Vaikka integrointipolun voi valita miten hyvänsä, erimuotoisten polkujen esittäminen funktiona voi olla haastavaa (funktion parametrisointi). Olennaista on aina magneettikentän symmetrioiden hyödyntäminen.</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-160"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-676">Laske alla olevan kuvan mukaiset magneettikentän \(\vec{B}\) viivaintegraalit. Integrointipolku on jana origosta pisteeseen (50,50).</p>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/maxwell3.svg" role="img" class="contained" alt=""></div>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-162" id="solution-162"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-162"><div class="solution solution-like"><ol class="lower-alpha">
+<li id="li-120">
+<p id="p-677">Koska magneettikenttä \(\vec{B}\) on samansuuntainen integrointipolun \(\vec{s}\) kanssa alkupisteestä i loppupisteeseen f, \(\vec{B}\text{:}\)n ja \(\dee\vec{s}\text{:}\)n välinen pistetulo on \(B\dee s\text{.}\) Siten polkuintegraali on</p>
+<div class="displaymath">
+\begin{align*}
+\int_{\mathrm{i}}^{\mathrm{f}} \vec{B}\cdot \dee\vec{s}
+= \int_{\mathrm{i}}^{\mathrm{f}} B\dee s
+= B \int_{\mathrm{i}}^{\mathrm{f}} \dee s
+\amp= B \left( \sqrt{(0,50\,\meter)^2 + (0,50\,\meter)^2 } \right) \\
+\amp= (0,10\,\tesla)\sqrt{2} (0,50\meter\,) \\
+\amp= 0,71\,\tesla\meter
+\end{align*}
+</div>
+</li>
+<li id="li-121"><p id="p-678">Koska \(\vec{B}\) on kohtisuorassa integrointipolkua kohti koko polun matkalta, pistetulo \(\vec{B}\cdot\dee\vec{s}=0\text{,}\) joten polkuintegraalin tulos on nolla.</p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-161"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-679">Mikä on magneettikentän \(\vec{B}\) viivaintegraali pisteiden A ja B välillä?</p>
+<div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/maxwell4.svg" role="img" class="contained" alt=""></div>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-163" id="solution-163"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-163"><div class="solution solution-like">
+<p id="p-680">Jaetaan integraali kolmeen osaan</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{\mathrm{i}}^{\mathrm{f}} \vec{B}\cdot \dee\vec{s}
+= \int_{\mathrm{vasen\;jana}} \vec{B}\cdot \dee\vec{s}
++ \int_{\mathrm{puoliympyrä}} \vec{B}\cdot \dee\vec{s}
++ \int_{\mathrm{oikea\;jana}} \vec{B}\cdot \dee\vec{s}
+\end{equation*}
+</div>
+<p class="continuation">Johtimen muodostama magneettikenttä on ympyräsymmetrinen johtimen ympärillä. Siispä magneettikenttä on samansuuntainen ympyränmuotoisten polkujen kanssa ja kohtisuorassa tehtävässä annettujen janojen kanssa. Siispä integraalit janojen yli ovat nollia. Puoliympyrällä \(\vec{B}\) on samansuuntainen polun kanssa ja magneettikentän suuruus on \(B=\mu_0 I/2\pi d\text{.}\) Siispä</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{\mathrm{i}}^{\mathrm{f}} \vec{B}\cdot \dee\vec{s}
+= 0 + BL + 0
+= \frac{\mu_0 I}{2\pi d}(\pi d) = \frac{\mu_0 I}{2}
+= \frac{(4\pi\times \eminus 7 \tesla\meter/\ampere)(2,0\,\ampere)}{2}
+= 1,26\eminus6\,\tesla\meter
+\end{equation*}
+</div>
+</div></div>
+</div></article></section></section><section class="subsection" id="subsec-faraday"><h3 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">7.2.4</span> <span class="title">Faradayn laki (sähkömagneettinen induktio)</span>
+</h3>
+<p id="p-681">Katso video <a class="external" href="https://www.youtube.com/watch?v=0iMW4Iwny0g" target="_blank">Sähkömagneettinen induktio</a>.</p>
+<section class="exercises" id="exercises-faraday"><h4 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h4>
+<article class="exercise exercise-like" id="exercise-162"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-682">Alla olevissa kuvissa on johdinsilmukka, jonka halkaisija on 10,0 cm ja resistanssi on \(0,20\,\ohm\text{.}\) Mikä on kuhunkin silmukkaan indusoituvan virran suuruus ja suunta?</p>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/maxwell5.svg" role="img" class="contained" alt=""></div>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-164" id="solution-164"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-164"><div class="solution solution-like">
+<p id="p-683">Indusoitunut jännite on \(\mathcal{E} = |\dee\Phi/\dee t|\) ja indusoitunut virta on \(I=\mathcal{E}/R\text{.}\) Kenttä \(B\) muuttuu, mutta pinta-ala \(A\) ei.</p>
+<ol class="lower-alpha">
+<li id="li-122">
+<p id="p-684">Olkoon pinta-alavektorin suunta sivusta ulospäin ja samansuuntainen \(\vec{B}\text{:}\)n kanssa, jolloin \(\Phi = AB\text{.}\) Siispä</p>
+<div class="displaymath">
+\begin{equation*}
+\mathcal{E}
+= |A\frac{\dee B}{\dee t}|
+= |\pi r^2 \frac{\dee B}{\dee t}|
+= |\pi(0,050\,\meter^2)(0,50\,\tesla/second)|
+= 3,9\eminus3\,\volt
+\end{equation*}
+</div>
+<p class="continuation">ja virta on</p>
+<div class="displaymath">
+\begin{equation*}
+I = \frac{\mathcal{E}}{R}
+= \frac{3,93\eminus3\,\volt}{ 0,20\ohm}
+= 2,0\eminus2\,\ampere
+= 20\,\milli\ampere\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Kentän voimakkuus kasvaa sivun sisään. Vastustaakseen kentän kasvamista, indusoituneen kentän täytyy osoittaa sivusta poispäin, jolloin oikean käden säännöllä virran suunnaksi saadaan vastapäivään.</p>
+</li>
+<li id="li-123"><p id="p-685">Kuten (a)-kohdassa, \(\mathcal{E} = A(\dee B/\dee t) = 3,9\,\milli\volt\) ja I=20 mA. Nyt kentän suunta on sivusta ulos ja kentän voimakkuus pienenee. Muutosta vastustavan kentän täytyy siis osoittaa sivusta ulospäin ja siten indusoitunut virta on jälleen vastapäivään.</p></li>
+<li id="li-124"><p id="p-686">Nyt pinta-alavektori \(\vec{A}\) on kohtisuorassa kenttän \(\vec{B}\) kanssa, joten \(\vec{A}\cdot\vec{B}= 0\,\weber\text{.}\) Koska \(\Phi = 0\,\weber\text{,}\) niin \(\mathcal{E}=|\dee\Phi/\dee t| = 0\,\volt/\meter\) ja \(I = 0\,\ampere\text{.}\) Indusoitunutta virtaa ei synny.</p></li>
+</ol>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-163"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-687">Katso video <a class="external" href="https://www.youtube.com/watch?v=eh818oHgqVw" target="_blank">Indusoitunut sähkökenttä</a>.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-165" id="solution-165"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-165"><div class="solution solution-like"><p id="p-688"></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-164"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-689">Alla on kuvaaja virrasta ajan funktiona solenoidissa, jossa on 400 kierrosta, jonka pituus on 20,0 cm ja halkaisija on 4,0 cm. Virta \(I\) aiheuttaa solenoidissa magneettikentän</p>
+<div class="displaymath">
+\begin{equation*}
+B = \frac{\mu_0 N I}{L}.
+\end{equation*}
+</div>
+<p class="continuation">Piirrä kuvaaja indusoituneen sähkökentän voimakkuudesta ajan funktiona 1,0 cm:n päässä solenoidin akselista.</p>
+<div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/maxwell6.svg" role="img" class="contained" alt=""></div>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-166" id="solution-166"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-166"><div class="solution solution-like">
+<p id="p-690">Virta \(I\) solenoidissa synnyttää magneettikentän</p>
+<div class="displaymath">
+\begin{equation*}
+B_\mathrm{solenoidi} = \frac{\mu_0 N I}{L}. 
+\end{equation*}
+</div>
+<p class="continuation">Indusoituneen sähkökentän voimakkuuden saa yhtälöstä</p>
+<div class="displaymath">
+\begin{equation*}
+E = \frac{r}{2} \left| \frac{\dee B}{\dee t} \right|. 
+\end{equation*}
+</div>
+<p class="continuation">Koska vain virta muuttuu, sähkökentän voimakkuus on</p>
+<div class="displaymath">
+\begin{equation*}
+E = \frac{r \mu_0 N}{2L} \left| \frac{\dee I}{\dee t} \right|
+= 1,26\eminus5\, \volt\second/\ampere\meter \left|\frac{\dee I}{\dee t} \right|.
+\end{equation*}
+</div>
+<p class="continuation">Virran muutoksen saa annetun kuvaajan kulmakertoimesta. Välillä \(t=0\,\second-t=0,1\,\second\) kulmakertoimen itseisarvo on \(|\dee I/\dee t|=50\,\ampere/\second\text{.}\) Välillä \(t=0,1\,\second-t=0,2\,\second\) virta ei muutu, eli kulmakerroin on nolla. Välillä \(t=0,2\,\second-t=0,4\,\second\) kulmakertoimen itseisarvo on \(|\dee I/\dee t|=25\,\ampere/\second\text{.}\)</p>
+<p id="p-691">Siispä sähkökentän suuruus on \(E=6,3\eminus4\,\volt/\meter\) ensimmäisellä välillä, 0 toisella välillä ja \(E=3,1\eminus4\,\volt/\meter\text{.}\)</p>
+<div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/maxwell7.svg" role="img" class="contained" alt=""></div>
+</div></div>
+</div></article></section></section></section></div></main>
+</div>
+</body>
+</html>

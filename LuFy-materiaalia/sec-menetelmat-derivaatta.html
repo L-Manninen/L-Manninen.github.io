@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-08-26T12:52:11+03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="fi-FI">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>LuFy Derivaatta</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Aja (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Siirry pääasiaan</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\puoli}{\frac{1}{2}}
+\newcommand{\second}{\mathrm{s}}
+\newcommand{\hour}{\mathrm{h}}
+\newcommand{\meter}{\mathrm{m}}
+\newcommand{\henry}{\mathrm{H}}
+\newcommand{\ohm}{\Omega}
+\newcommand{\ampere}{\mathrm{A}}
+\newcommand{\farad}{\mathrm{F}}
+\newcommand{\volt}{\mathrm{V}}
+\newcommand{\hertz}{\mathrm{Hz}}
+\newcommand{\tesla}{\mathrm{T}}
+\newcommand{\coulomb}{\mathrm{C}}
+\newcommand{\weber}{\mathrm{Wb}}
+\newcommand{\watt}{\mathrm{W}}
+\newcommand{\radian}{\mathrm{rad}}
+\newcommand{\newton}{\mathrm{N}}
+\newcommand{\joule}{\mathrm{J}}
+\newcommand{\gram}{\mathrm{g}}
+\newcommand{\kilogram}{\mathrm{kg}}
+\newcommand{\kelvin}{\mathrm{K}}
+\newcommand{\celsius}{^\circ\mathrm{C}}
+\newcommand{\pico}{\mathrm{p}}
+\newcommand{\nano}{\mathrm{n}}
+\newcommand{\micro}{\mu}
+\newcommand{\milli}{\mathrm{m}}
+\newcommand{\centi}{\mathrm{c}}
+\newcommand{\kilo}{\mathrm{k}}
+\newcommand{\mega}{\mathrm{M}}
+\newcommand{\dee}{\mathrm{d}}
+\newcommand{\eminus}{\mathrm{\,e\,\text{-}}}
+\newcommand{\eplus}{\mathrm{\,e}}
+\newcommand{\squared}{^2}
+\newcommand{\cubed}{^3}
+\newcommand{\ang}[1]{#1^\circ}
+\newcommand{\doo}{\partial}
+\newcommand{\kertaa}{\cdot}
+\newcommand{\pistetulo}[2]{\vec{#1} \cdot \vec{#2}}
+\newcommand{\ristitulo}[2]{\vec{#1} \times \vec{#2}}
+\newcommand{\sulut}[1]{\left( #1 \right)}
+\newcommand{\ja}{\quad \text{ja} \quad}
+\newcommand{\mps}{\meter/\second}
+\newcommand{\SI}[2]{#1 \mathrm{\, #2}}
+\newcommand{\si}[1]{\mathrm{\, #1}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="fysiikka-materiaaleja.html"><span class="title">Lisämateriaaleja lukion fysiikkaan</span></a></h1>
+<p class="byline">Lasse M. Manninen</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Sisällys</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec-menetelmat-vektorit.html" title="Edellinen">Ed</a><a id="upbutton" class="up-button button toolbar-item" href="mat-menetelmat.html" title="Ylös">Yl</a><a id="nextbutton" class="next-button button toolbar-item" href="sec-menetelmat-integraali.html" title="Seuraava">Seur</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Sisällys</button><a class="previous-button toolbar-item button" href="sec-menetelmat-vektorit.html" title="Edellinen">Ed</a><a class="up-button button toolbar-item" href="mat-menetelmat.html" title="Ylös">Yl</a><a class="next-button button toolbar-item" href="sec-menetelmat-integraali.html" title="Seuraava">Seur</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Nimiösivut</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Kolofoni</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Tästä materiaalista</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="jaykkakappale.html" data-scroll="jaykkakappale"><span class="codenumber">1</span> <span class="title">Jäykän kappaleen dynamiikkaa</span></a><ul>
+<li><a href="sec-pyorimisliikkeen-vastineita.html" data-scroll="sec-pyorimisliikkeen-vastineita">Pyörimisliikkeen vastineita lineaariselle liikkeelle</a></li>
+<li><a href="sec-tasaisesti-kiihtyva-pyorimisliike.html" data-scroll="sec-tasaisesti-kiihtyva-pyorimisliike">Tasaisesti kiihtyvä pyörimisliike ja hitausmomentti</a></li>
+<li><a href="sec-yleisen-pyorimisliikkeen-kuvaajat.html" data-scroll="sec-yleisen-pyorimisliikkeen-kuvaajat">Yleisen pyörimisliikkeen kuvaajat</a></li>
+<li><a href="sec-pyorimisliikkeen-perusyhtalo.html" data-scroll="sec-pyorimisliikkeen-perusyhtalo">Pyörimisliikkeen perusyhtälö</a></li>
+<li><a href="sec-rotaatioenergia.html" data-scroll="sec-rotaatioenergia">Rotaatioenergia ja sen säilymislaki</a></li>
+<li><a href="sec-pyorimismaara.html" data-scroll="sec-pyorimismaara">Pyörimismäärä ja sen säilyminen</a></li>
+<li><a href="sec-syventavaa.html" data-scroll="sec-syventavaa">Syventävää materiaalia</a></li>
+<li><a href="sec-alun-systeemi.html" data-scroll="sec-alun-systeemi">Palataan alun systeemiin</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="kinematiikkaa.html" data-scroll="kinematiikkaa"><span class="codenumber">2</span> <span class="title">Kinematiikkaa kahdessa ja kolmessa ulottuvuudessa</span></a><ul>
+<li><a href="sec-Kinematiikkaa.html" data-scroll="sec-Kinematiikkaa">Kinematiikkaa</a></li>
+<li><a href="sec-Koordinaatistot.html" data-scroll="sec-Koordinaatistot">Koordinaatistot fysiikassa</a></li>
+<li><a href="sec-suhteellinen-liike.html" data-scroll="sec-suhteellinen-liike">Suhteellinen liike</a></li>
+<li><a href="sec-kinematiikka-kisatehtava.html" data-scroll="sec-kinematiikka-kisatehtava">Palataan alun pulmaan</a></li>
+<li><a href="sec-kin-syventavaa.html" data-scroll="sec-kin-syventavaa">Syventävää materiaalia</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="termodynamiikkaa.html" data-scroll="termodynamiikkaa"><span class="codenumber">3</span> <span class="title">Termodynamiikkaa</span></a><ul>
+<li><a href="sec-IIpaasaanto.html" data-scroll="sec-IIpaasaanto">Termodynamiikan II pääsääntö</a></li>
+<li><a href="sec-lampovoimakoneet.html" data-scroll="sec-lampovoimakoneet">Lämpövoimakoneet</a></li>
+<li><a href="sec-carnot.html" data-scroll="sec-carnot">Carnot'n kiertoprosessi</a></li>
+<li><a href="sec-entropia.html" data-scroll="sec-entropia">Entropia</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="vaihtovirtapiirit.html" data-scroll="vaihtovirtapiirit"><span class="codenumber">4</span> <span class="title">Vaihtovirtapiirit</span></a><ul>
+<li><a href="sec-rlctasa.html" data-scroll="sec-rlctasa">RLC-piiri, tasavirta</a></li>
+<li><a href="sec-ac-perusteet.html" data-scroll="sec-ac-perusteet">AC-piirien perusteita</a></li>
+<li><a href="sec-lrcvaihtovirta.html" data-scroll="sec-lrcvaihtovirta">LRC-vaihtovirtapiirit</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="optiikkaa.html" data-scroll="optiikkaa"><span class="codenumber">5</span> <span class="title">Optiikkaa</span></a><ul>
+<li><a href="subsec-yleista-optiikasta.html" data-scroll="subsec-yleista-optiikasta">Yleistä optiikasta</a></li>
+<li><a href="sec-kuvan-muodostuminen.html" data-scroll="sec-kuvan-muodostuminen">Kuvan muodostuminen</a></li>
+<li><a href="sec-ohuet-linssit.html" data-scroll="sec-ohuet-linssit">Ohuet linssit ja rajapinnat</a></li>
+<li><a href="sec-optiset-laitteet.html" data-scroll="sec-optiset-laitteet">Suurentavat optiset laitteet</a></li>
+<li><a href="sec-optiikka-syventavaa.html" data-scroll="sec-optiikka-syventavaa">Syventävää materiaalia</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="mat-menetelmat.html" data-scroll="mat-menetelmat"><span class="codenumber">6</span> <span class="title">Vektorit, derivaatta ja integraali fysiikassa</span></a><ul>
+<li><a href="sec-menetelmat-vektorit.html" data-scroll="sec-menetelmat-vektorit">Vektorit</a></li>
+<li><a href="sec-menetelmat-derivaatta.html" data-scroll="sec-menetelmat-derivaatta" class="active">Derivaatta</a></li>
+<li><a href="sec-menetelmat-integraali.html" data-scroll="sec-menetelmat-integraali">Integraali</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="maxwell.html" data-scroll="maxwell"><span class="codenumber">7</span> <span class="title">Maxwellin yhtälöt</span></a><ul>
+<li><a href="sec-maxwell-motivointia.html" data-scroll="sec-maxwell-motivointia">Motivointia</a></li>
+<li><a href="sec-kenttien-maarittaminen.html" data-scroll="sec-kenttien-maarittaminen">Sähkö- ja magneettikenttien määrittäminen</a></li>
+<li><a href="sec-maxwell.html" data-scroll="sec-maxwell">Maxwellin yhtälöt</a></li>
+</ul>
+</li>
+<li class="link"><a href="ratks.html" data-scroll="ratks"><span class="codenumber">8</span> <span class="title">Malliratkaisut</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Tuotettu PreTeXtillä</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="sec-menetelmat-derivaatta"><h2 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">6.2</span> <span class="title">Derivaatta</span>
+</h2>
+<section class="introduction" id="introduction-41"><p id="p-585">Yksi esimerkki derivaatan avulla esitettävästä suureesta on sähkövirta. Sähkövirran voi käsittää sähkövarauksen virtausnopeutena, eli kuinka paljon varausta \(Q\) liikkuu jonkin pinnan läpi. Derivaatan avulla sähkövirtä on siten sähkövarauksen muutosnopeus ajan suhteen</p>
+<div class="displaymath">
+\begin{equation*}
+I = \frac{\dee Q}{\dee t}
+\end{equation*}
+</div>
+<p class="continuation">Sähkövirran yksikkö ampeeri voidaan myös esittää varauksen ja ajan avulla \(1\si{\ampere} = 1\si{\coulomb/\second}\text{.}\)</p>
+<p id="p-586">Fysiikassa funktioilla on erilaisia nimiä ja muuttuja on usein joku muu kuin \(x\text{.}\) Esimerkiksi paikka ajan funktiona \(x(t)\text{,}\) paikkavektori ajan funktiona \(\vec{r}(t)\) ja voima paikan funktiona \(\vec{F}(\textbf{r})=\vec{F}(x,y,z)\text{.}\) Derivaattojen kanssa on siten oltava joskus tarkkana. Esimerkiksi, jos \(x\) on ajan funktio, jota derivoidaan ajan suhteen, niin</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{\dee x(t)}{\dee t} = x'(t) \neq \frac{\dee}{\dee x} x = 1.
+\end{equation*}
+</div></section><section class="exercises" id="exercises-derivaatta"><h3 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber">6.2.1</span> <span class="title">Harjoitustehtävät</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-139"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-587">Hooken lain mukaan jousen aiheuttama voima on \(F = -k\Delta x\text{.}\) Jos nyt valitaan koordinaatisto siten, että jousen liike tapahtuu vain \(x\)-suunnassa, voidaan derivaatan avulla kirjoittaa</p>
+<div class="displaymath">
+\begin{equation*}
+F = -k\Delta x
+\iff
+-k\Delta x = m \frac{\dee^2 \vec{x}}{\dee t^2}.
+\end{equation*}
+</div>
+<p class="continuation">Keksitkö minkä funktion toinen derivaatta on sama funktio, mutta miinusmerkkinen? Millä tavalla keksimääsi funktiota pitää muokata, jotta toiselle derivaatalle tulee vakiokerroin? Mitä sellaista funktioon voi lisätä, joka ei näy derivaatoissa? Tämä on ns. harmonisen värähtelijän liikeyhtälö.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-16" id="hint-16"><span class="type">Vihje</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-16"><div class="hint solution-like"><p id="p-588">Trigonometriset funktiot ja yhdistetyn funktion derivointisäännöt.</p></div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-139" id="solution-139"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-139"><div class="solution solution-like">
+<p id="p-589">Sinin tai kosinin toinen derivaatta käy. Jos trigonometrisen funktion sisällä funktion argumentilla on kerroin, toisessa derivaatassa se tulee neliöitynä funktion kertoimeksi. Funktion vakiokerroin säilyy derivaatoissa. Derivaatoissa ei näy, jos funktioon on lisätty vakiokerroin, tai jos funktion argumenttiin on lisätty vakiokerroin. Esimerkiksi sinin derivaatta, kun sinillä on vakiokerroin \(A\text{,}\) \(x\text{:}\)llä on vakiokerroin \(\omega\text{,}\) funktion argumenttiin on lisätty vakio \(\phi\) ja funktioon on lisätty vakio \(B\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+\amp\frac{\dee^2}{\dee x^2} A \sin (\omega x + phi) + B \\
+=\amp \frac{\dee}{\dee x} A \omega \cos (\omega x + \phi) \\
+=\amp -A\omega^2 \sin (\omega x + \phi)
+\end{align*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-140"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-590">Tutkitaan heilurin liikeyhtälöä. Kirjoita Newtonin II lain mukaisesti heilurin punnuksen kiihtyvyyden komponentit punnuksen radan tangentin ja radan normaalin suuntaisesti (alla olevan kuvan \(\vec{F}_{Gt}\) ja \(\vec{F}_{Gr}\)).</p>
+<div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/derivaatta1.svg" role="img" class="contained" alt=""></div>
+<p id="p-591">Tangentin suuntainen kiihtyvyys kuvaa punnuksen liikettä kaaren \(s\) suuntaisesti. Nyt Newtonin II laista saadaan</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{\dee^2s}{\dee t} = -g\sin\theta.
+\end{equation*}
+</div>
+<p class="continuation">Tämä liikeyhtälö on monimutkaisempi kuin harmonisen värähtelijän. Heilurin tutkimisessa voidaan kuitenkin rajoittua pieniin värähtelyihin (n. \(\theta \lt \ang{10}\)), eli käyttää pienille kulmille hyvää approksimaatiota \(\sin\theta \approx \theta\text{.}\) Kun lisäksi kulma \(\theta\) kirjoitetaan  kaaren pituuden ja ympyrän säteen suhteena \(\theta = s/L\) Tällöin liikeyhtälöstä tulee</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{\dee^2s}{\dee t} = -g\theta = -\frac{g}{L}s.
+\end{equation*}
+</div>
+<p class="continuation">Nyt voit huomata, että ylläoleva yhtälö näyttää samalta, kuin aiemman tehtävän harmonisen värähtelijän yhtälö ja siten sen ratkaisukin on samannäköinen!</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-140" id="solution-140"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-140"><div class="solution solution-like">
+<p id="p-592">Trigonometrialla saadaan painovoiman komponenteiksi</p>
+<div class="displaymath">
+\begin{gather*}
+F_{Gt} = \sin(\theta) G = \sin(\theta) mg
+\quad \text{ja} \quad
+F_{Gr} = \cos(\theta) G = \cos(\theta) mg
+\end{gather*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-141"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-42">
+<p id="p-593">Kiihtyvyyttä voidaan mitata esimerkiksi alla olevan kuvan mukaisella järjestelmällä. Pallo liikkuu vapaasti parabolisella radalla \(y=x^2 \si{\meter}\text{.}\) Pallon paikkaa voidaan mitata vaakasuoralla asteikolla.</p>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/derivaatta2.svg" role="img" class="contained" alt=""></div>
+</div>
+<article class="task exercise-like" id="task-3"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-594">Määritä lauseke, jolla voit selvittää kiihtyvyyden, kun olet mitannut pallon poikkeaman tasapainoasemasta.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-141" id="solution-141"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-141"><div class="solution solution-like">
+<p id="p-595">Tavoitteena on siis saada yhtälö pallon kiihtyvyyden vaakasuoran komponentin ja sen siirtymän \(x\) yhteydelle. Tämä saadaan selville, koska palloon vaikuttava painovoima tunnetaan. Kiihtyvyyden vaakasuora komponentti saadaan kirjoitettua tukivoiman ja pystysuoran akselin välisen kulman avulla. Tämä kulma taas saadaan kirjoitettua poikkeaman \(x\) avulla.  Piirretään pallon vapaakappalekuva</p>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/derivaatta3.svg" role="img" class="contained" alt=""></div>
+<p id="p-596">Nyt koordinaatisto kannattaa valita vaakatasoon, koska vaikka pallo on rampilla, se on kiihtyvässä liikkeessä vaakatasossa. Newtonin II:sta saadaan</p>
+<div class="displaymath">
+\begin{equation*}
+\sum F_x = n\sin\theta - ma_x = \SI{0}{\newton}
+\qquad
+\sum F_y = n\cos\theta - F_G = ma_y = \SI{0}{\newton}
+\end{equation*}
+</div>
+<p class="continuation">Sijoittamalla jälkimmäisestä ratkaistu tukivoima \(n\) ensimmäiseen yhtälöön saadaan</p>
+<div class="displaymath">
+\begin{equation*}
+ma_x = \frac{F_G}{\cos\theta} \sin\theta = mg\tan\theta
+\implies
+a_x = g\tan\theta.
+\end{equation*}
+</div>
+<p class="continuation">Radan hetkellinen kulmakerroin on sama, kuin \(\tan\theta\text{.}\) Koska ramppia kuvaa yhtälö \(y=x^2\text{,}\) niin</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{\dee y}{\dee x} = \tan\theta = 2x
+\implies
+a_x = (2x)g
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="task exercise-like" id="task-4"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-597">Mikä on kiihtyvyys, kun \(x = \SI{20}{\centi\meter}\text{?}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-142" id="solution-142"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-142"><div class="solution solution-like">
+<p id="p-598">b) Kiihtyvyys, kun \(x=\SI{0,20}{\meter}\) on</p>
+<div class="displaymath">
+\begin{equation*}
+a_x = 2(0,20)(\SI{9,8}{\meter/\second\squared})
+= \SI{3,9}{\meter/\second\squared}
+\end{equation*}
+</div>
+</div></div>
+</div></article></article><div class="exercisegroup" id="exercisegroup-13">
+<div class="introduction" id="introduction-43">
+<p id="p-599">Sähkökentän voi saada selville annetusta potentiaalista</p>
+<div class="displaymath">
+\begin{equation*}
+E_s = -\frac{\dee V}{\dee s}
+\end{equation*}
+</div>
+</div>
+<div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-142"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-44"><p id="p-600">Sähköinen potentiaali \(x\)-akselin suuntaisesti on \(V=100x^2\si{\volt}\text{,}\) jossa \(x\) on metreinä. Mikä on \(E_x\)</p></div>
+<article class="task exercise-like" id="task-5"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-601">kun \(x=\SI{1,0}{\meter}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-143" id="solution-143"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-143"><div class="solution solution-like">
+<p id="p-602">Lasketaan ensin sähkökenttä yleisellä etäisyydellä \(x\) käyttämällä annettua yhtälöä</p>
+<div class="displaymath">
+\begin{equation*}
+E_x = - \frac{\dee V}{\dee x}
+= - \frac{\dee}{\dee x} 100 x^2 \text{ V}
+= - 200 x \text{ V}
+\end{equation*}
+</div>
+<p id="p-603">Eli nyt \(E_x(\SI{1,0}{\meter}) = \SI{-200}{\volt} \)</p>
+</div></div>
+</div></article><article class="task exercise-like" id="task-6"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-604">kun \(x=\SI{2,0}{\meter}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-144" id="solution-144"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-144"><div class="solution solution-like"><p id="p-605">\(E_x(\SI{2,0}{\meter}) = \SI{-400}{\volt} \)</p></div></div>
+</div></article></article></div>
+</div>
+<div class="exercisegroup" id="exercisegroup-14">
+<div class="introduction" id="introduction-45">
+<p id="p-606">Faradayn laki kertoo, että suljettuun johdinsilmukkaan indusoituu jännite \(\mathcal{E}\text{,}\) kun silmukan läpi kulkeva magneettikentän vuo \(\Phi\) muuttuu. Tämä indusoitunut jännite voidaan kirjoittaa derivaatan avulla seuraavasti</p>
+<div class="displaymath">
+\begin{equation*}
+\mathcal{E} = \left| \frac{\dee \Phi}{\dee t} \right|
+\end{equation*}
+</div>
+</div>
+<div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-143"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-607">Tarkastellaan tilannetta, jossa johdinsilmukka on kohtisuorassa magneettikenttää vasten ja silmukan pinta-ala muuttuu. Alla olevan kuvan mukaisesti magneettivuo johdinsilmukan läpi on \(\Phi = AB = xlB\text{.}\) Mikä on virtasilmukkaan indusoitunut jännite, kun silmukassa on yksi liukuva sivu, joka liikkuu oikealle nopeudella \(v\text{?}\)</p>
+<div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/derivaatta4.svg" role="img" class="contained" alt=""></div>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-145" id="solution-145"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-145"><div class="solution solution-like">
+<p id="p-608">Magneettikenttä pysyy vakiona, eli vuon muutokseen vaikuttaa vain silmukan pinta-alan muutos. Silmukan pinta-ala on \(A=xl\text{,}\) jossa \(l\) pysyy vakiona. Liukuva sivu liikkuu nopeudella \(v\text{,}\) joten pinta-alan muutos ajan suhteen on</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{\dee A}{\dee t} = \frac{\dee}{\dee t} xl
+= l\frac{\dee}{\dee t}x
+= lv
+\end{equation*}
+</div>
+<p class="continuation">Nyt siis vuon derivaatta on</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{\dee \Phi}{\dee t}
+= \frac{\dee}{\dee t} AB
+= B\frac{\dee A}{\dee t}
+= Bvl
+\end{equation*}
+</div>
+<p class="continuation">joten indusoitunut jännite on</p>
+<div class="displaymath">
+\begin{equation*}
+\mathcal{E} = \left| \frac{\dee \Phi}{\dee t} \right|
+= | vBl |
+\end{equation*}
+</div>
+</div></div>
+</div></article></div>
+</div></section><section class="subsection" id="subsec-osittaisderivaatta"><h3 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">6.2.2</span> <span class="title">Osittaisderivaatta</span>
+</h3>
+<section class="introduction" id="introduction-46"><p id="p-609">Katso video <a class="external" href="https://www.youtube.com/watch?v=wrE6jEXiK8M" target="_blank">Osittaisderivaatat (Matikkamatskut)</a>.</p></section><section class="exercises" id="exercises-osittaisderivaatta"><h4 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h4>
+<article class="exercise exercise-like" id="exercise-144"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-610">Mahdollinen tilanyhtälö kaasulle on</p>
+<div class="displaymath">
+\begin{equation*}
+PV = RT \exp (-\frac{\alpha}{VRT}),
+\end{equation*}
+</div>
+<p class="continuation">jossa \(\alpha\) ja \(R\) ovat vakioita. \(\exp(...)\) on eksponenttifunktion \(e^{...}\) merkintätapa. Laske</p>
+<div class="displaymath">
+\begin{equation*}
+\sulut{\frac{\doo P}{\doo V}}_T, \quad
+\sulut{\frac{\doo T}{\doo P}}_V.
+\end{equation*}
+</div>
+<p class="continuation">Osittaisderivaatan alaindeksillä tarkoitetaan, että alaindeksissä olevaa suure pysyy vakiona. Jälkimmäisessä derivaatassa on syytä hyödyntää tietyissä tilanteissa pätevää relaatiota<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a></p>
+<div class="displaymath">
+\begin{equation*}
+\frac{\doo x}{\doo y}
+= \frac{1}{\frac{\doo y}{\doo x}}.
+\end{equation*}
+</div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn">Tarkennus: kun kolme muuttujaa \(x\text{,}\) \(y\) ja \(z\) voidaan kuvata ehdolla \(F(x,y,z) = \text{vakio} \text{,}\) niin tulos pätee.</div></div>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-146" id="solution-146"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-146"><div class="solution solution-like">
+<p id="p-611">Nyt \(P(V) = RTV^{-1} \exp(-\frac{\alpha}{VRT})\text{.}\) Derivoidaan selkeyden vuoksi osamäärän termit erikseen</p>
+<div class="displaymath">
+\begin{align*}
+\frac{\doo }{\doo V} V\amp = 1 \\
+\frac{\doo}{\doo V} \exp(-\frac{\alpha}{VRT})
+\amp= \frac{\alpha}{RT V^2} \exp(-\frac{\alpha}{VRT})
+\end{align*}
+</div>
+<p class="continuation">Jälkimmäisessä käytetään yhdistetyn funktion derivointisääntöä. Nyt osamäärän derivointisäännöstä saadaan</p>
+<div class="displaymath">
+\begin{align*}
+\sulut{\frac{\doo P}{\doo V}}_T
+\amp= RT
+\left(
+\frac{V \frac{\alpha}{RT V^2} \exp(-\frac{\alpha}{VRT}) - \exp(-\frac{\alpha}{VRT}) }{V^2}
+\right) \\
+\amp= RT \exp(-\frac{\alpha}{VRT})
+\left(
+\frac{\alpha}{RTV^3} - \frac{1}{V^2}
+\right) \\
+\amp= \exp(-\frac{\alpha}{VRT})
+\left(
+\frac{\alpha}{V^3} - \frac{RT}{V^2}
+\right) \\
+
+\end{align*}
+</div>
+<p class="continuation">joka voidaan toisaalta kirjoittaa paineen avulla</p>
+<div class="displaymath">
+\begin{align*}
+\exp(-\frac{\alpha}{VRT})
+\left(
+\frac{\alpha}{V^3} - \frac{RT}{V^2}
+\right) 
+\amp= \frac{V}{RT} P
+\left(
+\frac{\alpha}{V^3} - \frac{RT}{V^2}
+\right) \\
+\amp= \frac{P(\alpha - VRT)}{V^2RT}
+\end{align*}
+</div>
+<p id="p-612">Käytetään toisen derivaatan laskemisessa hyödyksi relaatiota</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{\doo T}{\doo P}
+= \frac{1}{\frac{\doo P}{\doo T}}.
+\end{equation*}
+</div>
+<p class="continuation">Paine lämpötilan funktiona on \(P(T) = \frac{R}{V} T\exp(-\frac{\alpha}{VRT}) \text{.}\) Käyttämällä tulon derivoimissääntöä saadaan</p>
+<div class="displaymath">
+\begin{align*}
+\sulut{\frac{\doo P}{\doo T}}_V
+\amp= \frac{R}{V}
+\left(
+\exp(-\frac{\alpha}{VRT}) + T \frac{\alpha}{VRT^2} \exp(-\frac{\alpha}{VRT})
+\right) \\
+\amp= \frac{1}{T} P + \frac{\alpha}{VRT^2} P \\
+\amp= P \left( \frac{1}{T} \frac{\alpha}{VRT^2} \right) \\
+\amp= \frac{P(\alpha + VRT)}{VRT^2}.
+\end{align*}
+</div>
+<p class="continuation">Siispä kysytty derivaatta on edellisen käänteisluku</p>
+<div class="displaymath">
+\begin{equation*}
+\sulut{\frac{\doo T}{\doo P}}_V
+= \frac{VRT^2}{P(\alpha + VRT)}
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-145"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-613">Lämpötila  \(T\si{\celsius}\) \(xy\)-tasossa pisteessä \((x,y)\) saadaan funktiosta</p>
+<div class="displaymath">
+\begin{equation*}
+T(x,y) = x^2 e^{-y}.
+\end{equation*}
+</div>
+<p class="continuation">Mihin suuntaan lämpötila kasvaa nopeimmin pisteessä \((2,1)\text{?}\) Mikä on lämpötilan muutoksen suuruus tähän suuntaan?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-147" id="solution-147"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-147"><div class="solution solution-like">
+<p id="p-614">Lämpötilan nopeimman muutoksen suuruus ja suunta saadaan gradienttivektorista</p>
+<div class="displaymath">
+\begin{gather*}
+\nabla T(x,y)
+= \frac{\doo}{\doo x} T(x,y)\hat{i} + \frac{\doo}{\doo y} T(x,y)\hat{j} \\
+= \frac{\doo}{\doo x} x^2 e^{-y} \hat{i} + \frac{\doo}{\doo y} x^2 e^{-y} \hat{j} \\
+= 2x e^{-y}\hat{i} + -x^2e^{-y}\hat{j}.
+\end{gather*}
+</div>
+<p class="continuation">Gradienttivektori pisteessä (2,1) on</p>
+<div class="displaymath">
+\begin{gather*}
+\nabla T(2,1)
+= 2(2) e^{-1}\hat{i} + -(2)^2e^{-1}\hat{j}
+= 4e^{-1} \hat{i} -4e^{-1} \hat{j},
+\end{gather*}
+</div>
+<p class="continuation">eli tähän suuntaan lämpötila kasvaa nopeimmin. Muutoksen suuruus on gradienttivektorin pituus</p>
+<div class="displaymath">
+\begin{align*}
+| \nabla T(2,1) |
+\amp= | 4e^{-1} \hat{i} -4e^{-1} \hat{j} | \\
+\amp= \sqrt{ (4e^{-1})^2 + (-4e^{-1})^2 } \\
+\amp= \sqrt{ 16e^{-2} + 16e^{-2} } \\
+\amp= \sqrt{ 32e^{-2} } \\
+\amp= \sqrt{32}e^{-1} \\
+\amp= 4 \sqrt{ 2 } e^{-1}
+\end{align*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-146"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-615">Vaeltaja seisoo puron vierellä vuoren rinteellä ja tutkii karttaansa. Maan pinnan korkeus \(h\) metreissä pisteessä \((x,y)\) saadaan funktiosta</p>
+<div class="displaymath">
+\begin{equation*}
+h(x,y) = \frac{20 000}{3+x^2+2y^2},
+\end{equation*}
+</div>
+<p class="continuation">jossa \(x\) ja \(y\) ovat koordinaatit kartalla (kilometreinä). Vaeltaja on pisteessä \((3,2)\text{.}\) Mikä on puron virtauksen suunta pisteessä \((3,2)\text{?}\) Kuinka nopeasti puro laskee virtauksen suuntaan (kuinka monta m/km)?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-148" id="solution-148"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-148"><div class="solution solution-like">
+<p id="p-616">Puro virtaa siihen suuntaan, mihin maa viettää eniten. Funktion arvot kasvavat nopeimmin gradienttivektorin suuntaan. Toisaalta funktion arvot pienenevät nopeimmin juuri gradienttivektorin vastaiseen suuntaan. Siispä puron virtauksen suunta pisteessä (3,2) on \(-\nabla h(3,2)\text{.}\) Lasketaan</p>
+<div class="displaymath">
+\begin{gather*}
+-\nabla h(x,y)
+= - ( -\frac{2x \cdot 20000}{(x^2 + 2y^2 + 3)^2} \hat{i}
+- \frac{4y \cdot 20000 }{(x^2 + 2y^2 + 3)^2} \hat{j}) \\
+= \frac{40000 x}{(x^2 + 2y^2 + 3)^2} \hat{i}
++ \frac{80000 y}{(x^2 + 2y^2 + 3)^2} \hat{j}.
+\end{gather*}
+</div>
+<p class="continuation">Siispä pisteessä (3,2) virtauksen suunta on</p>
+<div class="displaymath">
+\begin{align*}
+-\nabla h(3,2)
+\amp= \frac{40000 \cdot 3}{(3^2 + 2\cdot2^2 + 3)^2} \hat{i}
++ \frac{80000 \cdot 2}{(3^2 + 2\cdot2^2 + 3)^2} \hat{j} \\
+\amp= \frac{120000}{400} \hat{i}
++ \frac{160000}{400} \hat{j} \\
+\amp= 300 \hat{i}
++ 400 \hat{j} \\
+\amp= 100 (3 \hat{i} + 4 \hat{j})
+\end{align*}
+</div>
+<p class="continuation">ja virtaus laskee</p>
+<div class="displaymath">
+\begin{equation*}
+| -\nabla h(3,2) |
+= \sqrt{ 300^2 + 400^2 }
+= \sqrt{ 90000 + 160 000 }
+= \sqrt{ 250 000 }
+= 500
+\end{equation*}
+</div>
+<p class="continuation">metriä/kilometri eli puoli metriä jokaista vaakasuoraa metriä kohti.</p>
+</div></div>
+</div></article></section></section></section></div></main>
+</div>
+</body>
+</html>

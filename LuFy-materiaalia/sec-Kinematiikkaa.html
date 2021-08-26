@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-08-26T12:52:09+03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="fi-FI">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>LuFy Kinematiikkaa</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Aja (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Siirry pääasiaan</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\puoli}{\frac{1}{2}}
+\newcommand{\second}{\mathrm{s}}
+\newcommand{\hour}{\mathrm{h}}
+\newcommand{\meter}{\mathrm{m}}
+\newcommand{\henry}{\mathrm{H}}
+\newcommand{\ohm}{\Omega}
+\newcommand{\ampere}{\mathrm{A}}
+\newcommand{\farad}{\mathrm{F}}
+\newcommand{\volt}{\mathrm{V}}
+\newcommand{\hertz}{\mathrm{Hz}}
+\newcommand{\tesla}{\mathrm{T}}
+\newcommand{\coulomb}{\mathrm{C}}
+\newcommand{\weber}{\mathrm{Wb}}
+\newcommand{\watt}{\mathrm{W}}
+\newcommand{\radian}{\mathrm{rad}}
+\newcommand{\newton}{\mathrm{N}}
+\newcommand{\joule}{\mathrm{J}}
+\newcommand{\gram}{\mathrm{g}}
+\newcommand{\kilogram}{\mathrm{kg}}
+\newcommand{\kelvin}{\mathrm{K}}
+\newcommand{\celsius}{^\circ\mathrm{C}}
+\newcommand{\pico}{\mathrm{p}}
+\newcommand{\nano}{\mathrm{n}}
+\newcommand{\micro}{\mu}
+\newcommand{\milli}{\mathrm{m}}
+\newcommand{\centi}{\mathrm{c}}
+\newcommand{\kilo}{\mathrm{k}}
+\newcommand{\mega}{\mathrm{M}}
+\newcommand{\dee}{\mathrm{d}}
+\newcommand{\eminus}{\mathrm{\,e\,\text{-}}}
+\newcommand{\eplus}{\mathrm{\,e}}
+\newcommand{\squared}{^2}
+\newcommand{\cubed}{^3}
+\newcommand{\ang}[1]{#1^\circ}
+\newcommand{\doo}{\partial}
+\newcommand{\kertaa}{\cdot}
+\newcommand{\pistetulo}[2]{\vec{#1} \cdot \vec{#2}}
+\newcommand{\ristitulo}[2]{\vec{#1} \times \vec{#2}}
+\newcommand{\sulut}[1]{\left( #1 \right)}
+\newcommand{\ja}{\quad \text{ja} \quad}
+\newcommand{\mps}{\meter/\second}
+\newcommand{\SI}[2]{#1 \mathrm{\, #2}}
+\newcommand{\si}[1]{\mathrm{\, #1}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="fysiikka-materiaaleja.html"><span class="title">Lisämateriaaleja lukion fysiikkaan</span></a></h1>
+<p class="byline">Lasse M. Manninen</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Sisällys</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="kinematiikkaa.html" title="Edellinen">Ed</a><a id="upbutton" class="up-button button toolbar-item" href="kinematiikkaa.html" title="Ylös">Yl</a><a id="nextbutton" class="next-button button toolbar-item" href="sec-Koordinaatistot.html" title="Seuraava">Seur</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Sisällys</button><a class="previous-button toolbar-item button" href="kinematiikkaa.html" title="Edellinen">Ed</a><a class="up-button button toolbar-item" href="kinematiikkaa.html" title="Ylös">Yl</a><a class="next-button button toolbar-item" href="sec-Koordinaatistot.html" title="Seuraava">Seur</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Nimiösivut</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Kolofoni</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Tästä materiaalista</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="jaykkakappale.html" data-scroll="jaykkakappale"><span class="codenumber">1</span> <span class="title">Jäykän kappaleen dynamiikkaa</span></a><ul>
+<li><a href="sec-pyorimisliikkeen-vastineita.html" data-scroll="sec-pyorimisliikkeen-vastineita">Pyörimisliikkeen vastineita lineaariselle liikkeelle</a></li>
+<li><a href="sec-tasaisesti-kiihtyva-pyorimisliike.html" data-scroll="sec-tasaisesti-kiihtyva-pyorimisliike">Tasaisesti kiihtyvä pyörimisliike ja hitausmomentti</a></li>
+<li><a href="sec-yleisen-pyorimisliikkeen-kuvaajat.html" data-scroll="sec-yleisen-pyorimisliikkeen-kuvaajat">Yleisen pyörimisliikkeen kuvaajat</a></li>
+<li><a href="sec-pyorimisliikkeen-perusyhtalo.html" data-scroll="sec-pyorimisliikkeen-perusyhtalo">Pyörimisliikkeen perusyhtälö</a></li>
+<li><a href="sec-rotaatioenergia.html" data-scroll="sec-rotaatioenergia">Rotaatioenergia ja sen säilymislaki</a></li>
+<li><a href="sec-pyorimismaara.html" data-scroll="sec-pyorimismaara">Pyörimismäärä ja sen säilyminen</a></li>
+<li><a href="sec-syventavaa.html" data-scroll="sec-syventavaa">Syventävää materiaalia</a></li>
+<li><a href="sec-alun-systeemi.html" data-scroll="sec-alun-systeemi">Palataan alun systeemiin</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="kinematiikkaa.html" data-scroll="kinematiikkaa"><span class="codenumber">2</span> <span class="title">Kinematiikkaa kahdessa ja kolmessa ulottuvuudessa</span></a><ul>
+<li><a href="sec-Kinematiikkaa.html" data-scroll="sec-Kinematiikkaa" class="active">Kinematiikkaa</a></li>
+<li><a href="sec-Koordinaatistot.html" data-scroll="sec-Koordinaatistot">Koordinaatistot fysiikassa</a></li>
+<li><a href="sec-suhteellinen-liike.html" data-scroll="sec-suhteellinen-liike">Suhteellinen liike</a></li>
+<li><a href="sec-kinematiikka-kisatehtava.html" data-scroll="sec-kinematiikka-kisatehtava">Palataan alun pulmaan</a></li>
+<li><a href="sec-kin-syventavaa.html" data-scroll="sec-kin-syventavaa">Syventävää materiaalia</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="termodynamiikkaa.html" data-scroll="termodynamiikkaa"><span class="codenumber">3</span> <span class="title">Termodynamiikkaa</span></a><ul>
+<li><a href="sec-IIpaasaanto.html" data-scroll="sec-IIpaasaanto">Termodynamiikan II pääsääntö</a></li>
+<li><a href="sec-lampovoimakoneet.html" data-scroll="sec-lampovoimakoneet">Lämpövoimakoneet</a></li>
+<li><a href="sec-carnot.html" data-scroll="sec-carnot">Carnot'n kiertoprosessi</a></li>
+<li><a href="sec-entropia.html" data-scroll="sec-entropia">Entropia</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="vaihtovirtapiirit.html" data-scroll="vaihtovirtapiirit"><span class="codenumber">4</span> <span class="title">Vaihtovirtapiirit</span></a><ul>
+<li><a href="sec-rlctasa.html" data-scroll="sec-rlctasa">RLC-piiri, tasavirta</a></li>
+<li><a href="sec-ac-perusteet.html" data-scroll="sec-ac-perusteet">AC-piirien perusteita</a></li>
+<li><a href="sec-lrcvaihtovirta.html" data-scroll="sec-lrcvaihtovirta">LRC-vaihtovirtapiirit</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="optiikkaa.html" data-scroll="optiikkaa"><span class="codenumber">5</span> <span class="title">Optiikkaa</span></a><ul>
+<li><a href="subsec-yleista-optiikasta.html" data-scroll="subsec-yleista-optiikasta">Yleistä optiikasta</a></li>
+<li><a href="sec-kuvan-muodostuminen.html" data-scroll="sec-kuvan-muodostuminen">Kuvan muodostuminen</a></li>
+<li><a href="sec-ohuet-linssit.html" data-scroll="sec-ohuet-linssit">Ohuet linssit ja rajapinnat</a></li>
+<li><a href="sec-optiset-laitteet.html" data-scroll="sec-optiset-laitteet">Suurentavat optiset laitteet</a></li>
+<li><a href="sec-optiikka-syventavaa.html" data-scroll="sec-optiikka-syventavaa">Syventävää materiaalia</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="mat-menetelmat.html" data-scroll="mat-menetelmat"><span class="codenumber">6</span> <span class="title">Vektorit, derivaatta ja integraali fysiikassa</span></a><ul>
+<li><a href="sec-menetelmat-vektorit.html" data-scroll="sec-menetelmat-vektorit">Vektorit</a></li>
+<li><a href="sec-menetelmat-derivaatta.html" data-scroll="sec-menetelmat-derivaatta">Derivaatta</a></li>
+<li><a href="sec-menetelmat-integraali.html" data-scroll="sec-menetelmat-integraali">Integraali</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="maxwell.html" data-scroll="maxwell"><span class="codenumber">7</span> <span class="title">Maxwellin yhtälöt</span></a><ul>
+<li><a href="sec-maxwell-motivointia.html" data-scroll="sec-maxwell-motivointia">Motivointia</a></li>
+<li><a href="sec-kenttien-maarittaminen.html" data-scroll="sec-kenttien-maarittaminen">Sähkö- ja magneettikenttien määrittäminen</a></li>
+<li><a href="sec-maxwell.html" data-scroll="sec-maxwell">Maxwellin yhtälöt</a></li>
+</ul>
+</li>
+<li class="link"><a href="ratks.html" data-scroll="ratks"><span class="codenumber">8</span> <span class="title">Malliratkaisut</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Tuotettu PreTeXtillä</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="sec-Kinematiikkaa"><h2 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">2.1</span> <span class="title">Kinematiikkaa</span>
+</h2>
+<section class="introduction" id="introduction-11"><p id="p-180">Vektoreita, derivaattaa ja integraalia voi kerrata hyödyntämällä Jyväskylän yliopiston ylläpitämää <a class="external" href="https://tim.jyu.fi/view/kurssit/matematiikka/matikkapakki/etusivu" target="_blank">Matikkapakkia</a> ja sen osia <a class="external" href="https://tim.jyu.fi/view/kurssit/matematiikka/matikkapakki/vektorit" target="_blank">Vektorit</a>, <a class="external" href="https://tim.jyu.fi/view/kurssit/matematiikka/matikkapakki/derivaatta" target="_blank">Derivaatta</a> ja <a class="external" href="https://tim.jyu.fi/view/kurssit/matematiikka/matikkapakki/integraali" target="_blank">Integraali</a>. Matemaattisista menetelmistä fysiikassa on myös materiaali <a class="external" href="https://www.jyu.fi/science/fi/fysiikka/opiskelu/suomen-fysiikan-olympiavalmennus/valmennusmateriaalia/fmm.pdf" target="_blank">Suomen fysiikan olympiavalmennukseen liittyen</a>.</p></section><section class="subsection" id="subsec-Yksiulotteista-kinematiikkaa"><h3 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">2.1.1</span> <span class="title">Yksiulotteista kinematiikkaa</span>
+</h3>
+<p id="p-181">Katso video <a class="external" href="https://www.youtube.com/watch?v=NFjE1B5zLL8" target="_blank">Kinematiikkaa yksiulotteisessa liikkeessä</a>. Tee muistiinpanot, joista näet miten paikan funktiosta saadaan derivoimalla nopeus ja kiihtyvyys ja miten kiihtyvyyden funktiosta saadaan integroimalla nopeus ja paikka. Pyri myös ymmärtämään käsitteellisesti, miksi juuri derivaatat ja integraalit ovat oikeita työkaluja kinematiikan tutkimisessa.</p>
+<p id="p-182">Vastaa sitten seuraaviin kysymyksiin.</p>
+<section class="exercises" id="exercises-yksiulotteista"><h4 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h4>
+<article class="exercise exercise-like" id="exercise-43"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-183">Hiukkasen paikka ajan funktiona on \(x(t) = -(t^3 + 3t)\)<span class="quantity">m</span>.</p>
+<ol class="lower-alpha">
+<li id="li-26"><p id="p-184">Mikä on hiukkasen paikka ja nopeus, kun \(t=2\text{s}\text{?}\)</p></li>
+<li id="li-27"><p id="p-185">Piirrä \(x(t)\text{:}\)n ja \(v_x(t)\text{:}\)n graafit välillä \(-3\text{s} \leq t \leq 3\text{s}\text{.}\)</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-42" id="solution-42"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-42"><div class="solution solution-like">
+<p id="p-186">a) Paikan saa sijoittamalla paikan funktioon annetun ajan:</p>
+<div class="displaymath">
+\begin{equation*}
+x(2) = (-(2)^3 + 3 \cdot 2)\text{m} = (-8 + 6)\text{m} = -2\text{m}.
+\end{equation*}
+</div>
+<p class="continuation">Nopeuden saa paikan derivaatasta:</p>
+<div class="displaymath">
+\begin{equation*}
+v_x(t) = x'(t) = (-3t^2 + 3)\text{m/s}
+\end{equation*}
+</div>
+<p class="continuation">ja hetkellinen nopeus</p>
+<div class="displaymath">
+\begin{equation*}
+v_x(2) = (-3 \cdot 2^2 + 3)\text{m/s} = -8\text{m/s}
+\end{equation*}
+</div>
+<p class="continuation">b) Kuvissa y-akselin skaala on pienempi kuin x-akselin.</p>
+<div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/kinratk1.svg" role="img" class="contained" alt=""></div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-44"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-187">Allaolevassa kuvaajassa on kiihdytyskilpailuissa ajavan auton nopeus ajan funktiona. Laske auton kulkema matka ensimmäisen kolmen sekunnin aikana</p>
+<ol class="lower-alpha">
+<li id="li-28"><p id="p-188">integroimalla</p></li>
+<li id="li-29"><p id="p-189">geometrisesti</p></li>
+</ol>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/t2112.svg" role="img" class="contained" alt=""></div>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-43" id="solution-43"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-43"><div class="solution solution-like">
+<p id="p-190">a) Selvitetään suoran yhtälö:</p>
+<div class="displaymath">
+\begin{equation*}
+y - y_0 = \frac{\Delta y}{\Delta x} (x -x_0)\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Suora kulkee origon kautta, joten \(x_0=y_0=0\) ja</p>
+<div class="displaymath">
+\begin{equation*}
+y = \frac{12}{3} x = 4x\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Integroidaan suoran yhtälö 0:sta 3:een:</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{0}^{3} 4x \text{d}x
+= \Big|_0^3 4 \cdot \frac{1}{2}x^2
+= 4 \cdot \frac{1}{2} \cdot 3^2 - 4 \cdot \frac{1}{2}\cdot 0^2
+= 18\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Siispä siirtymä on 18m. b) Kuvasta voi laskea suoraan kolmion pinta-alan</p>
+<div class="displaymath">
+\begin{equation*}
+x = 3\text{s} \cdot 12\text{m/s} \cdot \frac{1}{2}
+= 18\text{m}\text{.}
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-45"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-191">Hiukkasen liikettä \(x\)-akselilla kuvaa funktio \(x(t) = (t^2-4t+2)\text{m}\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="li-30"><p id="p-192">Hahmottele \(x\text{:}\)n kuvaaja. Yritä arvioida, missä funktio leikkaa akselit ja funktion käyttäytyminen, kun \(t\) kasvaa suureksi. Piirrä tämän jälkeen kuvaaja tietokoneella/laskimella ja vertaa hahmotelmaasi.</p></li>
+<li id="li-31"><p id="p-193">Määritä hiukkasen nopeus ajanhetkellä \(t=1,0\text{s}\text{.}\)</p></li>
+<li id="li-32"><p id="p-194">Missä kohdassa hiukkasen liikkeen suunta muuttuu?</p></li>
+<li id="li-33"><p id="p-195">Missä hiukkanen on, kun sen nopeus on \(v_x = 4,0\text{m/s}\text{?}\)</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-44" id="solution-44"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-44"><div class="solution solution-like">
+<p id="p-196">a) Kuvaajan kulkua voi hahmotella sijoittamalla funktioon pari yksinkertaista arvoa, kuten -1, 0, 1. Tässä tapauksessa lisää vihjeitä saa siitä, että termi \(t^2\) on aina positiivinen ja siitä, että \(t^2&gt;-4t \iff t\gt4\) tai \(t\lt-4\text{.}\) Tämä jälkimmäinenhän viittaa siihen, että ainakin näillä \(t\text{:}\)n arvoilla \(x\) on positiivinen. Tarkemmin funktion kuvaajan kulkua voi tutkia derivaatan avulla, mutta fysiikan tehtävissä on usein hyödyllistä hahmotella nopeasti funktion käyttäytymistä välittämättä tarkoista lukuarvoista.</p>
+<div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="images/kinratk3.svg" role="img" class="contained" alt=""></div>
+<p id="p-197">b) Hiukkasen nopeus saadaan paikan funktion derivaatasta</p>
+<div class="displaymath">
+\begin{equation*}
+v_x(t) = x'(t) = 2t-4 \implies v_x(1) = (2-4)\text{m/s}
+= -2\text{m/s}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">c) Liikkeen suunta muuttuu, kun nopeus vaihtaa merkkiä. Nopeuden nollakohdasta saadaan siis suunnanmuutoksen ajanhetki</p>
+<div class="displaymath">
+\begin{equation*}
+v_x(t) = 0 \iff 2t-4 = 0 \iff t=2\text{.}
+\end{equation*}
+</div>
+<p class="continuation">d) Selvitetään, millä ajanhetkellä nopeus on 4m/s.</p>
+<div class="displaymath">
+\begin{equation*}
+v_x(t) = 2t-4 = 4 \iff t = 4\text{s}
+\end{equation*}
+</div>
+<p class="continuation">Paikan funktion mukaan</p>
+<div class="displaymath">
+\begin{equation*}
+x(0) = 2 \text{m}\text{,}
+\end{equation*}
+</div>
+<p class="continuation">eli hiukkanen on 2 metrin päässä origosta (jonka paikan mittaaja on valinnut.)</p>
+</div></div>
+</div></article></section></section><section class="subsection" id="subsec-2d3d"><h3 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">2.1.2</span> <span class="title">Kinematiikkaa kahdessa ja kolmessa ulottuvuudessa</span>
+</h3>
+<section class="introduction" id="introduction-12"><p id="p-198">Katso video <a class="external" href="https://www.youtube.com/watch?v=bYuwmGIaDrE" target="_blank">Kinematiikkaa kahdessa ja kolmessa ulottuvuudessa</a>. Tee muistiinpanot, joista käy ilmi, miksi kaksi- tai kolmeulotteinen kinematiikka palautuu yksiulotteiseen kinematiikkaan paikkavektorin komponenttien suhteen.</p></section><section class="exercises" id="exercises-k2d3d"><h4 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h4>
+<article class="exercise exercise-like" id="exercise-46"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-199">Hiukkasen liikettä \(xy\)-tasossa kuvaa yhtälöt</p>
+<div class="displaymath">
+\begin{align*}
+x \amp= 2t^2 \text{m} \\
+y \amp= (5t + 5)\text{m} 
+\end{align*}
+</div>
+<p class="continuation">Mikä on hiukkasen vauhti ajan funktiona?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-10" id="hint-10"><span class="type">Vihje</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-10"><div class="hint solution-like"><p id="p-200">Miten nopeuden komponenteista saa vauhdin?</p></div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-45" id="solution-45"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-45"><div class="solution solution-like">
+<p id="p-201">Hiukkasen vauhti on sen nopeuden suuruus. Nopeuden komponentit saadaan derivoimalla paikan funktiot</p>
+<div class="displaymath">
+\begin{equation*}
+v_x = x' = 4t \quad \text{ja} \quad v_y = y' = 5
+\end{equation*}
+</div>
+<p class="continuation">Nopeusvektorin pituus saadaan pythagoraan lauseella</p>
+<div class="displaymath">
+\begin{equation*}
+|v| = \sqrt{v_x^2 + v_y^2} = \sqrt{(4t)^2+5^2} = \sqrt{16t^2+25}.
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-47"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-202">Purjevene liikkuu itään vauhdilla <span class="quantity">5 <sup>m</sup>⁄<sub>s</sub></span>. Äkillinen tuulenpuuska aiheuttaa veneeseen kiihtyvyyden \(\vec{a}= (0,8\text{m}/\text{s}^2, 40^\circ\) pohjoiseen idästä). Mikä on veneen nopeuden suunta ja suuruus 6s myöhemmin, kun tuulenpuuska laantuu?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-46" id="solution-46"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-46"><div class="solution solution-like">
+<p id="p-203">Tilanteesta kannattaa piirtää kuva.</p>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/kinratk4.svg" role="img" class="contained" alt=""></div>
+<p id="p-204">Voimme tutkia kiihtyvyyden aiheuttamaa nopeuden muutosta komponenteittain. Kiihtyvyyden komponentit saamme trigonometrialla</p>
+<div class="displaymath">
+\begin{align*}
+a_x \amp = 0,8\text{m/s}^2 \cos 40^\circ
+\approx 0,613\text{m/s}^2\\
+a_y \amp = 0,8\text{m/s}^2 \sin 40^\circ
+\approx 0,514\text{m/s}^2 \text{.}
+\end{align*}
+</div>
+<p class="continuation">Nopeuden komponentit muuttuvat yhtälön \(v(t)=v_0+at\) mukaisesti, joten kuuden sekunnin kuluttua ne ovat</p>
+<div class="displaymath">
+\begin{align*}
+v_{1x} \amp = 5,0\text{m/s} + 0,613\text{m/s}^2 \cdot 6\text{s} = 8,68\text{m/s}\\
+v_{1y} \amp = 0\text{m/s} + 0,514\text{m/s}^2 \cdot 6\text{s} = 3,09\text{m/s}\text{.}
+\end{align*}
+</div>
+<p class="continuation">Nopeuden suunta ja suuruus ovat siten</p>
+<div class="displaymath">
+\begin{align*}
+|v|\amp = \sqrt{(8,68\text{m/s})^2 + (3,09\text{m/s})^2} \approx 9,2\text{m/s}\\
+\theta \amp = \tan^{-1}\left( \frac{v_{1y}}{v_{1x}} \right)= \tan^{-1}\left( \frac{3,09\text{m/s}}{8,68\text{m/s}} \right) \approx 20^\circ \; \text{idästä pohjoiseen}
+\end{align*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-48"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-205">Hiukkasen liikettä kuvaa yhtälöt</p>
+<div class="displaymath">
+\begin{align*}
+x \amp= \cos(t) \\
+y \amp= \sin(t) 
+\end{align*}
+</div>
+<p class="continuation">Hahmottele hiukkasen rata xy-koordinaatistossa. Mikä on hiukkasen nopeus ajan funktiona? Entä kiihtyvyys?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-47" id="solution-47"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-47"><div class="solution solution-like">
+<p id="p-206">Hiukkanen on ympyräradalla. Nopeus saadaan paikkavektorin \(\vec{r} = \cos(t)\hat{i} + \sin(t)\hat{j}\) derivaatasta</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{v} = -\sin(t)\hat{i} + \cos(t)\hat{j}
+\end{equation*}
+</div>
+<p class="continuation">ja kiihtyvyys edelleen nopeuden derivaatasta</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{a} = -\cos(t) \hat{i} - \sin(t)\hat{j},
+\end{equation*}
+</div>
+<p class="continuation">eli ympyräliikkessä kiihtyvyys osoittaa ympyrän keskipistettä kohti.</p>
+</div></div>
+</div></article></section></section><section class="subsection" id="subsec-heittoliike"><h3 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">2.1.3</span> <span class="title">Heittoliike</span>
+</h3>
+<section class="introduction" id="introduction-13"><p id="p-207">Katso opetus.tv:n sivulta <a class="external" href="https://opetus.tv/lukio-ops2016/fysiikka/fy5/vino-heittoliike-ja-angry-birds/" target="_blank">Vino heittoliike ja Angry Birds</a> ainakin video "2. Vinon heittoliikkeen yhtälöt". Kiinnitä huomiota ainakin heittoliikkeessä olevan kappaleen nopeuksien komponentteihin.</p></section><section class="exercises" id="exercises-heittoliike"><h4 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h4>
+<article class="exercise exercise-like" id="exercise-49"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-208">Pallo heitetään vaakasuoraan <span class="quantity">25 <sup>m</sup>⁄<sub>s</sub></span> ja se lentää <span class="quantity">50 m</span>:n vaakasuoran etäisyyden ennen maahan osumista. Kuinka korkealta pallo heitettiin?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-48" id="solution-48"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-48"><div class="solution solution-like">
+<p id="p-209">Valitaan karteesinen koordinaatisto siten, että heitto tapahtuu origosta x-akselin suuntaan. Nopeuden vaakasuora komponentti on $v_x = 25\text{m/s}$. Lasketaan kuinka kauan tällä nopeudella kestää $s=50\text{m}$:n matka:</p>
+<div class="displaymath">
+\begin{equation*}
+t
+= \frac{s}{v}
+= \frac{50\text{m}}{25\text{m/s}}
+= 2\text{s}
+\end{equation*}
+</div>
+<p class="continuation">Lähtönopeuden pystysuora komponentti on alussa 0. Vapaassa pudotuksessa oleva kappale on tasaisesti kiihtyvässä liikkeessä siten, että \(a=-g=-9,8\text{m/s}^2\) (suunta tässä koordinaatistossa negatiivisen y-akselin suuntaan). Liikeyhtälö \(y\)-akselin suunnassa on siten</p>
+<div class="displaymath">
+\begin{equation*}
+y = y_0 + v_{0y} t - \puoli g t^2
+\implies y = - \puoli g t^2
+= - \puoli 9,8\text{m/s}^2 (2\text{s})^2
+= - 19,62\text{m}.
+\end{equation*}
+</div>
+<p class="continuation">Eli pallo heitettiin noin 20\text{m}:n korkeudelta.</p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-50"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-210">Lähtönopeudella \(v_0\) ja kulmassa \(\theta\) vaakatasosta heitetään pallo. Mikä on pallon kantama? (ilman ilmanvastusta)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-49" id="solution-49"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-49"><div class="solution solution-like">
+<p id="p-211">Kantama on pallon \(x\)-akselin suuntainen matka. Tämä matka saadaan lähtönopeuden \(x\)-komponentin ja lentoajan avulla. Lentoaika taas on helpoin määrittää kappaleen pystysuorasta liikkeestä. Lentoaika saadaan määritettyä esimerkiksi siten, että tutkitaan milloin tasaisella kiihtyvyydellä nopeuden \(y\)-komponentti on nolla. Tällöin pallo on lentoratansa lakipisteessä. Pallolla kuluu sama aika matkata lakipisteestä maahan, kuin heitosta lakipisteeseen. Kokonaisaika pallon matkalle on siis kaksi kertaa aika heitosta lakipisteeseen. Käytetään liikeyhtälöä \(y\)-akselin suunnassa. Lähtönopeuden y-akselin suuntainen komponentti saadaan trigonometrialla \(v_{0y} = |v_0|\sin\theta\text{.}\) Siispä aika \(t'\text{,}\) jossa \(v_{0y}\) vähenee nollaan, saadaan yhtälöstä</p>
+<div class="displaymath">
+\begin{align*}
+\amp v_y = v_{0y} + at' = |v_0|\sin\theta - gt'\\
+\iff \amp t' = \frac{|v_0|\sin\theta}{g}
+\end{align*}
+</div>
+<p class="continuation">Joten kokonaisaika \(t=2t' = 2|v_0|\sin\theta / g\text{.}\) Nyt kantama saadaan pallon x-suuntaisesta liikeyhtälöstä</p>
+<div class="displaymath">
+\begin{equation*}
+x = x_0 + v_{0x} t +  \puoli a t^2
+= |v_0|\cos\theta \cdot t
+= |v_0|\cos\theta \cdot 2 \frac{|v_0|\sin\theta}{g}
+= \frac{2 |v_0|^2\cos\theta\sin\theta}{g}
+\end{equation*}
+</div>
+<p class="continuation">Pohditaan hieman tuloksen järkevyyttä. Suuri painovoima tarkoittaa suurta putoamiskiihtyvyyttä, joka pienentää kantamaa. Kantaman riippuvuus lähtökulmasta ei ehkä ole aivan ilmeinen, mutta ainakin jos heittää suoraan ylöspäin, eli \(\theta = 90^\circ\text{,}\) niin kantama on nolla. Tässä on ajateltu, että pallo lähtee liikkeelle aivan maan pinnalta, joten kun lähtökulma on nolla, on myös kantama nolla.</p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-51"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-212">Lähtökulma, jolla saavutetaan suurin etäisyys (ilman ilmanvastusta).</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-50" id="solution-50"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-50"><div class="solution solution-like">
+<p id="p-213">Tarkoitus on siis tutkia, missä kohtaa funktiolla \(x(\theta)\) on maksimi. Hahmotellaan ensin funktion kuvaaja. Asetetaan kerroin \(2|v_0|^2/g = 2,5\text{m}\text{.}\)</p>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/kinratk5.svg" role="img" class="contained" alt=""></div>
+<p id="p-214">Funktiolla näyttäisi siis olevan maksimi nollakohtien \(\theta=0^\circ\)  ja \(\theta=90^\circ\) puolessa välissä. Funktion ääriarvokohdan saa selville tutkimalla sen derivaatan nollakohtaa:</p>
+<div class="displaymath">
+\begin{align*}
+\amp x'(\theta) = \frac{2 |v_0|^2}{g}(\cos^2\theta -\sin^2\theta) = 0\\
+\iff \amp \cos^2\theta = \sin^2\theta\\
+\implies \amp \theta = 45^\circ\text{,}
+\end{align*}
+</div>
+<p class="continuation">jossa hyödynnettiin tulon derivoimissääntöä, tulon nollasääntöä ja sitä, että haluttu kulma on välillä \(0^\circ \lt \theta \lt 90^\circ\text{.}\)</p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-52"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-215">Pallon maksimikorkeus \(h\text{?}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-51" id="solution-51"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-51"><div class="solution solution-like">
+<p id="p-216">Maksimikorkeuden voi selvittää käyttämällä esimerkiksi energian säilymistä. Jälleen voidaan tutkia vain y-suunnassa tapahtuvaa liikettä, jolloin mekaanisen energian säilymisestä saadaan</p>
+<div class="displaymath">
+\begin{align*}
+\amp \puoli m v_{0y}^2 = m g h\\
+\iff \amp h = \frac{v_{0y}^2}{2g} = \frac{|v_0|^2\sin^2\theta}{2g}
+\end{align*}
+</div>
+<p class="continuation">Tätäkin tulosta voidaan arvioida eri lähtökulmilla. Suoraan ylöspäin heitettäessä \(\sin(90^\circ)=1\) saadaan suurin korkeus. Suurempi lähtönopeus nostaa korkeutta ja suurempi putoamiskiihtyvyys pienentää korkeutta.</p>
+</div></div>
+</div></article></section></section></section></div></main>
+</div>
+</body>
+</html>

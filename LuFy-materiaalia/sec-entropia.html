@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-08-26T12:52:10+03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="fi-FI">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>LuFy Entropia</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Aja (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Siirry pääasiaan</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\puoli}{\frac{1}{2}}
+\newcommand{\second}{\mathrm{s}}
+\newcommand{\hour}{\mathrm{h}}
+\newcommand{\meter}{\mathrm{m}}
+\newcommand{\henry}{\mathrm{H}}
+\newcommand{\ohm}{\Omega}
+\newcommand{\ampere}{\mathrm{A}}
+\newcommand{\farad}{\mathrm{F}}
+\newcommand{\volt}{\mathrm{V}}
+\newcommand{\hertz}{\mathrm{Hz}}
+\newcommand{\tesla}{\mathrm{T}}
+\newcommand{\coulomb}{\mathrm{C}}
+\newcommand{\weber}{\mathrm{Wb}}
+\newcommand{\watt}{\mathrm{W}}
+\newcommand{\radian}{\mathrm{rad}}
+\newcommand{\newton}{\mathrm{N}}
+\newcommand{\joule}{\mathrm{J}}
+\newcommand{\gram}{\mathrm{g}}
+\newcommand{\kilogram}{\mathrm{kg}}
+\newcommand{\kelvin}{\mathrm{K}}
+\newcommand{\celsius}{^\circ\mathrm{C}}
+\newcommand{\pico}{\mathrm{p}}
+\newcommand{\nano}{\mathrm{n}}
+\newcommand{\micro}{\mu}
+\newcommand{\milli}{\mathrm{m}}
+\newcommand{\centi}{\mathrm{c}}
+\newcommand{\kilo}{\mathrm{k}}
+\newcommand{\mega}{\mathrm{M}}
+\newcommand{\dee}{\mathrm{d}}
+\newcommand{\eminus}{\mathrm{\,e\,\text{-}}}
+\newcommand{\eplus}{\mathrm{\,e}}
+\newcommand{\squared}{^2}
+\newcommand{\cubed}{^3}
+\newcommand{\ang}[1]{#1^\circ}
+\newcommand{\doo}{\partial}
+\newcommand{\kertaa}{\cdot}
+\newcommand{\pistetulo}[2]{\vec{#1} \cdot \vec{#2}}
+\newcommand{\ristitulo}[2]{\vec{#1} \times \vec{#2}}
+\newcommand{\sulut}[1]{\left( #1 \right)}
+\newcommand{\ja}{\quad \text{ja} \quad}
+\newcommand{\mps}{\meter/\second}
+\newcommand{\SI}[2]{#1 \mathrm{\, #2}}
+\newcommand{\si}[1]{\mathrm{\, #1}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="fysiikka-materiaaleja.html"><span class="title">Lisämateriaaleja lukion fysiikkaan</span></a></h1>
+<p class="byline">Lasse M. Manninen</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Sisällys</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec-carnot.html" title="Edellinen">Ed</a><a id="upbutton" class="up-button button toolbar-item" href="termodynamiikkaa.html" title="Ylös">Yl</a><a id="nextbutton" class="next-button button toolbar-item" href="vaihtovirtapiirit.html" title="Seuraava">Seur</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Sisällys</button><a class="previous-button toolbar-item button" href="sec-carnot.html" title="Edellinen">Ed</a><a class="up-button button toolbar-item" href="termodynamiikkaa.html" title="Ylös">Yl</a><a class="next-button button toolbar-item" href="vaihtovirtapiirit.html" title="Seuraava">Seur</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Nimiösivut</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Kolofoni</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Tästä materiaalista</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="jaykkakappale.html" data-scroll="jaykkakappale"><span class="codenumber">1</span> <span class="title">Jäykän kappaleen dynamiikkaa</span></a><ul>
+<li><a href="sec-pyorimisliikkeen-vastineita.html" data-scroll="sec-pyorimisliikkeen-vastineita">Pyörimisliikkeen vastineita lineaariselle liikkeelle</a></li>
+<li><a href="sec-tasaisesti-kiihtyva-pyorimisliike.html" data-scroll="sec-tasaisesti-kiihtyva-pyorimisliike">Tasaisesti kiihtyvä pyörimisliike ja hitausmomentti</a></li>
+<li><a href="sec-yleisen-pyorimisliikkeen-kuvaajat.html" data-scroll="sec-yleisen-pyorimisliikkeen-kuvaajat">Yleisen pyörimisliikkeen kuvaajat</a></li>
+<li><a href="sec-pyorimisliikkeen-perusyhtalo.html" data-scroll="sec-pyorimisliikkeen-perusyhtalo">Pyörimisliikkeen perusyhtälö</a></li>
+<li><a href="sec-rotaatioenergia.html" data-scroll="sec-rotaatioenergia">Rotaatioenergia ja sen säilymislaki</a></li>
+<li><a href="sec-pyorimismaara.html" data-scroll="sec-pyorimismaara">Pyörimismäärä ja sen säilyminen</a></li>
+<li><a href="sec-syventavaa.html" data-scroll="sec-syventavaa">Syventävää materiaalia</a></li>
+<li><a href="sec-alun-systeemi.html" data-scroll="sec-alun-systeemi">Palataan alun systeemiin</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="kinematiikkaa.html" data-scroll="kinematiikkaa"><span class="codenumber">2</span> <span class="title">Kinematiikkaa kahdessa ja kolmessa ulottuvuudessa</span></a><ul>
+<li><a href="sec-Kinematiikkaa.html" data-scroll="sec-Kinematiikkaa">Kinematiikkaa</a></li>
+<li><a href="sec-Koordinaatistot.html" data-scroll="sec-Koordinaatistot">Koordinaatistot fysiikassa</a></li>
+<li><a href="sec-suhteellinen-liike.html" data-scroll="sec-suhteellinen-liike">Suhteellinen liike</a></li>
+<li><a href="sec-kinematiikka-kisatehtava.html" data-scroll="sec-kinematiikka-kisatehtava">Palataan alun pulmaan</a></li>
+<li><a href="sec-kin-syventavaa.html" data-scroll="sec-kin-syventavaa">Syventävää materiaalia</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="termodynamiikkaa.html" data-scroll="termodynamiikkaa"><span class="codenumber">3</span> <span class="title">Termodynamiikkaa</span></a><ul>
+<li><a href="sec-IIpaasaanto.html" data-scroll="sec-IIpaasaanto">Termodynamiikan II pääsääntö</a></li>
+<li><a href="sec-lampovoimakoneet.html" data-scroll="sec-lampovoimakoneet">Lämpövoimakoneet</a></li>
+<li><a href="sec-carnot.html" data-scroll="sec-carnot">Carnot'n kiertoprosessi</a></li>
+<li><a href="sec-entropia.html" data-scroll="sec-entropia" class="active">Entropia</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="vaihtovirtapiirit.html" data-scroll="vaihtovirtapiirit"><span class="codenumber">4</span> <span class="title">Vaihtovirtapiirit</span></a><ul>
+<li><a href="sec-rlctasa.html" data-scroll="sec-rlctasa">RLC-piiri, tasavirta</a></li>
+<li><a href="sec-ac-perusteet.html" data-scroll="sec-ac-perusteet">AC-piirien perusteita</a></li>
+<li><a href="sec-lrcvaihtovirta.html" data-scroll="sec-lrcvaihtovirta">LRC-vaihtovirtapiirit</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="optiikkaa.html" data-scroll="optiikkaa"><span class="codenumber">5</span> <span class="title">Optiikkaa</span></a><ul>
+<li><a href="subsec-yleista-optiikasta.html" data-scroll="subsec-yleista-optiikasta">Yleistä optiikasta</a></li>
+<li><a href="sec-kuvan-muodostuminen.html" data-scroll="sec-kuvan-muodostuminen">Kuvan muodostuminen</a></li>
+<li><a href="sec-ohuet-linssit.html" data-scroll="sec-ohuet-linssit">Ohuet linssit ja rajapinnat</a></li>
+<li><a href="sec-optiset-laitteet.html" data-scroll="sec-optiset-laitteet">Suurentavat optiset laitteet</a></li>
+<li><a href="sec-optiikka-syventavaa.html" data-scroll="sec-optiikka-syventavaa">Syventävää materiaalia</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="mat-menetelmat.html" data-scroll="mat-menetelmat"><span class="codenumber">6</span> <span class="title">Vektorit, derivaatta ja integraali fysiikassa</span></a><ul>
+<li><a href="sec-menetelmat-vektorit.html" data-scroll="sec-menetelmat-vektorit">Vektorit</a></li>
+<li><a href="sec-menetelmat-derivaatta.html" data-scroll="sec-menetelmat-derivaatta">Derivaatta</a></li>
+<li><a href="sec-menetelmat-integraali.html" data-scroll="sec-menetelmat-integraali">Integraali</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="maxwell.html" data-scroll="maxwell"><span class="codenumber">7</span> <span class="title">Maxwellin yhtälöt</span></a><ul>
+<li><a href="sec-maxwell-motivointia.html" data-scroll="sec-maxwell-motivointia">Motivointia</a></li>
+<li><a href="sec-kenttien-maarittaminen.html" data-scroll="sec-kenttien-maarittaminen">Sähkö- ja magneettikenttien määrittäminen</a></li>
+<li><a href="sec-maxwell.html" data-scroll="sec-maxwell">Maxwellin yhtälöt</a></li>
+</ul>
+</li>
+<li class="link"><a href="ratks.html" data-scroll="ratks"><span class="codenumber">8</span> <span class="title">Malliratkaisut</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Tuotettu PreTeXtillä</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="sec-entropia"><h2 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">3.4</span> <span class="title">Entropia</span>
+</h2>
+<section class="introduction" id="introduction-22"><p id="p-345">Tässä luvussa tutustutaan lyhyesti entropian muutoksiin termodynaamisissa prosesseissa. Tämä osio on osittain käännetty avoimesta oppikirjasta University Physics Volume 2 (Samuel J. Ling, Jeff Sanny, William Moebs), joka on <a class="external" href="https://openstax.org/details/books/university-physics-volume-2" target="_blank">saatavilla ilmaiseksi.</a></p>
+<p id="p-346">Termodynamiikan toinen pääsääntö voidaan esittää entropian muutoksen avulla. Reversiibelin vakiolämpötilassa tapahtuvan prosessin entropian muutos on</p>
+<div class="displaymath">
+\begin{equation*}
+\Delta S = \frac{Q}{T},
+\end{equation*}
+</div>
+<p class="continuation">jossa \(Q\) on systeemin ja ympäristön välillä siirtynyt lämpö, kun systeemin lämpötila on vakio \(T\text{.}\)</p>
+<p id="p-347">Muissa prosesseissa entropian muutoksen selvittämiseksi muokataan yhtälöä \(\Delta S = Q/T\text{.}\) Tarkastellaan prosessia, jossa systeemin tila muuttuu tilasta \(A\) tilaan \(B\) hyvin pienissä askelissa. Näiden lopputilojen lämpötilat ovat \(T_A\) ja \(T_B\text{.}\) Jokaisessa prosessin askeleessa systeemin lämpö muuttuu \(\Delta Q_i\text{:}\)n verran reversiibelisti lämpötilassa \(T_i\text{.}\) Jokaisen askeleen entropian muutos on siten \(\Delta S_i = \Delta Q_i / T_i\text{.}\) Entropian kokonaismuutos prosessissa on siten</p>
+<div class="displaymath">
+\begin{equation*}
+\Delta S = \sum_{i} \Delta S_i = \sum_i \frac{\Delta Q_i}{T_i}.
+\end{equation*}
+</div>
+<p id="p-348">Kun nyt otetaan raja-arvo \(\Delta Q_i \to 0\text{,}\) askelten lukumäärä lähestyy ääretöntä ja kokonaisentropiaksi tulee integraali</p>
+<div class="displaymath">
+\begin{equation*}
+\Delta S = \int_{A}^{B} \frac{{\mathrm d} Q}{T}.
+\end{equation*}
+</div>
+<p class="continuation">Tämä pätee vain reversiibeleissä prosesseissa.</p></section><article class="example example-like" id="example-3"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-3"><h6 class="heading">
+<span class="type">Esimerkki</span><span class="space"> </span><span class="codenumber">3.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Entropian muutos isobaarisessa prosessissa.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-3"><article class="example example-like"><p id="p-349">Määritetään \(m\) massaisen kappaleen entropian muutos vakiopaineessa lämpötilasta \(T_h\) lämpötilaan \(T_c\text{,}\) kun kappaleen ominaislämpökapasiteetti on \(c\text{.}\)</p>
+<p id="p-350">Käytetään siis yhtälöä</p>
+<div class="displaymath">
+\begin{equation*}
+\Delta S = \int_{T_h}^{T_c} \frac{{\mathrm d} Q}{T}.
+\end{equation*}
+</div>
+<p class="continuation">Kappaleen lämpökapasiteetin määritelmästä \(\Delta Q=mc\Delta T\text{,}\) kun muutos on infinitesimaalisen pieni</p>
+<div class="displaymath">
+\begin{equation*}
+{\mathrm d} Q = mc {\mathrm d} T.
+\end{equation*}
+</div>
+<p class="continuation">Nyt voimme sijoittaa tämän integraaliin ja laskea</p>
+<div class="displaymath">
+\begin{align*}
+\Delta S \amp= \int_{T_h}^{T_c} \frac{mc {\mathrm d} T}{T} \\
+\amp= mc \Bigg|_{T_h}^{T_c} \ln T \\
+\amp= mc (\ln T_c - \ln T_h) \\
+\amp= mc \ln\frac{T_c}{T_h}\text{.}
+\end{align*}
+</div>
+<p class="continuation">Nyt jos \(T_c \lt T_h\text{,}\) niin \(\Delta S \lt 0\text{,}\) eli kappaleen entropia pienenee, kun sen lämpötila laskee.</p></article></div>
+<article class="example example-like" id="example-4"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-4"><h6 class="heading">
+<span class="type">Esimerkki</span><span class="space"> </span><span class="codenumber">3.4.2</span><span class="period">.</span><span class="space"> </span><span class="title">Kaasun hidas isoterminen laajeneminen.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-4"><article class="example example-like"><p id="p-351">Määritetään entropian muutos, kun kaasu laajenee isotermisesti tilavuudesta \(V_1\) tilavuuteen \(V_2\text{.}\) Kun lämpötila on vakio, niin \(\Delta S = Q/T\text{.}\) Isotermisessä laajenemisessa lämpö on yhtäsuuri kuin työ ja</p>
+<div class="displaymath">
+\begin{equation*}
+Q = W = \int_{V_1}^{V_2} p {\mathrm d} V\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Ideaalikaasulain \(pV=nRT \) avulla</p>
+<div class="displaymath">
+\begin{equation*}
+Q = nRT \int_{V_1}^{V_2} \frac{{\mathrm d} V}{V}
+= nRT \ln\frac{V_2}{V_1},
+\end{equation*}
+</div>
+<p class="continuation">jossa integraali lasketaan samoin kuin edellisessä esimerkissä. Nyt entropian muutokseksi saadaan</p>
+<div class="displaymath">
+\begin{equation*}
+\Delta S = \frac{Q}{T} = nR \ln \frac{V_2}{V_1}\text{.}
+\end{equation*}
+</div></article></div>
+<section class="exercises" id="exercises-entropia"><h3 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-89"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-352">Ideaalikaasua, jonka lämpötila on 300K, puristetaan isotermisesti yhteen viidesosaan sen alkuperäisestä tilavuudesta. Mikä on kaasun entropian muutos per mooli?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-88" id="solution-88"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-88"><div class="solution solution-like">
+<p id="p-353">Isotermisessä kaasun tilavuuden muutoksessa</p>
+<div class="displaymath">
+\begin{equation*}
+\Delta S = nR \ln \frac{V_2}{V_1}
+\iff
+\frac{\Delta S}{n} = R \ln \frac{V_2}{V_1}.
+\end{equation*}
+</div>
+<p class="continuation">Nyt \(V_2 = 1/5 V_1\text{,}\) joten</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{\Delta S}{n} = R \ln \frac{\frac{1}{5}V_1}{V_1}
+= R \ln ( \frac{1}{5} )
+\approx 8,31 \frac{{\mathrm J}}{{\mathrm{mol} \; \mathrm K}} \cdot (-1,61)
+\approx -13,38 \frac{{\mathrm J}}{{\mathrm{mol} \; \mathrm K}}.
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-90"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-354">200g vettä, jonka lämpötila on 0\(^\circ\mathrm C\) tuodaan kontaktiin 80\(^\circ\mathrm C\) lämpökylvyn kanssa. Kun systeemi saavuttaa termodynaamisen tasapainon, mikä on veden lämpötila? Entä lämpökylvyn? Kuinka paljon lämpöä siirtyy prosessissa? Mikä on veden entropian muutos? Entä lämpökylvyn?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-89" id="solution-89"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-89"><div class="solution solution-like">
+<p id="p-355">Lämpökylpyä käsitellään laajana lämpövarastona, jonka lämpötila pysyy vakiona. Siispä tasapainossa veden ja lämpökylvyn lämpötilat ovat 80\(^\circ\mathrm C\text{.}\)</p>
+<p id="p-356">Siirtynyt lämpö saadaan yhtälöstä</p>
+<div class="displaymath">
+\begin{gather*}
+Q = mc\Delta T
+\implies
+Q = 0,2{\mathrm{kg}}
+\cdot 4200 \frac{{\mathrm J}}{{\mathrm{kg} \, \mathrm K}}
+\cdot 80{\mathrm K}
+= 67200{\mathrm J}
+\end{gather*}
+</div>
+<p id="p-357">Veden entropian muutos saadaan yhtälöstä</p>
+<div class="displaymath">
+\begin{gather*}
+\Delta S = mc\ln\frac{T_2}{T_1}
+\implies
+\Delta S
+= 0,2 \mathrm{kg}
+\cdot 4200 \frac{{\mathrm J}}{{\mathrm{kg} \, \mathrm K}}
+\cdot \frac{353{\mathrm K}}{273{\mathrm K}}
+\approx
+216 \frac{{\mathrm J}}{{\mathrm K}}.
+\end{gather*}
+</div>
+<p id="p-358">Lämpökylvyn lämpötila pysyy vakiona, joten entropian muutos saadaan siirtyneestä lämmöstä</p>
+<div class="displaymath">
+\begin{equation*}
+\Delta S = \frac{Q}{T}
+\implies
+\Delta S = \frac{-67200{\mathrm J}}{353{\mathrm K}}
+\approx
+-190 \frac{{\mathrm J}}{{\mathrm K}}.
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-91"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-359">Yksi mooli monoatomista ideaalikaasua on suljetussa jäykässä astiassa. Kun kaasuun lisätään reversiibelisti lämpöä, sen lämpötila muuttuu lämpötilasta \(T_1\) lämpötilaan \(T_2\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="li-58"><p id="p-360">Kuinka paljon lämpöä lisätään kaasuun?</p></li>
+<li id="li-59"><p id="p-361">Mikä on kaasun entropian muutos?</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-90" id="solution-90"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-90"><div class="solution solution-like">
+<p id="p-362">a) Isokoorisessa prosessissa lämpö saadaan yhtälöstä</p>
+<div class="displaymath">
+\begin{equation*}
+Q = n C_V \Delta T
+\implies
+Q = n \cdot \frac{3}{2} R \cdot (T_2 - T_1)
+\end{equation*}
+</div>
+<p id="p-363">b) Nyt \({\mathrm d} Q = 3/2 nR {\mathrm d} T\text{,}\) joten entropian muutos saadaan integraalista</p>
+<div class="displaymath">
+\begin{equation*}
+\Delta S = \int_{T_1}^{T_2} \frac{3}{2} n R \frac{{\mathrm d} T}{T}
+= \frac{3}{2} n R (\ln T_2 - \ln T_1 )
+= \frac{3}{2} n R \ln \frac{T_2}{T_1}.
+\end{equation*}
+</div>
+</div></div>
+</div></article></section></section></div></main>
+</div>
+</body>
+</html>

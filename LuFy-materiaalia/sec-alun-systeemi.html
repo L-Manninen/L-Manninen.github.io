@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-08-26T12:52:09+03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="fi-FI">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>LuFy Palataan alun systeemiin</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Aja (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Siirry pääasiaan</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\puoli}{\frac{1}{2}}
+\newcommand{\second}{\mathrm{s}}
+\newcommand{\hour}{\mathrm{h}}
+\newcommand{\meter}{\mathrm{m}}
+\newcommand{\henry}{\mathrm{H}}
+\newcommand{\ohm}{\Omega}
+\newcommand{\ampere}{\mathrm{A}}
+\newcommand{\farad}{\mathrm{F}}
+\newcommand{\volt}{\mathrm{V}}
+\newcommand{\hertz}{\mathrm{Hz}}
+\newcommand{\tesla}{\mathrm{T}}
+\newcommand{\coulomb}{\mathrm{C}}
+\newcommand{\weber}{\mathrm{Wb}}
+\newcommand{\watt}{\mathrm{W}}
+\newcommand{\radian}{\mathrm{rad}}
+\newcommand{\newton}{\mathrm{N}}
+\newcommand{\joule}{\mathrm{J}}
+\newcommand{\gram}{\mathrm{g}}
+\newcommand{\kilogram}{\mathrm{kg}}
+\newcommand{\kelvin}{\mathrm{K}}
+\newcommand{\celsius}{^\circ\mathrm{C}}
+\newcommand{\pico}{\mathrm{p}}
+\newcommand{\nano}{\mathrm{n}}
+\newcommand{\micro}{\mu}
+\newcommand{\milli}{\mathrm{m}}
+\newcommand{\centi}{\mathrm{c}}
+\newcommand{\kilo}{\mathrm{k}}
+\newcommand{\mega}{\mathrm{M}}
+\newcommand{\dee}{\mathrm{d}}
+\newcommand{\eminus}{\mathrm{\,e\,\text{-}}}
+\newcommand{\eplus}{\mathrm{\,e}}
+\newcommand{\squared}{^2}
+\newcommand{\cubed}{^3}
+\newcommand{\ang}[1]{#1^\circ}
+\newcommand{\doo}{\partial}
+\newcommand{\kertaa}{\cdot}
+\newcommand{\pistetulo}[2]{\vec{#1} \cdot \vec{#2}}
+\newcommand{\ristitulo}[2]{\vec{#1} \times \vec{#2}}
+\newcommand{\sulut}[1]{\left( #1 \right)}
+\newcommand{\ja}{\quad \text{ja} \quad}
+\newcommand{\mps}{\meter/\second}
+\newcommand{\SI}[2]{#1 \mathrm{\, #2}}
+\newcommand{\si}[1]{\mathrm{\, #1}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="fysiikka-materiaaleja.html"><span class="title">Lisämateriaaleja lukion fysiikkaan</span></a></h1>
+<p class="byline">Lasse M. Manninen</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Sisällys</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec-syventavaa.html" title="Edellinen">Ed</a><a id="upbutton" class="up-button button toolbar-item" href="jaykkakappale.html" title="Ylös">Yl</a><a id="nextbutton" class="next-button button toolbar-item" href="kinematiikkaa.html" title="Seuraava">Seur</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Sisällys</button><a class="previous-button toolbar-item button" href="sec-syventavaa.html" title="Edellinen">Ed</a><a class="up-button button toolbar-item" href="jaykkakappale.html" title="Ylös">Yl</a><a class="next-button button toolbar-item" href="kinematiikkaa.html" title="Seuraava">Seur</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Nimiösivut</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Kolofoni</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Tästä materiaalista</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="jaykkakappale.html" data-scroll="jaykkakappale"><span class="codenumber">1</span> <span class="title">Jäykän kappaleen dynamiikkaa</span></a><ul>
+<li><a href="sec-pyorimisliikkeen-vastineita.html" data-scroll="sec-pyorimisliikkeen-vastineita">Pyörimisliikkeen vastineita lineaariselle liikkeelle</a></li>
+<li><a href="sec-tasaisesti-kiihtyva-pyorimisliike.html" data-scroll="sec-tasaisesti-kiihtyva-pyorimisliike">Tasaisesti kiihtyvä pyörimisliike ja hitausmomentti</a></li>
+<li><a href="sec-yleisen-pyorimisliikkeen-kuvaajat.html" data-scroll="sec-yleisen-pyorimisliikkeen-kuvaajat">Yleisen pyörimisliikkeen kuvaajat</a></li>
+<li><a href="sec-pyorimisliikkeen-perusyhtalo.html" data-scroll="sec-pyorimisliikkeen-perusyhtalo">Pyörimisliikkeen perusyhtälö</a></li>
+<li><a href="sec-rotaatioenergia.html" data-scroll="sec-rotaatioenergia">Rotaatioenergia ja sen säilymislaki</a></li>
+<li><a href="sec-pyorimismaara.html" data-scroll="sec-pyorimismaara">Pyörimismäärä ja sen säilyminen</a></li>
+<li><a href="sec-syventavaa.html" data-scroll="sec-syventavaa">Syventävää materiaalia</a></li>
+<li><a href="sec-alun-systeemi.html" data-scroll="sec-alun-systeemi" class="active">Palataan alun systeemiin</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="kinematiikkaa.html" data-scroll="kinematiikkaa"><span class="codenumber">2</span> <span class="title">Kinematiikkaa kahdessa ja kolmessa ulottuvuudessa</span></a><ul>
+<li><a href="sec-Kinematiikkaa.html" data-scroll="sec-Kinematiikkaa">Kinematiikkaa</a></li>
+<li><a href="sec-Koordinaatistot.html" data-scroll="sec-Koordinaatistot">Koordinaatistot fysiikassa</a></li>
+<li><a href="sec-suhteellinen-liike.html" data-scroll="sec-suhteellinen-liike">Suhteellinen liike</a></li>
+<li><a href="sec-kinematiikka-kisatehtava.html" data-scroll="sec-kinematiikka-kisatehtava">Palataan alun pulmaan</a></li>
+<li><a href="sec-kin-syventavaa.html" data-scroll="sec-kin-syventavaa">Syventävää materiaalia</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="termodynamiikkaa.html" data-scroll="termodynamiikkaa"><span class="codenumber">3</span> <span class="title">Termodynamiikkaa</span></a><ul>
+<li><a href="sec-IIpaasaanto.html" data-scroll="sec-IIpaasaanto">Termodynamiikan II pääsääntö</a></li>
+<li><a href="sec-lampovoimakoneet.html" data-scroll="sec-lampovoimakoneet">Lämpövoimakoneet</a></li>
+<li><a href="sec-carnot.html" data-scroll="sec-carnot">Carnot'n kiertoprosessi</a></li>
+<li><a href="sec-entropia.html" data-scroll="sec-entropia">Entropia</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="vaihtovirtapiirit.html" data-scroll="vaihtovirtapiirit"><span class="codenumber">4</span> <span class="title">Vaihtovirtapiirit</span></a><ul>
+<li><a href="sec-rlctasa.html" data-scroll="sec-rlctasa">RLC-piiri, tasavirta</a></li>
+<li><a href="sec-ac-perusteet.html" data-scroll="sec-ac-perusteet">AC-piirien perusteita</a></li>
+<li><a href="sec-lrcvaihtovirta.html" data-scroll="sec-lrcvaihtovirta">LRC-vaihtovirtapiirit</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="optiikkaa.html" data-scroll="optiikkaa"><span class="codenumber">5</span> <span class="title">Optiikkaa</span></a><ul>
+<li><a href="subsec-yleista-optiikasta.html" data-scroll="subsec-yleista-optiikasta">Yleistä optiikasta</a></li>
+<li><a href="sec-kuvan-muodostuminen.html" data-scroll="sec-kuvan-muodostuminen">Kuvan muodostuminen</a></li>
+<li><a href="sec-ohuet-linssit.html" data-scroll="sec-ohuet-linssit">Ohuet linssit ja rajapinnat</a></li>
+<li><a href="sec-optiset-laitteet.html" data-scroll="sec-optiset-laitteet">Suurentavat optiset laitteet</a></li>
+<li><a href="sec-optiikka-syventavaa.html" data-scroll="sec-optiikka-syventavaa">Syventävää materiaalia</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="mat-menetelmat.html" data-scroll="mat-menetelmat"><span class="codenumber">6</span> <span class="title">Vektorit, derivaatta ja integraali fysiikassa</span></a><ul>
+<li><a href="sec-menetelmat-vektorit.html" data-scroll="sec-menetelmat-vektorit">Vektorit</a></li>
+<li><a href="sec-menetelmat-derivaatta.html" data-scroll="sec-menetelmat-derivaatta">Derivaatta</a></li>
+<li><a href="sec-menetelmat-integraali.html" data-scroll="sec-menetelmat-integraali">Integraali</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="maxwell.html" data-scroll="maxwell"><span class="codenumber">7</span> <span class="title">Maxwellin yhtälöt</span></a><ul>
+<li><a href="sec-maxwell-motivointia.html" data-scroll="sec-maxwell-motivointia">Motivointia</a></li>
+<li><a href="sec-kenttien-maarittaminen.html" data-scroll="sec-kenttien-maarittaminen">Sähkö- ja magneettikenttien määrittäminen</a></li>
+<li><a href="sec-maxwell.html" data-scroll="sec-maxwell">Maxwellin yhtälöt</a></li>
+</ul>
+</li>
+<li class="link"><a href="ratks.html" data-scroll="ratks"><span class="codenumber">8</span> <span class="title">Malliratkaisut</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Tuotettu PreTeXtillä</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="sec-alun-systeemi"><h2 class="heading hide-type">
+<span class="type">Alaluku</span> <span class="codenumber">1.8</span> <span class="title">Palataan alun systeemiin</span>
+</h2>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:50%;"><p id="p-111">Pieni \(m\)-massainen kiekko on asetettu onton ohuen sylinterin sisäpinnalle. Sylinterin massa on \(M\) ja säde \(R\text{.}\) Aluksi sylinteri lepää vaakasuoran tason päällä, ja kiekko on korkeudella \(R\) tasosta. Tehtävänämme on löytää kiekon sylinteriin aiheuttama tukivoima \(F\text{,}\) kun kiekko saavuttaa ratansa matalimman kohdan. Oletamme, että kiekon ja sylinterin välillä ei ole kitkaa ja että sylinteri vierii liukumatta. Putoamiskiihtyvyys on \(g\text{.}\)</p></div>
+<div class="sbspanel top" style="width:50%;"><img src="kuvat/jaykkakappale/iphotehtava2014.png" class="contained" alt="(for accessibility)"></div>
+</div></div>
+<p id="p-112">Tarkastellaan tätä tehtävää paloittelemalla se osatehtäviin. Pohditaan kuitenkin aluksi sitä, miten tällaista haastavaa tehtävää voi lähteä tutkimaan ja analysoimaan. Muutamaa vaihtoehtoa kannattaa pysähtyä hetkeksi miettimään: Mikä on se suure, jonka tietämisestä olisi tehtävän ratkaisun kannalta eniten hyötyä? Voiko tilannetta yksinkertaistaa ja ratkaista helpomman ongelman? Voiko samoja periaatteita hyödyntää monimutkaisemman ongelman ratkaisemisessa? Tällaiset kysymykset ovat yleisestikin hyödyllisiä matematiikan ja fysiikan ongelmien ratkaisemisessa. Erilaisia kilpailu- ja oppikirjatehtäviä ratkoessa on myös hyvä muistaa, että yleensä tehtäviin on olemassa analyyttinen ratkaisu tai jos ei ole, se kerrotaan tehtävänannossa.</p>
+<section class="exercises" id="exercises-esimsysteemi-jaykkakappale"><h3 class="heading hide-type">
+<span class="type">Harjoitustehtävät</span> <span class="codenumber"></span> <span class="title">Harjoitustehtävät</span>
+</h3>
+<div class="exercisegroup" id="exercisegroup-1">
+<div class="introduction" id="introduction-4">
+<p id="p-113">Piirrä tilanteesta ensin havainnollistava kuva, josta ilmenee ainakin kiekkoon ja sylinteriin vaikuttavat voimat, kun kiekko on liukumassa ala-asentoon ja kun kiekko on ala-asennossa.</p>
+<p id="p-114">Pohdi seuraavia kysymyksiä ennen kuin etenet:</p>
+</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-23"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-115">Mitkä suureet sinun tarvitsee tietää, jotta saat selville kysytyn voiman \(F\text{?}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-22" id="solution-22"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-22"><div class="solution solution-like"><p id="p-116">Esimerkiksi kiekon ratanopeus sylinterin keskipisteen suhteen, sylinterin keskipisteen nopeus.</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-24"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-117">Mitkä asiat sinun täytyy tietää, jotta voit saada nämä edelliset suureet selville?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-23" id="solution-23"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-23"><div class="solution solution-like"><p id="p-118">Esim. sylinterin kulmakiihtyvyys ja kulmanopeus.</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-25"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-119">Mikä tästä ongelmasta tekee haastavan? Eli minkä tehtävän piirteen voi yksinkertaistaa ja ratkaista helpomman ongelman?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-24" id="solution-24"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-24"><div class="solution solution-like"><p id="p-120">Sylinterin liikkuminen on koko tehtävän juju.</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-26"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-121">Miten ongelma ratkeaisi tällä yksinkertaistuksella?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-25" id="solution-25"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-25"><div class="solution solution-like"><p id="p-122">Ilman sylinterin liikettä tehtävän voi ratkaista kirjoittamalla kiekolle mekaanisen energian säilymisen ja ratkaisemalla sen avulla kiekon ratanopeuden.</p></div></div>
+</div></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-2">
+<div class="introduction" id="introduction-5"><p id="p-123">Seuraavaksi pohditaan sitä, miltä kysymyksen lopputilanne näyttää. Analysoidaan siis tilannetta, jossa kiekko on jo ala-asennossa.</p></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-27"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-124">Mihin suuntaan kiekon nopeus ja kiihtyvyys osoittavat?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-26" id="solution-26"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-26"><div class="solution solution-like"><p id="p-125">Kiekon nopeus on x-akselin suuntainen ja kiihtyvyys y-akselin suuntainen (suoraan sylinterin keskipistettä kohti).</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-28"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="p-126">Mihin suuntaan sylinterin keskipisteen nopeus ja kiihtyvyys osoittavat?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-27" id="solution-27"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-27"><div class="solution solution-like"><p id="p-127">Sylinterin keskipisteen nopeus on x-akselin suuntainen ja kiihtyvyys on hetkellisesti 0.</p></div></div>
+</div></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-3">
+<div class="introduction" id="introduction-6"><p id="p-128">Yksinkertaisempi ongelma olisi sellainen, jossa sylinteri on kiinnitetty paikalleen. Tässä tilanteessa kiekon nopeus ala-asennossa saadaan suoraviivaisesti energian säilymislailla. Tämä ongelma kannattaa ratkaista ennen etenemistä. Seuraavaksi tutkimme sylinterin liikettä.</p></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-29"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="p-129">Kirjoita sylinterin liikeyhtälö käyttämällä Newtonin toista lakia.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Vihje</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like"><p id="p-130">Mieti sylinterin keskipisteen liikettä. Sylinterin keskipiste liikkuu x-akselin suuntaisesti, joten voit tutkia x-suuntaan vaikuttavia voimia.</p></div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-28" id="solution-28"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-28"><div class="solution solution-like"><div class="displaymath" id="p-131">
+\begin{equation*}
+Ma_s = N \sin \theta - F_{fr}
+\end{equation*}
+</div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-30"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<p id="p-132">Kirjoita sylinterin kulmakiihtyvyys sylinterin keskipisteen kiihtyvyyden avulla.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Vihje</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like"><p id="p-133">Vierimisehto</p></div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-29" id="solution-29"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-29"><div class="solution solution-like"><div class="displaymath" id="p-134">
+\begin{equation*}
+\alpha = a_s / R
+\end{equation*}
+</div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-31"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<p id="p-135">Mikä on sylinteriin kohdistuvan kitkavoiman suuruus?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-3" id="hint-3"><span class="type">Vihje</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-3"><div class="hint solution-like"><p id="p-136">Sylinterin ja tason välinen kitka aiheuttaa vääntömomentin.</p></div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-30" id="solution-30"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-30"><div class="solution solution-like"><div class="displaymath" id="p-137">
+\begin{equation*}
+\tau = I \alpha = F_{fr}R \iff F_{fr} = MR^2 \frac{a_s}{R} \frac{1}{R} = M a_s
+\end{equation*}
+</div></div></div>
+</div></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-4">
+<div class="introduction" id="introduction-7"><p id="p-138">Seuraavaksi tutkitaan sitä, miten kiekon ja sylinterin kiihtyvyydet liittyvät toisiinsa.</p></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-32"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
+<p id="p-139">Kirjoita kiekon \(x\)- ja \(y\)-suuntaiset kiihtyvyydet kiekon ja sylinterin välisen tukivoiman avulla.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-31" id="solution-31"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-31"><div class="solution solution-like"><div class="displaymath" id="p-140">
+\begin{equation*}
+a_x = N \sin \theta, \quad a_y = N \cos \theta
+\end{equation*}
+</div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-33"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
+<p id="p-141">Ratkaise aiemmin tutkimasi sylinterin kiihtyvyys kiekon ja sylinterin välisen tukivoiman suhteen.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-32" id="solution-32"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-32"><div class="solution solution-like"><div class="displaymath" id="p-142">
+\begin{equation*}
+M a_s = N \sin \theta - F_{fr} = N \sin \theta - M a_s \iff 2 M a_s = N \sin \theta
+\end{equation*}
+</div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-34"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
+<p id="p-143">Saatko nyt kirjoitettua sylinterin keskipisteen x-suuntaisen kiihtyvyyden kiekon x-suuntaisen kiihtyvyyden avulla?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-33" id="solution-33"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-33"><div class="solution solution-like"><div class="displaymath" id="p-144">
+\begin{equation*}
+2 M a_s = m a_x
+\end{equation*}
+</div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-35"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
+<p id="p-145">Laske kiihtyvyyksistä sylinterin ja kiekon x-suuntaiset nopeudet toistensa suhteen.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-4" id="hint-4"><span class="type">Vihje</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-4"><div class="hint solution-like"><p id="p-146">Integroi saamasi yhtälö 0:sta \(t\text{:}\)hen.</p></div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-34" id="solution-34"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-34"><div class="solution solution-like"><div class="displaymath" id="p-147">
+\begin{equation*}
+2 M v = m u
+\end{equation*}
+</div></div></div>
+</div></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-5">
+<div class="introduction" id="introduction-8"><p id="p-148">Tutkitaan nyt, saammeko kirjoitettua kiekon ja sylinterin x-suuntaiset nopeudet käyttämällä ainoastaan tehtävässä annettuja tietoja.</p></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-36"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
+<p id="p-149">Mitä fysiikan periaatetta voit nyt hyödyntää?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-5" id="hint-5"><span class="type">Vihje</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-5"><div class="hint solution-like"><p id="p-150">Säilymislaki</p></div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-35" id="solution-35"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-35"><div class="solution solution-like">
+<p id="p-151">Mekaanisen energian säilyminen. \(E_{p,kiekko} = E_{k,kiekko} + E_{k,sylinteri} + E_{rot,sylinteri}\text{,}\) eli</p>
+<div class="displaymath">
+\begin{equation*}
+mgR = \frac{1}{2} mu^2 + \frac{1}{2} mv^2 + \frac{1}{2} I \omega^2
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-37"><h6 class="heading"><span class="codenumber">15<span class="period">.</span></span></h6>
+<p id="p-152">Sijoita saamaasi yhtälöön sylinterin kulmanopeus.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-6" id="hint-6"><span class="type">Vihje</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-6"><div class="hint solution-like"><p id="p-153">Vierimisehto</p></div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-36" id="solution-36"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-36"><div class="solution solution-like"><p id="p-154">\(\omega = \frac{v}{R}\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-38"><h6 class="heading"><span class="codenumber">16<span class="period">.</span></span></h6>
+<p id="p-155">Ratkaise yhtälöparista nopeudet.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-7" id="hint-7"><span class="type">Vihje</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-7"><div class="hint solution-like"><p id="p-156">Kysymyksen 12 ja 15 yhtälöt.</p></div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-37" id="solution-37"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-37"><div class="solution solution-like"><div class="displaymath" id="p-157">
+\begin{equation*}
+u = 2 \sqrt{\frac{MgR}{2M+m}}, \quad 
+v = \frac{m}{M} \sqrt{\frac{MgR}{2M+m}}
+\end{equation*}
+</div></div></div>
+</div></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-6">
+<div class="introduction" id="introduction-9"><p id="p-158">Olemme jo hyvin lähellä ratkaisua. Palautetaan tässä vaiheessa mieleen se, mitä alunperin kysyttiin. Kysymys kuului, mikä on kiekon sylinteriin aiheuttama tukivoima, kun kiekko on ala-asennossa. Jos pohdit aiemmin tämän hetkellisen tilanteen nopeuksia ja kiihtyvyyksiä, totesit että kiekon nopeus on x-akselin suuntainen ja kiihtyvyys suoraan ylöspäin eli sylinterin keskipistettä kohti. Kiekko on siis sylinterin keskipisteen suhteen hetkellisesti ympyräliikkeessä. Sylinteriin taas ei kohdistu tällä hetkellä kokonaisvoimaa x-akselin suuntaan, joten sylinteri on hetkellisesti tähän suuntaan tasaisessa liikkeessä. Näillä tiedoilla voimme laskea kiekon ratanopeuden suhteessa sylinterin keskipisteeseen ja laskea tutulla tavalla ympyräliikkeessä olevan kappaleen normaalikiihtyvyydestä aiheutuvan voiman.</p></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-39"><h6 class="heading"><span class="codenumber">17<span class="period">.</span></span></h6>
+<p id="p-159">Mikä on kiekon nopeus suhteessa sylinterin keskipisteeseen?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-8" id="hint-8"><span class="type">Vihje</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-8"><div class="hint solution-like"><p id="p-160">Galilein muunnos sylinterin keskipisteen mukana liikkuvaan koordinaatistoon.</p></div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-38" id="solution-38"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-38"><div class="solution solution-like"><div class="displaymath" id="p-161">
+\begin{equation*}
+v_{rel} = u + v
+\end{equation*}
+</div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-40"><h6 class="heading"><span class="codenumber">18<span class="period">.</span></span></h6>
+<p id="p-162">Mikä on kiekon normaalikiihtyvyys tässä koordinaatistossa?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-39" id="solution-39"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-39"><div class="solution solution-like"><div class="displaymath" id="p-163">
+\begin{equation*}
+a_{rel} = v_{rel}^2 / R
+\end{equation*}
+</div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-41"><h6 class="heading"><span class="codenumber">19<span class="period">.</span></span></h6>
+<p id="p-164">Mikä on kiekon kiihtyvyys laboratoriokoordinaatistossa (aluksi valitsemassasi koordinaatistossa?)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-9" id="hint-9"><span class="type">Vihje</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-9"><div class="hint solution-like"><p id="p-165">Mitä seuraa siitä, että sylinterin kiihtyvyys on hetkellisesti 0?</p></div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-40" id="solution-40"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-40"><div class="solution solution-like">
+<div class="displaymath" id="p-166">
+\begin{equation*}
+a = a_{rel}\text{,}
+\end{equation*}
+</div>
+<p class="continuation">miksi?</p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-42"><h6 class="heading"><span class="codenumber">20<span class="period">.</span></span></h6>
+<p id="p-167">Laske kiekon sylinteriin kohdistama tukivoima.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-41" id="solution-41"><span class="type">Ratkaisu</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-41"><div class="solution solution-like">
+<p id="p-168">\(F - mg =  v_{rel}^2 / R\text{,}\) johon sijoittamalla \(v_{rel}\) saamme lopulta</p>
+<div class="displaymath">
+\begin{equation*}
+F = 3mg \left( 1 + \frac{m}{3M} \right)
+\end{equation*}
+</div>
+</div></div>
+</div></article>
+</div>
+</div></section></section></div></main>
+</div>
+</body>
+</html>
