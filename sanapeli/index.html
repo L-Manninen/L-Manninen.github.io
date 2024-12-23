@@ -13,17 +13,22 @@
 
         .letters {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             margin: 20px 0;
+            gap: 10px;
         }
 
         .letter {
-            font-size: 24px;
+            font-size: calc(5vw + 10px);
             margin: 5px;
-            padding: 10px 20px;
+            padding: 10px;
             border: 2px solid #333;
             border-radius: 5px;
             cursor: pointer;
+            flex: 1 0 calc(20% - 10px);
+            max-width: calc(20% - 10px);
+            box-sizing: border-box;
         }
 
         .letter.highlight {
@@ -76,6 +81,22 @@
 
         .new-game-button:hover {
             background-color: darkblue;
+        }
+
+        @media (max-width: 768px) {
+            .letter {
+                font-size: calc(7vw + 5px);
+                flex: 1 0 calc(30% - 10px);
+                max-width: calc(30% - 10px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .letter {
+                font-size: calc(8vw + 5px);
+                flex: 1 0 calc(40% - 10px);
+                max-width: calc(40% - 10px);
+            }
         }
     </style>
 </head>
