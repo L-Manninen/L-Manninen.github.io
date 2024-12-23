@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanapeli</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        .letters {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .letter {
+            font-size: 24px;
+            margin: 5px;
+            padding: 10px 20px;
+            border: 2px solid #333;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .letter.highlight {
+            color: white;
+            background-color: orange;
+        }
+
+        .input-container {
+            margin: 20px;
+        }
+
+        .words-list {
+            margin-top: 20px;
+        }
+
+        #correct-words {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .progress-bar {
+            width: 100%;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 20px auto;
+            height: 20px;
+        }
+
+        .progress {
+            height: 100%;
+            background-color: green;
+            width: 0;
+            transition: width 0.3s;
+        }
+
+        .new-game-button {
+            margin: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .new-game-button:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sanapeli</h1>
+    <p>Keksi sanoja annetuista kirjaimista. Värillistä kirjainta täytyy käyttää jokaisessa sanassa.</p>
+    <button class="new-game-button" id="new-game">Uusi peli</button>
+    <div class="letters">
+        <!-- Letters will be dynamically inserted here -->
+    </div>
+    <div class="input-container">
+        <input type="text" id="word-input" placeholder="Kirjoita sana...">
+        <button id="submit-word">Lähetä</button>
+    </div>
+    <div class="progress-bar">
+        <div class="progress" id="progress-bar"></div>
+    </div>
+
+
+    <p id="score">Pisteet: 0</p>
+    <p id="max-score">Täydet pisteet: 0</p>
+
+    <div class="words-list">
+        <h2>Käytetyt sanat</h2>
+        <ul id="correct-words">
+            <!-- Correct words will be listed here -->
+        </ul>
+    </div>
+
+    <script>
+        async function loadGameData() {
+            try {
+                const response = await fetch('gameData.txt'); // Replace with your file path
+                const text = await response.text();
+
+                // Split the file into lines (one game per line)
+                const games = text.trim().split('\n');
+                return games.map(line => {
+                    const [lettersPart, requiredLetter, dictionaryPart] = line.split('|');
+                    const letters = lettersPart.split(',');
+                    const dictionary = dictionaryPart.split(',');
+                    return { letters, requiredLetter, dictionary };
+                });
+            } catch (error) {
+                console.error('Error loading game data:', error);
+            }
+        }
+
+        function calculateMaxScore(letters, requiredLetter, dictionary) {
+            let maxScore = 0;
+
+            dictionary.forEach(word => {
+                if (word.includes(requiredLetter)) {
+                    let points = word.length === 4 ? 1 : word.length;
+                    if (letters.every(letter => word.includes(letter))) {
+                        points += 7; // Pangram bonus
+                    }
+                    maxScore += points;
+                }
+            });
+
+            return maxScore;
+        }
+
+        async function selectNewGame() {
+            const games = await loadGameData();
+            if (!games || games.length === 0) {
+                alert('No games available!');
+                return;
+            }
+
+            // Select a random game
+            const randomGame = games[Math.floor(Math.random() * games.length)];
+            gameData.letters = randomGame.letters;
+            gameData.requiredLetter = randomGame.requiredLetter;
+            gameData.dictionary = randomGame.dictionary;
+            gameData.maxScore = calculateMaxScore(
+                randomGame.letters,
+                randomGame.requiredLetter,
+                randomGame.dictionary
+            );
+
+            resetGame();
+            initializeLettersDisplay();
+            updateMaxScoreDisplay();
+        }
+
+        function resetGame() {
+            score = 0;
+            foundWords = [];
+            document.getElementById('correct-words').innerHTML = '';
+            document.getElementById('progress-bar').style.width = '0%';
+            document.getElementById('score').textContent = 'Score: 0';
+        }
+
+        function initializeLettersDisplay() {
+            const lettersContainer = document.querySelector('.letters');
+            lettersContainer.innerHTML = '';
+
+            gameData.letters.forEach(letter => {
+                const letterElement = document.createElement('div');
+                letterElement.textContent = letter;
+                letterElement.classList.add('letter');
+                if (letter === gameData.requiredLetter) {
+                    letterElement.classList.add('highlight');
+                }
+                lettersContainer.appendChild(letterElement);
+            });
+        }
+
+        function updateMaxScoreDisplay() {
+            document.getElementById('max-score').textContent = `Täydet pisteet: ${gameData.maxScore}`;
+        }
+
+        const gameData = {
+            letters: [],
+            requiredLetter: '',
+            dictionary: [],
+            maxScore: 0
+        };
+
+        let score = 0;
+        let foundWords = [];
+
+        document.getElementById('new-game').addEventListener('click', selectNewGame);
+
+        document.getElementById('submit-word').addEventListener('click', submitWord);
+
+        document.getElementById('word-input').addEventListener('keypress', (event) => {
+            if (event.key === 'Enter') {
+                submitWord();
+            }
+        });
+
+        function submitWord() {
+            const word = document.getElementById('word-input').value.toUpperCase();
+            document.getElementById('word-input').value = '';
+
+            if (isValidWord(word)) {
+                if (!foundWords.includes(word)) {
+                    foundWords.push(word);
+                    foundWords.sort();
+                    updateScore(word);
+                    displayWords();
+                    updateProgressBar();
+                } else {
+                    alert('You already found this word!');
+                }
+            } else {
+                alert('Invalid word!');
+            }
+        }
+
+
+        function isValidWord(word) {
+            if (word.length < 4) return false;
+            if (!word.includes(gameData.requiredLetter)) return false;
+            if (!gameData.dictionary.includes(word)) return false;
+            return true;
+        }
+
+        function updateScore(word) {
+            let points = word.length === 4 ? 1 : word.length;
+            if (isPangram(word)) {
+                points += 7;
+            }
+            score += points;
+            document.getElementById('score').textContent = `Pisteet: ${score}`;
+        }
+
+        function isPangram(word) {
+            return gameData.letters.every(letter => word.includes(letter));
+        }
+
+        function displayWords() {
+            const correctWordsContainer = document.getElementById('correct-words');
+            correctWordsContainer.innerHTML = '';
+            foundWords.forEach(word => {
+                const wordElement = document.createElement('div');
+                wordElement.textContent = word;
+                correctWordsContainer.appendChild(wordElement);
+            });
+        }
+
+        function updateProgressBar() {
+            const percentage = (score / gameData.maxScore) * 100;
+            document.getElementById('progress-bar').style.width = `${percentage}%`;
+        }
+
+        // Initialize the first game
+        selectNewGame();
+    </script>
+</body>
+</html>
